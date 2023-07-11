@@ -43,6 +43,8 @@ body {
   margin: 0;
   padding: 0;
   position: absolute;
+  overflow-x: hidden;
+
 }
 
 img {
@@ -176,6 +178,24 @@ h5 {
   border: 1px solid var(--main-white);
 }
 
+.second-cta {
+  padding: 15px 30px;
+  background-color: var(--main-black);
+  color: var(--main-white);
+  border: 1px solid var(--main-white);
+  border-radius: 8px;
+  transition: all 0.7s ease;
+
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.second-cta:hover {
+  background-color: var(--main-white);
+  color: var(--main-black);
+  border: 1px solid var(--main-black);
+}
 /* === HEADER ===*/
 
 nav {
@@ -262,3 +282,19 @@ nav div:nth-child(2) {
 }
 
 /* === FOOTER ===*/
+
+.footer-size{
+  height: 30vh;
+
+    >div{
+      width: 33.33%;
+        img{
+          width: 50%;
+        }
+    }
+}
+
+.line-vertical {
+  border-left: 1px solid var(--main-white);
+  margin-right: 5%;
+}
