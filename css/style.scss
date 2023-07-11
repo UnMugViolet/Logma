@@ -1,0 +1,264 @@
+/* === MISE EN PAGE GENERAL ===*/
+
+$title-font: "Noto Serif Makasar", serif;
+$main-font: "Poppins", sans-serif;
+
+// Variable
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-black: #010001;
+  --main-white: #f6f8fa;
+  --main-color: #212121;
+  --hover-white: #F1F1F1;
+
+  .color-black {
+    color: var(--main-black);
+  }
+
+  .color-white {
+    color: var(--main-white);
+  }
+
+  .color-color {
+    color: var(--main-color);
+  }
+
+  // Background
+
+  .bg-color-black {
+    background-color: var(--main-black);
+  }
+  .bg-color-white {
+    background-color: var(--main-white);
+  }
+  .bg-color-main {
+    background-color: var(--main-color);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  margin-top: 10px;
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px 10px var(--main-color);
+  border: solid 3px transparent;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px 10px var(--main-white);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: solid 3px transparent;
+}
+
+/* Classes fonctionnelles */
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.object-center {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.spacing-section {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* Titre */
+h1 {
+  font-family: $title-font;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 56px;
+}
+
+h2 {
+  font-family: $title-font;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 34px;
+}
+
+h3 {
+  font-family: $title-font;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 16px;
+
+  margin: 0;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-family: $main-font;
+  font-weight: 200;
+  font-size: 15px;
+  text-align: left;
+  margin: 0;
+}
+
+/* Buttons */
+
+.first-cta {
+  padding: 15px 30px;
+  background-color: var(--main-black);
+  color: var(--main-white);
+  border: 1px solid var(--main-white);
+  border-radius: 8px;
+  transition: all 0.7s ease;
+
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.first-cta:hover {
+  background-color: var(--main-white);
+  color: var(--main-black);
+  border: 1px solid var(--main-white);
+}
+
+/* === HEADER ===*/
+
+nav {
+  align-items: center;
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    color: var(--main-white);
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: unset;
+  }
+}
+nav div:nth-child(1) {
+  max-width: 9%;
+}
+
+nav div:nth-child(2) {
+  width: 35%;
+}
+
+.spacing-nav {
+  margin-top: 10px;
+  width: 80%;
+}
+.nav-separation{
+  margin-right: 5%;
+}
+/* === MAIN ===*/
+#myVideo {
+  width: 99.3vw;
+  height: 98vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.header-content {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 7px 60px 47px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+
+.projects {
+  background-color: var(--main-color);
+  background-size: cover;
+  z-index: 1;
+}
+
+.spacing-last-projects {
+  gap: 3%;
+  margin-top: 5%;
+
+  span {
+    width: 33.33%;
+
+    :nth-child(2) {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.button-center-disposition {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.pictures-part{
+  background-color: var(--main-white);
+}
+
+/* === FOOTER ===*/
