@@ -6,7 +6,7 @@
 :root {
   --main-black: #010001;
   --main-white: #f6f8fa;
-  --main-color: #212121;
+  --main-color: #666970;
   --hover-white: #F1F1F1;
 }
 :root .color-black {
@@ -15,7 +15,7 @@
 :root .color-white {
   color: var(--main-white);
 }
-:root .color-color {
+:root .color-main {
   color: var(--main-color);
 }
 :root .bg-color-black {
@@ -262,17 +262,41 @@ nav div:nth-child(2) {
 }
 
 /* === FOOTER ===*/
+footer a {
+  text-decoration: none;
+}
+
 .footer-size {
-  height: 30vh;
+  height: 50vh;
 }
 .footer-size > div {
   width: 33.33%;
 }
 .footer-size > div img {
-  width: 50%;
+  width: 20%;
+}
+
+.spacing-first-part-footer {
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .line-vertical {
   border-left: 1px solid var(--main-white);
   margin-right: 5%;
+}
+
+.container-contact {
+  display: flex;
+}
+
+.container-contact-icon {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  transform: translateZ(10);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container-contact:hover .container-contact-icon {
+  transform: translateX(5px) translateZ(0);
 }/*# sourceMappingURL=style.css.map */
