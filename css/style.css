@@ -168,6 +168,13 @@ h5 {
   margin: 0;
 }
 
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 /* Buttons */
 .first-cta {
   padding: 15px 30px;
@@ -297,7 +304,7 @@ footer h3 {
 }
 
 .footer-size {
-  height: 50vh;
+  height: 45vh;
 }
 .footer-size > div {
   width: 33.33%;
@@ -337,5 +344,25 @@ footer h3 {
 
 .icon-color {
   fill: var(--main-white);
-  transition: all 4s ease;
+  transition: all 0.6s ease;
+}
+
+.bottom-footer {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.bottom-footer p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.bottom-footer a {
+  margin-left: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 1s ease;
+}
+.bottom-footer a:hover {
+  color: var(--main-white);
 }/*# sourceMappingURL=style.css.map */
