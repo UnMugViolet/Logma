@@ -141,7 +141,7 @@ img {
 }
 
 .h-demi{
-  height: 55%;
+  height: 50%;
 }
 /* Titre */
 h1 {
@@ -353,12 +353,17 @@ footer{
 }
 
 .icons-footer{
-  gap: 10px;
     svg{
       fill: var(--hover-white);
-      transition: transform .6s cubic-bezier(.165,.84,.44,1)
+      transition: all 4s ease;
     }
+
     svg:hover{
       fill: var(--main-color);
     }
+}
+
+.icon-color{
+  fill: var(--main-white);
+  transition: all 4s ease;
 }

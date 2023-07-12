@@ -126,7 +126,7 @@ img {
 }
 
 .h-demi {
-  height: 55%;
+  height: 50%;
 }
 
 /* Titre */
@@ -327,13 +327,15 @@ footer h3 {
   transform: translateX(5px) translateZ(0);
 }
 
-.icons-footer {
-  gap: 10px;
-}
 .icons-footer svg {
   fill: var(--hover-white);
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 4s ease;
 }
 .icons-footer svg:hover {
   fill: var(--main-color);
+}
+
+.icon-color {
+  fill: var(--main-white);
+  transition: all 4s ease;
 }/*# sourceMappingURL=style.css.map */
