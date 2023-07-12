@@ -42,9 +42,9 @@ $main-font: "Poppins", sans-serif;
 body {
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: relative;
+  min-height: 100vh;
   overflow-x: hidden;
-
 }
 
 img {
@@ -309,13 +309,14 @@ nav div:nth-child(2) {
   margin-top: 3%;
 }
 
-.pictures-part{
-  background-color: var(--main-white);
-}
 
 /* === FOOTER ===*/
 
 footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
   a{
     margin-left: 5px;
     font-family: $main-font;

@@ -15,6 +15,6 @@
 
 </head>
 <body>
-    <header-components></header-components>
+    <header-component></header-component>
 </body>
 </html>

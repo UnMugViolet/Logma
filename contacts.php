@@ -15,11 +15,13 @@
     <!-- JS -->
     <script src="index.js" type="text/javascript" defer></script>
     <script src="./js/components/header.js" type="text/javascript" defer></script>
+    <script src="./js/components/footer.js" type="text/javascript" defer></script>
     <!-- Favicon -->
     <link rel="icon" href="./ressources/favicon.ico">
 
 </head>
 <body>
-    <header-components></header-components>
+    <header-component></header-component>
+    <footer-content></footer-content>
 </body>
 </html>
