@@ -297,7 +297,16 @@ nav div:nth-child(2) {
 
 /* === FOOTER ===*/
 footer a {
+  margin-left: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   text-decoration: none;
+  font-size: 14px;
+  color: var(--main-white);
+  transition: all 0.8s ease;
+}
+footer a:hover {
+  color: var(--main-color);
 }
 footer h3 {
   margin: auto;
@@ -312,11 +321,6 @@ footer h3 {
 
 .logo-size {
   width: 20%;
-}
-
-.line-vertical {
-  border-left: 1px solid var(--main-white);
-  margin-right: 5%;
 }
 
 .container-contact {
@@ -349,14 +353,6 @@ footer h3 {
 .bottom-footer p {
   margin-top: auto;
   margin-bottom: auto;
-}
-.bottom-footer a {
-  margin-left: 5px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  text-decoration: none;
-  font-size: 14px;
-  transition: all 1s ease;
 }
 .bottom-footer a:hover {
   color: var(--main-white);

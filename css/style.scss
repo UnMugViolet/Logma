@@ -317,14 +317,20 @@ nav div:nth-child(2) {
 
 footer{
   a{
+    margin-left: 5px;
+    font-family: $main-font;
+    font-weight: 400;
     text-decoration: none;
+    font-size: 14px;
+    color: var(--main-white);
+    transition: all 0.8s ease;
   }
-
+  a:hover{
+    color: var(--main-color);
+  }
   h3{
     margin: auto;
   }
-
-
 }
 
 .footer-size{
@@ -339,11 +345,6 @@ footer{
   width: 20%;
 }
 
-
-.line-vertical {
-  border-left: 1px solid var(--main-white);
-  margin-right: 5%;
-}
 
 .container-contact {
   display: flex;
@@ -380,15 +381,9 @@ footer{
     margin-bottom: auto;
   }
 
-  a{
-    margin-left: 5px;
-    font-family: $main-font;
-    font-weight: 400;
-    text-decoration: none;
-    font-size: 14px;
-    transition: all 1s ease;
-  }
   a:hover{
     color: var(--main-white);
   }
+
+
 }
