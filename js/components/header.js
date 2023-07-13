@@ -5,13 +5,13 @@ class Header extends HTMLElement {
   
     connectedCallback() {
       this.innerHTML = `
-      <header class="header-content">
+      <header class="header-content w-full">
         <nav class="container flex-container spacing-nav">
             <div class="logo-size">
                 <a href="./index.html"><img src="./ressources/img/Logo-logma.png" alt="Logo société Logma"></a>
             </div>
-            <div>
-                <ul class="flex-container vertical-align">
+            <div class="vertical-align w-trois-quart">
+                <ul class="flex-end w-full spacing-components-header">
                     <li>
                         <a href="./a-propos.html">A propos</a>
                     </li>
@@ -21,6 +21,8 @@ class Header extends HTMLElement {
                     <li class="nav-separation">
                         <a href="./galerie-photo.php">Galerie Photo</a>
                     </li>
+                </ul>
+                <ul class="flex-container vertical-align spacing-icon-header">
                     <li>
                         <a href="https://www.instagram.com/logma_production/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
