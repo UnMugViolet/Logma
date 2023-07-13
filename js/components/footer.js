@@ -65,10 +65,10 @@ class Footer extends HTMLElement {
                             <a href="./contacts.php">Contact</a>
                         </div>
                         <div>
-                            <a href="./pages/cgu.html">CGU</a>
+                            <a href="./cgu.html">CGU</a>
                         </div>
                         <div>
-                            <a href="./pages/mentions-legales.html">Mentions légales</a>  
+                            <a href="./mentions-legales.html">Mentions légales</a>  
                         </div>
                         
                     </div>
