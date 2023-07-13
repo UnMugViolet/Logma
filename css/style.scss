@@ -252,21 +252,6 @@ nav {
     font-weight: 600;
     font-size: 14px;
     text-decoration: unset;
-    position: relative;
-
-    &::after{
-      position: absolute;
-      content: '';
-      background-color: var(--main-white);
-      bottom: -4px;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      transition: 0.3s ease all;
-    }
-    &:hover::after{
-        width: 100%;
-    }
   } 
 }
 nav div:nth-child(1) {
@@ -287,6 +272,24 @@ nav div:nth-child(1) {
 
 .spacing-icon-header{
   gap: 20px;
+}
+
+.link-style-nav{
+  position: relative;
+
+  &::after{
+    position: absolute;
+    content: '';
+    background-color: var(--main-white);
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    transition: 0.3s ease all;
+  }
+  &:hover::after{
+      width: 100%;
+  }
 }
 
 /* === MAIN ===*/
