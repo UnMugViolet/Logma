@@ -49,26 +49,29 @@
 
         </section>
         <section class="spacing-section">
-            <div class="container">
+            <div class="container ">
                 <h1 class="text-center color-white">Derniers projets</h1>
-                <div class="flex-container spacing-last-projects">
-                    <span>
-                        <div>
-                            <img src="./ressources/img/projet-photographe-noe.jpg">
+                <div class="flex-container spacing-last-projects h-full">
+                    <span class="flex-col">
+                        <div class="thumbnail-noe layout-video-container ">
+                            <video class="h-full">
+                                <source src="ressources/video/Nohé - Campagne de marque.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                            </video>
                         </div>
                         <h4 class="color-white">NOHÉ</h4>
                         <h5 class="color-white">CAMPAGNE</h5>
                     </span>
-                    <span>
-                        <div>
-                            <img src="./ressources/img/projet-photographe-PLATYPUS-CRAFT.jpg">
+                    <span class="flex-col">
+                        <div class="thumbnail-craft layout-video-container w-full h-full">
+                            
                         </div>
                         <h4 class="color-white">PLATYPUS CRAFT</h4>
                         <h5 class="color-white">DIGITAL</h5>
                     </span>
-                    <span>
-                        <div>
-                            <img src="./ressources/img/projet-photographe-transaharienne-maroc.jpg">
+                    <span class="flex-col">
+                        <div class="thumbnail-transaharienne layout-video-container w-full h-full">
+                            
                         </div>
                         <h4 class="color-white">TRANSAHARIENNE</h4>
                         <h5 class="color-white">REPORTAGE</h5>
@@ -132,3 +135,16 @@
 </body>
 
 </html>
+
+<script>
+
+var figure = $(".video").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {  
+    $('video', this).get(0).play(); 
+}
+
+function hideVideo(e) {
+    $('video', this).get(0).pause(); 
+}
+</script>

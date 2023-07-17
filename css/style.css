@@ -39,6 +39,10 @@ img {
   display: block;
 }
 
+video::-webkit-media-controls {
+  display: none !important;
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   margin-top: 10px;
@@ -322,6 +326,27 @@ nav div:nth-child(1) {
   margin-top: 3%;
 }
 
+.layout-video-container {
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  height: 350px;
+  width: 100%;
+}
+
+.thumbnail-noe {
+  background-image: url("../ressources/img/projet-photographe-noe.jpg");
+}
+
+.thumbnail-craft {
+  background-image: url("../ressources/img/projet-photographe-PLATYPUS-CRAFT.jpg");
+}
+
+.thumbnail-transaharienne {
+  background-image: url("../ressources/img/projet-photographe-transaharienne-maroc.jpg");
+}
+
 /* === FOOTER ===*/
 footer {
   width: 100%;
@@ -351,10 +376,6 @@ footer h3 {
 
 .logo-size {
   width: 20%;
-}
-
-.container-contact {
-  display: flex;
 }
 
 .container-contact-icon {
