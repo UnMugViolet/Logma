@@ -51,28 +51,30 @@
         <section class="spacing-section">
             <div class="container ">
                 <h1 class="text-center color-white">Derniers projets</h1>
-                <div class="flex-container spacing-last-projects h-full">
-                    <span class="flex-col">
-                        <div class="thumbnail-noe layout-video-container ">
-                            <video class="h-full">
-                                <source src="ressources/video/Nohé - Campagne de marque.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
+                <div class="flex-container spacing-last-projects ">
+                    <span>
+                        <div>
+                            <video id="myvideo" onmouseover="toggleControls();" onmouseleave="removeControls();" class="layout-video-container w-full" preload="metadata">
+                                <source src="./ressources/video/Nohé - Campagne de marque.mp4" type="video/mp4">
+                                <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
                             </video>
                         </div>
                         <h4 class="color-white">NOHÉ</h4>
                         <h5 class="color-white">CAMPAGNE</h5>
                     </span>
-                    <span class="flex-col">
-                        <div class="thumbnail-craft layout-video-container w-full h-full">
-                            
-                        </div>
+                    <span>
+                        <video id="myvideo" onmouseover="toggleControls();" onmouseleave="removeControls();" class="layout-video-container w-full" preload="metadata" controls >
+                            <source src="./ressources/video/Nohé - Campagne de marque.mp4" type="video/mp4">
+                            <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
+                        </video>
                         <h4 class="color-white">PLATYPUS CRAFT</h4>
                         <h5 class="color-white">DIGITAL</h5>
                     </span>
-                    <span class="flex-col">
-                        <div class="thumbnail-transaharienne layout-video-container w-full h-full">
-                            
-                        </div>
+                    <span>
+                        <video class="layout-video-container w-full" preload="metadata" controls>
+                            <source src="./ressources/video/Nohé - Campagne de marque.mp4" type="video/mp4">
+                            <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
+                        </video>
                         <h4 class="color-white">TRANSAHARIENNE</h4>
                         <h5 class="color-white">REPORTAGE</h5>
                     </span>
@@ -136,15 +138,3 @@
 
 </html>
 
-<script>
-
-var figure = $(".video").hover( hoverVideo, hideVideo );
-
-function hoverVideo(e) {  
-    $('video', this).get(0).play(); 
-}
-
-function hideVideo(e) {
-    $('video', this).get(0).pause(); 
-}
-</script>

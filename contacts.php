@@ -1,14 +1,15 @@
 <?php
- $name = "Paul "; 
- echo "<h1>Bonjour ! ce site a été conçu par</h1> {$name}"; 
+$name = "Paul ";
+echo "<h1>Bonjour ! ce site a été conçu par {$name}</h1> ";
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions Légales | Logma </title>
+    <title>Contacts | Logma </title>
 
     <!--Feuille de CSS-->
     <link rel="stylesheet" href="css/style.css">
@@ -20,8 +21,11 @@
     <link rel="icon" href="./ressources/favicon.ico">
 
 </head>
+
 <body>
     <header-component></header-component>
+
     <footer-content></footer-content>
 </body>
+
 </html>
