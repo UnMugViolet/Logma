@@ -5,7 +5,7 @@ class Footer extends HTMLElement {
   
     connectedCallback() {
       this.innerHTML = `
-      <footer class="bg-color-black">
+      <footer class="bg-color-black w-full">
         <div class="container flex-container vertical-align footer-size">
             <div class="flex-col h-trois-quart">
                 <div class="logo-size">

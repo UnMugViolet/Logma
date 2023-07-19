@@ -74,6 +74,14 @@ img {
 
 /* Classes fonctionnelles */
 
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
 .vertical-align {
   display: flex;
   align-items: center;
@@ -299,6 +307,7 @@ nav div:nth-child(1) {
 .header-content {
   position: fixed;
   top: 0;
+  z-index: 9;
   background: rgba(0, 0, 0, 0.15);
   box-shadow: 0px 7px 60px 47px rgba(0, 0, 0, 0.15);
   padding: 20px;
@@ -332,13 +341,13 @@ nav div:nth-child(1) {
 .spacing-last-projects {
   gap: 3%;
   margin-top: 5%;
-
+  
   span {
     width: 33.33%;
 
-    :nth-child(2) {
-      margin-top: 10px;
-    }
+  h4{
+    margin-top: 10px;
+  }
   }
 }
 
@@ -348,14 +357,37 @@ nav div:nth-child(1) {
   margin-top: 3%;
 }
 
+.overlay{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 1s ease;
+  background-color: var(--main-black);
 
-.layout-video-container{
-  height: 350px;
+  p{
+    color: var(--main-white);
+    font-size: 1rem;
+    font-weight: 400;
+    top: 50%;
+    left: 50%;
+    text-decoration: underline;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
+
+.video-hover:hover .overlay{
+  opacity: 0.6;
+
+}
+
 /* === FOOTER ===*/
 
 footer{
-  width: 100%;
+  
   
   a{
     margin-left: 5px;
