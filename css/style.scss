@@ -387,8 +387,7 @@ nav div:nth-child(1) {
 /* === FOOTER ===*/
 
 footer{
-  
-  
+
   a{
     margin-left: 5px;
     font-family: $main-font;
@@ -416,6 +415,10 @@ footer{
 
 .logo-size{
   width: 20%;
+}
+
+.container-contact {
+  display: flex;
 }
 
 .container-contact-icon {

@@ -17,7 +17,7 @@ class Footer extends HTMLElement {
                         simplement discuter.</p>
                 </div>
 
-                <a href="mailto:contact@logma-production" class="flex color-white">
+                <a href="mailto:contact@logma-production" class="container-contact color-white">
                     <h5>contact@logma-production </h5>
                     <h5 class="container-contact-icon"> →</h5>
                 </a>

@@ -383,6 +383,10 @@ footer h3 {
   width: 20%;
 }
 
+.container-contact {
+  display: flex;
+}
+
 .container-contact-icon {
   margin-left: 5px;
   margin-bottom: 5px;
