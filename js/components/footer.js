@@ -62,13 +62,13 @@ class Footer extends HTMLElement {
                 <div class="flex-container col-center h-demi">
                     <div class="flex-col h-full ">
                         <div>
-                            <a href="./contacts.php">Contact</a>
+                            <a href="./contacts">Contact</a>
                         </div>
                         <div>
-                            <a href="./cgu.html">CGU</a>
+                            <a href="./cgu">CGU</a>
                         </div>
                         <div>
-                            <a href="./mentions-legales.html">Mentions légales</a>  
+                            <a href="./mentions-legales">Mentions légales</a>  
                         </div>
                         
                     </div>
