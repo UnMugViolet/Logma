@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c | rewrite_module>
+RewriteEngine On
+# Allow htaccess to follow relative links
+Options +FollowSymLinks
+
+# Management of redirecting pages/content file to root
+RewriteRule ^a-propos$ /logma/pages/content/a-propos.php [L]
+RewriteRule ^contacts$ /logma/pages/content/contacts.php [L]
+RewriteRule ^galerie-photo$ /logma/pages/content/galerie-photo.php [L]
+
+# Management of redirecting pages/legal file to root
+RewriteRule ^cgu$ /logma/pages/legal/cgu.html [L]
+RewriteRule ^mentions-legales$ /logma/pages/legal/mentions-legales.html [L]
+
+# Management of errors on website 
+ErrorDocument 404 /logma/pages/errors/404.html
+ErrorDocument 500 /logma/pages/errors/500.html
+ErrorDocument 503 /logma/pages/errors/maintenance-logma.html
+
+
+# # Uncomment bellow for maintenance mode
+# RewriteCond %{REMOTE_ADDR} !^192\.168\.1\.1$
+# RewriteRule .* pages/errors/maintenance-logma.html [L]

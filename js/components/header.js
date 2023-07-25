@@ -13,13 +13,13 @@ class Header extends HTMLElement {
                 <div class="vertical-align w-trois-quart nav-menu">
                     <ul class="flex-end w-full spacing-components-header">
                         <li class="nav-item">
-                            <a class="link-style-nav" href="./a-propos.html">A propos</a>
+                            <a class="link-style-nav" href="./a-propos">A propos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="link-style-nav" href="./contacts.php">Contacts</a>
+                            <a class="link-style-nav" href="./contacts">Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="link-style-nav" href="./galerie-photo.php">Galerie Photo</a>
+                            <a class="link-style-nav" href="./galerie-photo">Galerie Photo</a>
                         </li>
                     </ul>
                     <ul class="flex-container vertical-align spacing-icon-header">
