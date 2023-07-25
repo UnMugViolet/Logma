@@ -293,7 +293,7 @@ p {
 }
 
 .wrap {
-  border-right: 1ch solid #fff;
+  border-right: 1ch solid var(--main-white);
   animation: blink 0.8s linear infinite;
 }
 
