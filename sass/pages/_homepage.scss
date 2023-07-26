@@ -14,62 +14,61 @@
     top: 0;
     bottom: 0;
     z-index: -1;
-}
+  }
   
-.projects {
-  background-color: $main-color;
-  background-size: cover;
-  z-index: 1;
-}
-
-.spacing-last-projects {
-  gap: 3%;
-  margin-top: 5%;
+  .projects {
+    background-color: $main-color;
+    background-size: cover;
+    z-index: 1;
+  }
   
-    span {
-      width: 33.33%;
-
-    h4{
-      margin-top: 10px;
+  .spacing-last-projects {
+    gap: 3%;
+    margin-top: 5%;
+    
+      span {
+        width: 33.33%;
+  
+      h4{
+        margin-top: 10px;
+      }
     }
   }
-}
-
-.button-center-disposition {
-  display: flex;
-  justify-content: center;
-  margin-top: 3%;
-}
-
-.overlay{
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: all 0.7s ease;
-  background-color: $main-black;
   
-
-  p{
-    color: $main-white;
-    font-size: 1rem;
-    font-weight: 200;
-    top: 50%;
-    left: 50%;
-    text-decoration: underline;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  .button-center-disposition {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
   }
-}
-
-.video-hover:hover .overlay{
-  opacity: 0.6;
-}
-.wrap{
-  border-right: 1ch solid $main-white;
-  animation: blink 0.8s linear infinite;
-}
-
-@keyframes blink { 50% { border-color: $main-black; }  }
+  
+  .overlay{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.7s ease;
+    background-color: $main-black;
+  
+    p{
+      color: $main-white;
+      font-size: 1rem;
+      font-weight: 400;
+      top: 50%;
+      left: 50%;
+      text-decoration: underline;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .video-hover:hover .overlay{
+    opacity: 0.6;
+  }
+    .wrap{
+      border-right: 1ch solid $main-white;
+      animation: blink 0.8s linear infinite;
+    }
+    
+    @keyframes blink { 50% { border-color: $main-black; }  }
