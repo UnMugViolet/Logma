@@ -26,6 +26,7 @@
         <div>
             <header-component/>
         </div>
+
     </section>
 
     <section class="spacing-section dual-col bg-color-black">
