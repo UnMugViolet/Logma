@@ -12,6 +12,7 @@
 
     <!--Feuille de CSS-->
     <link rel="stylesheet" href="css/main.css">
+<<<<<<< HEAD
 ========
     <title>CGU | Logma </title>
 =======
@@ -30,6 +31,8 @@
 >>>>>>>> c91937f (🔍 Added all pages and make them work with footer and header, great day today big progress):pages/legal/cgu.html
 =======
 >>>>>>> c91937f (🔍 Added all pages and make them work with footer and header, great day today big progress)
+=======
+>>>>>>> e6b9ae5 (All done can close this issue :fire:)
 
     <!-- JS -->
     <script src="./js/components/header.js" type="text/javascript"></script>
