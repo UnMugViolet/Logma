@@ -1,0 +1,76 @@
+@import '../abstracts/variables.scss';
+
+/* === FOOTER ===*/
+
+footer{
+
+    a{
+      margin-left: 5px;
+      font-family: $main-font;
+      font-weight: 400;
+      text-decoration: none;
+      font-size: 14px;
+      color: $main-white;
+      transition: all 0.8s ease;
+    }
+    a:hover{
+      color: $main-color;
+    }
+    h3{
+      margin: auto;
+    }
+  }
+  
+  .footer-size{
+    height: 45vh;
+  
+      >div{
+        width: 33.33%;
+        height: 50%;
+      }
+  }
+  
+  .logo-size{
+    width: 20%;
+    min-width: 100px;
+  }
+  
+  .container-contact {
+    display: flex;
+  }
+  
+  .container-contact-icon {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    transform: translateZ(10);
+    transition: transform .6s cubic-bezier(.165,.84,.44,1)
+  }
+  
+  .container-contact:hover .container-contact-icon {
+    transform: translateX(5px) translateZ(0)
+  }
+  
+  .icons-footer{
+      svg{
+        fill: $main-white;
+        transition: all 0.4s ease;
+      }
+  
+      svg:hover{
+        fill: $main-color;
+      }
+  }
+  
+  
+  .bottom-footer{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    p{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  
+    a:hover{
+      color: $main-white;
+    }
+  }

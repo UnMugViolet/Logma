@@ -1,0 +1,43 @@
+@use '../abstracts'as *;
+
+/* Buttons */
+
+.first-cta {
+    padding: 18px 40px;
+    background-color: $main-black;
+    color: $main-white;
+    border: 1px solid $main-white;
+    border-radius: 8px;
+    transition: all 0.7s ease;
+    text-decoration: none;
+  
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .first-cta:hover {
+    background-color: $main-white;
+    color: $main-black;
+    border: 1px solid $main-white;
+  }
+  
+  .second-cta {
+    padding: 18px 40px;
+    background-color: $main-black;
+    color: $main-white;
+    border: 1px solid $main-white;
+    border-radius: 8px;
+    transition: all 0.7s ease;
+    text-decoration: none;
+  
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .second-cta:hover {
+    background-color: $main-white;
+    color: $main-black;
+    border: 1px solid $main-black;
+  }
