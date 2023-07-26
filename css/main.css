@@ -171,6 +171,10 @@ p {
   height: 50%;
 }
 
+.bottom-0 {
+  bottom: 0;
+}
+
 /* === HEADER ===*/
 nav {
   align-items: center;
