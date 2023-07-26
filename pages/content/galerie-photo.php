@@ -12,10 +12,8 @@ echo "<h1>Bonjour ! ce site a été conçu par {$name}</h1> ";
     <title>Galerie Photo | Logma </title>
 
     <!--Feuille de CSS-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/specific/header.css">
-    <link rel="stylesheet" href="css/specific/footer.css">
-
+    <link rel="stylesheet" href="css/main.css">
+    
     <!-- JS -->
     <script src="./js/components/header.js" type="text/javascript"></script>
     <script src="./js/components/footer.js" type="text/javascript"></script>

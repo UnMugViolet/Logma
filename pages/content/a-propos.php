@@ -12,9 +12,7 @@ echo "<h1>A propos réalisée par {$name}</h1> ";
     <title>A Propos | Logma </title>
 
     <!--Feuille de CSS-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/specific/header.css">
-    <link rel="stylesheet" href="css/specific/footer.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- JS -->
     <script src="./js/components/header.js" type="text/javascript"></script>

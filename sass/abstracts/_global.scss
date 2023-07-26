@@ -1,0 +1,44 @@
+@use 'variables.scss' as *;
+
+:root {
+    .color-black {
+      color: $main-black;
+    }
+    .color-white {
+      color: $main-white;
+    }
+    .color-main {
+      color: $main-color;
+    }
+  
+    // Background
+  
+    .bg-color-black {
+      background-color: $main-black;
+    }
+    .bg-color-white {
+      background-color: $main-white;
+    }
+    .bg-color-main {
+      background-color: $main-color;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  img {
+    width: 100%;
+    pointer-events: none;
+    display: block;
+  }
+  
+  
+  
