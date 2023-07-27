@@ -468,24 +468,24 @@ footer h3 {
 /* === FORM ===*/
 .input {
   border-radius: 8px;
-  margin-bottom: 19px;
-  border-color: #f6f8fa;
+  border: 1px solid #f6f8fa;
+  color: white;
   font-size: 13px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif Makasar", serif;
 }
 
 .input-small {
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
 }
 
 .input-large {
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
   min-height: 180px;
 }
 
@@ -614,4 +614,8 @@ footer h3 {
     border-color: #010001;
   }
 }
+.small-line {
+  border-top: 1px solid #f6f8fa;
+}
+
 /* Silence is golden as they say :) *//*# sourceMappingURL=main.css.map */
