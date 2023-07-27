@@ -15,12 +15,8 @@
     bottom: 0;
     z-index: -1;
   }
+
   
-  .projects {
-    background-color: $main-color;
-    background-size: cover;
-    z-index: 1;
-  }
   
   .spacing-last-projects {
     gap: 3%;
@@ -66,9 +62,9 @@
   .video-hover:hover .overlay{
     opacity: 0.6;
   }
-    .wrap{
-      border-right: 1ch solid $main-white;
-      animation: blink 0.8s linear infinite;
-    }
+  .wrap{
+    border-right: 1ch solid $main-white;
+    animation: blink 0.8s linear infinite;
+  }
     
-    @keyframes blink { 50% { border-color: $main-black; }  }
+  @keyframes blink { 50% { border-color: $main-black; }  }
