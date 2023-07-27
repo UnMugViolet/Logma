@@ -5,10 +5,13 @@
     background-position: 50% 91.5%;
 }
 
-.bg-image-mountains{
-background-image: url(../ressources/img/men-in-moutains.jpg);
-}
+.bg-image-small{
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 48.5%;
 
+}
 
 @media (max-width:768px){
     .bg-image-layout{
@@ -17,4 +20,12 @@ background-image: url(../ressources/img/men-in-moutains.jpg);
         background-repeat: no-repeat;
         background-position: 43% 50.65%;
     }
+}
+
+.bg-image-mountains{
+    background-image: url(../ressources/img/men-in-moutains.jpg);
+}
+    
+.bg-image-car{
+    background-image: url(../ressources/img/car-iceland.jpg);
 }
