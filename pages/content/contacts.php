@@ -59,19 +59,19 @@
 
             <form action="" method="POST">
                   <label for="name"></label><br>
-                  <input class="w-full input input-small bg-color-black" type="text" name="name" placeholder="Nom" >
+                  <input class="w-full input input-small bg-color-black color-white" type="text" name="name" placeholder="Nom" >
                   <p><?php if(isset($name_error)) echo $name_error; ?></p>
 
                   <label for="subject"></label><br>
-                  <input class="w-full" type="text" placeholder="Objet">
+                  <input class="w-full input input-small bg-color-black color-white"  type="text" placeholder="Objet">
                   <p><?php if(isset($subject_error)) echo $subject_error; ?></p>
 
                   <label for="email"></label><br>
-                  <input class="w-full" type="text" name="email" placeholder="E-mail">
+                  <input class="w-full input input-small bg-color-black color-white"  type="text" name="email" placeholder="E-mail">
                   <p><?php if(isset($email_error)) echo $email_error; ?></p>
 
                   <label for="message"></label><br>
-                  <textarea class="w-full" name="message" placeholder="Votre Message"></textarea>
+                  <textarea class="w-full input input-large bg-color-black color-white"  name="message" placeholder="Votre Message"></textarea>
                   <p><?php if(isset($message_error)) echo $message_error; ?></p>
 
                   <input type="submit" name="submit" value="Envoyer" class="submit-cta">
@@ -95,8 +95,11 @@
         </div>
       </div>
     </section>
+    <div class="container bg-color-black">
+      <hr class="small-line container" />
+    </div>
     
-    <footer-component />
+    <footer-component/>
 </body>
 
 </html>
