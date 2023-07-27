@@ -15,18 +15,18 @@
     <script src="./js/script.js" type="text/javascript" defer></script>
     
     <!-- Favicon -->
-    <link rel="icon" href="/ressources/favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
 </head>
 
-<body >
+<body class="bg-color-black">
     <section class="bg-image-layout bg-image-mountains">
         <div>
             <header-component/>
         </div>
     </section>
-    <section class="container spacing-section ">
-        <div class="spacing-section">
+    <section class="spacing-section bg-color-white">
+        <div class="container spacing-section">
             <p>
                 Dans ce monde qui va si vite, nous on prend le temps. Le temps de répondre aux besoins de chaque client, chaque projet. 
             </p>

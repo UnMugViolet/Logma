@@ -1,8 +1,3 @@
-<?php
-$name = "Paul & Ben";
-echo "<h1>Bonjour ! ce site a été conçu par {$name}</h1> ";
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -22,7 +17,7 @@ echo "<h1>Bonjour ! ce site a été conçu par {$name}</h1> ";
     <script src="./js/script.js" type="text/javascript" defer></script>
     
     <!-- Favicon -->
-    <link rel="icon" href="/ressources/favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
 </head>
 
@@ -32,8 +27,13 @@ echo "<h1>Bonjour ! ce site a été conçu par {$name}</h1> ";
             <header-component/>
         </div>
     </section>
-    
+    <?php
+        $name = "Paul & Ben";
+        echo "<h1>Bonjour ! ce site a été conçu par {$name}</h1> ";
+    ?>
+
     <footer-component/>
 </body>
 
 </html>
+

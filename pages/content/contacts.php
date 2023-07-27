@@ -1,16 +1,10 @@
-<?php
-$name = "Paul & Ben";
-echo "<h1>Contact réalisée par {$name}</h1> ";
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Contacts | Logma </title>
+    <title>Contact | Logma </title>
 
     <!--Feuille de CSS-->
     <link rel="stylesheet" href="css/main.css">
@@ -21,9 +15,10 @@ echo "<h1>Contact réalisée par {$name}</h1> ";
     <script src="./js/script.js" type="text/javascript" defer></script>
     
     <!-- Favicon -->
-    <link rel="icon" href="/ressources/favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
 </head>
+
 
 <body >
     <section>
@@ -31,7 +26,11 @@ echo "<h1>Contact réalisée par {$name}</h1> ";
             <header-component/>
         </div>
     </section>
-    
+    <?php
+        $name = "Paul & Ben";
+        echo "<h1>Bonjour ! ce site a été conçu par {$name}</h1> ";
+    ?>
+
     <footer-component/>
 </body>
 
