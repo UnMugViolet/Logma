@@ -1,4 +1,7 @@
 /* All variables are stocked right there */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/* All variables are stocked right there */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 :root .color-black {
   color: #010001;
 }
@@ -75,7 +78,7 @@ h5 {
 
 p {
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
   font-size: 14px;
 }
@@ -289,12 +292,11 @@ nav div:nth-child(1) {
     margin-top: 20px;
   }
 }
-/* All variables are stocked right there */
 /* === FOOTER ===*/
 footer a {
   margin-left: 5px;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
   font-size: 14px;
   color: #f6f8fa;
@@ -383,7 +385,7 @@ footer h3 {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .first-cta:hover {
@@ -402,7 +404,7 @@ footer h3 {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .second-cta:hover {
@@ -507,7 +509,7 @@ footer h3 {
 .overlay p {
   color: #f6f8fa;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   top: 50%;
   left: 50%;
   text-decoration: underline;

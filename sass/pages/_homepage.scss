@@ -46,25 +46,26 @@
     transition: all 0.7s ease;
     background-color: $main-black;
   
-    p{
-      color: $main-white;
-      font-size: 1rem;
-      font-weight: 400;
-      top: 50%;
-      left: 50%;
-      text-decoration: underline;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
+
+  p{
+    color: $main-white;
+    font-size: 1rem;
+    font-weight: 200;
+    top: 50%;
+    left: 50%;
+    text-decoration: underline;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
-  
-  .video-hover:hover .overlay{
-    opacity: 0.6;
-  }
-  .wrap{
-    border-right: 1ch solid $main-white;
-    animation: blink 0.8s linear infinite;
-  }
-    
-  @keyframes blink { 50% { border-color: $main-black; }  }
+}
+
+.video-hover:hover .overlay{
+  opacity: 0.6;
+}
+.wrap{
+  border-right: 1ch solid $main-white;
+  animation: blink 0.8s linear infinite;
+}
+
+@keyframes blink { 50% { border-color: $main-black; }  }

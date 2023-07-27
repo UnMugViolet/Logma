@@ -13,7 +13,7 @@
   
     font-family: $main-font;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
   }
   
 .first-cta:hover {
@@ -33,14 +33,14 @@
 
   font-family: $main-font;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .second-cta:hover {
   background-color: $main-white;
   color: $main-black;
-  border: 1px solid $main-black;
-}
+  border: 1px solid $main-black;}
+
 
 .submit-cta {
   padding: 15px 35px;
