@@ -1,9 +1,20 @@
 .bg-image-layout{
-    height: 95vh;
+    height: 98vh;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 50% 91.5%;
 }
 
 .bg-image-mountains{
 background-image: url(../ressources/img/men-in-moutains.jpg);
+}
+
+
+@media (max-width:768px){
+    .bg-image-layout{
+        height: 60vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 43% 50.65%;
+    }
 }

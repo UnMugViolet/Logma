@@ -246,7 +246,7 @@ nav div:nth-child(1) {
   background-color: #f6f8fa;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .hamburger {
     display: block;
   }
@@ -410,15 +410,24 @@ footer h3 {
 }
 
 .bg-image-layout {
-  height: 95vh;
+  height: 98vh;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 91.5%;
 }
 
 .bg-image-mountains {
   background-image: url(../ressources/img/men-in-moutains.jpg);
 }
 
+@media (max-width: 768px) {
+  .bg-image-layout {
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 43% 50.65%;
+  }
+}
 /* === MAIN ===*/
 #BackgroundVideo {
   position: relative;
