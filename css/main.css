@@ -409,6 +409,16 @@ footer h3 {
   border: 1px solid #010001;
 }
 
+.bg-image-layout {
+  height: 95vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-image-mountains {
+  background-image: url(../ressources/img/men-in-moutains.jpg);
+}
+
 /* === MAIN ===*/
 #BackgroundVideo {
   position: relative;
