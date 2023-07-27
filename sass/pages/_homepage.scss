@@ -14,38 +14,35 @@
     top: 0;
     bottom: 0;
     z-index: -1;
-  }
+}
 
+.spacing-last-projects {
+  gap: 3%;
+  margin-top: 5%;
   
-  
-  .spacing-last-projects {
-    gap: 3%;
-    margin-top: 5%;
-    
-      span {
-        width: 33.33%;
-  
-      h4{
-        margin-top: 10px;
-      }
+    span {
+      width: 33.33%;
+
+    h4{
+      margin-top: 10px;
     }
   }
-  
-  .button-center-disposition {
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
-  }
-  
-  .overlay{
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    transition: all 0.7s ease;
-    background-color: $main-black;
-  
+}
+
+.button-center-disposition {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.overlay{
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.7s ease;
+  background-color: $main-black;
 
   p{
     color: $main-white;
