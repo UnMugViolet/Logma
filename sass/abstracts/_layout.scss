@@ -1,10 +1,10 @@
 /* === MISE EN PAGE GENERAL ===*/
 
-.absolute {
-  position: absolute;
+.absolute{
+    position: absolute;
 }
-
-.relative {
+  
+.relative{
   position: relative;
 }
 
@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.col-center {
+.col-center{
   flex-direction: column;
   align-items: center;
 }
@@ -52,7 +52,7 @@
   justify-content: flex-end;
 }
 
-.flex-col {
+.flex-col{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -63,30 +63,28 @@
   padding-bottom: 5%;
 }
 
-.w-full {
+.w-full{
   width: 100%;
 }
 
-.w-trois-quart {
+.w-trois-quart{
   width: 75%;
 }
 
-.w-un-quart {
+.w-un-quart{
   width: 25%;
 }
 
-.h-full {
+.h-full{
   height: 100%;
 }
 
-.h-trois-quart {
+.h-trois-quart{
   height: 75%;
 }
 
-.h-demi {
+.h-demi{
   height: 50%;
 }
-
-.bottom-0 {
-  bottom: 0;
-}
+  
+  

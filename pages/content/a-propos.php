@@ -1,8 +1,3 @@
-<?php
-$name = "Paul & Ben";
-echo "<h1>A propos réalisée par {$name}</h1> ";
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -25,12 +20,29 @@ echo "<h1>A propos réalisée par {$name}</h1> ";
 </head>
 
 <body >
-    <section>
+    <section class="bg-image-layout bg-image-mountains">
         <div>
             <header-component/>
         </div>
     </section>
-    
+    <section class="container spacing-section ">
+        <div class="spacing-section">
+            <p>
+                Dans ce monde qui va si vite, nous on prend le temps. Le temps de répondre aux besoins de chaque client, chaque projet. 
+            </p>
+            <p>
+                Aujourd’hui nous sommes en tournage pour MD surfboards, 1er créateur de planche de surf biosourcés, demain nous tournons pour Nohé, une marque de vêtements qui transporte leurs produits à la voile et après-demain nous partons réaliser un reportage sur l’accès à l’éducation au Maroc. La diversité, les rencontres ! Voilà ce qui nous plaît le plus au-delà des tournages. 
+            </p>
+            <p>
+                Vous pouvez nous confier l’identité de votre marque, entreprises, projet, vous pouvez être certains d’une chose c’est que l’on donnera tout pour créer les images qui vous ressemblent, prête à être diffusés.
+            </p>
+        </div>
+        <div class="button-center-disposition">
+            <a href="./contacts" class="second-cta ">
+                UN PROJET ? LET’S GO.
+            </a>
+        </div>
+    </section>
     <footer-component/>
 </body>
 

@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 /* All variables are stocked right there */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/* All variables are stocked right there */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 :root .color-black {
   color: #010001;
 }
@@ -169,10 +171,6 @@ p {
 
 .h-demi {
   height: 50%;
-}
-
-.bottom-0 {
-  bottom: 0;
 }
 
 /* === HEADER ===*/
@@ -434,7 +432,16 @@ footer h3 {
   border: 1px solid #010001;
 }
 
-/* All variables are stocked right there */
+.bg-image-layout {
+  height: 95vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-image-mountains {
+  background-image: url(../ressources/img/men-in-moutains.jpg);
+}
+
 /* === FORM ===*/
 .dual-col {
   display: grid;

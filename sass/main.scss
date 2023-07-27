@@ -11,8 +11,10 @@
 @use 'components/footer';
 @use 'components/scrollbar';
 @use 'components/buttons';
+@use 'components/bg-image';
 @use 'components/form';
 
 // Pages
-@use 'pages/homepage'
+@use 'pages/homepage';
+@use 'pages/about';
 
