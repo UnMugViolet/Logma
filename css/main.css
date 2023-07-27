@@ -448,12 +448,6 @@ footer h3 {
   z-index: -1;
 }
 
-.projects {
-  background-color: #666970;
-  background-size: cover;
-  z-index: 1;
-}
-
 .spacing-last-projects {
   gap: 3%;
   margin-top: 5%;
