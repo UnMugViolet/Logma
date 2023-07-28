@@ -20,19 +20,12 @@ footer{
       margin: auto;
     }
   }
-  
-  .footer-size{
-    height: 45vh;
-  
-      >div{
-        width: 33.33%;
-        height: 50%;
-      }
-  }
-  
+
+
   .logo-size{
     width: 20%;
     min-width: 100px;
+    margin-bottom: 15px;
   }
   
   .container-contact {
@@ -61,7 +54,10 @@ footer{
       }
   }
   
-  
+  .text-height{
+    margin-top: 25px;
+    height: 120px;
+  }
   .bottom-footer{
     margin-top: 5px;
     margin-bottom: 10px;

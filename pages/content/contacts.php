@@ -31,7 +31,7 @@
     <section class="spacing-section bg-color-black">
 
       <div class="container dual-col">
-        <div class="container w-full col-1">
+        <div class="container w-full dual-col-1">
           <?php
             if(isset($_POST['submit'])){
               $name = htmlspecialchars(stripslashes(trim($_POST['name'])));
@@ -93,7 +93,7 @@
           </div>
         </div>
 
-        <div class="container col-2 vertical-align spacing-section w-full">
+        <div class="container dual-col-2 vertical-align spacing-section w-full">
           <div>
             <div>
               <div class="object-center margin-whatsapp">
@@ -119,7 +119,7 @@
 
 
     <div class="bg-color-black">
-      <div class="bg-color-black">
+      <div class="bg-color-black spacing-section">
         <hr class="container small-line "  />
       </div>
     </div>
