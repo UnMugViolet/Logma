@@ -126,3 +126,13 @@
   }
   
 }
+
+/* Responsive */
+
+
+@media (max-width: 768px) {
+  .responsive-center{
+      display: flex;
+      justify-content: center;
+  }
+}

@@ -39,16 +39,16 @@
               $email = htmlspecialchars(stripslashes(trim($_POST['email'])));
               $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
               if(!preg_match("/^[A-Za-z .'-]+$/", $name)){
-                $name_error = '<p class="color-white">Votre Nom n\'est pas valide</p>';
+                $name_error = 'Votre Nom n\'est pas valide';
               }
               if(!preg_match("/^[A-Za-z .'-]+$/", $subject)){
-                $subject_error = '<p class="color-white">Votre sujet n\'est pas valide</p>';
+                $subject_error = 'Votre sujet n\'est pas valide';
               }
               if(!preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/", $email)){
-                $email_error = '<p class="color-white">Votre e-mail n\'est pas valide</p>';
+                $email_error = 'Votre e-mail n\'est pas valide';
               }
               if(strlen($message) === 0){
-                $message_error = '<p class="color-white">Votre message n\'est pas rempli</p>';
+                $message_error = 'Votre message est vide';
               }
             }
           ?>
@@ -60,21 +60,24 @@
             <form action="" method="POST">
                   <label for="name"></label><br>
                   <input class="w-full input input-small bg-color-black color-white" type="text" name="name" placeholder="Nom" >
-                  <p><?php if(isset($name_error)) echo $name_error; ?></p>
+                  <p class="color-white"><?php if(isset($name_error)) echo $name_error; ?></p>
 
                   <label for="subject"></label><br>
                   <input class="w-full input input-small bg-color-black color-white"  type="text" placeholder="Objet">
-                  <p><?php if(isset($subject_error)) echo $subject_error; ?></p>
+                  <p class="color-white"><?php if(isset($subject_error)) echo $subject_error; ?></p>
 
                   <label for="email"></label><br>
                   <input class="w-full input input-small bg-color-black color-white"  type="text" name="email" placeholder="E-mail">
-                  <p><?php if(isset($email_error)) echo $email_error; ?></p>
+                  <p class="color-white"><?php if(isset($email_error)) echo $email_error; ?></p>
 
                   <label for="message"></label><br>
                   <textarea class="w-full input input-large bg-color-black color-white"  name="message" placeholder="Votre Message"></textarea>
-                  <p><?php if(isset($message_error)) echo $message_error; ?></p>
+                  <p class="color-white"><?php if(isset($message_error)) echo $message_error; ?></p>
 
-                  <input type="submit" name="submit" value="Envoyer" class="submit-cta">
+                  <div class="responsive-center">
+                    <input type="submit" name="submit" value="Envoyer" class="submit-cta">
+                  </div>
+
                   <?php 
                   if(isset($_POST['submit']) && !isset($name_error) && !isset($subject_error) && !isset($email_error) && !isset($message_error)){
                       $to = 'contact@logma-production.com'; // edit here
@@ -105,7 +108,7 @@
 
             </div>
             <div>
-              <img src="./ressources/img/baptiste-fablet.jpg" alt="">
+              <img src="./ressources/img/baptiste-fablet.jpg" alt="baptiste fablet au travail">
             </div>
           </div>
 
