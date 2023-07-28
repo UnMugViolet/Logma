@@ -20,11 +20,17 @@ footer{
       margin: auto;
     }
   }
-
+  .footer-size{
+    height: 550px;
+  }
 
   .logo-size{
     width: 20%;
     min-width: 100px;
+
+  }
+
+  .margin-logo{
     margin-bottom: 15px;
   }
   
@@ -68,5 +74,12 @@ footer{
   
     a:hover{
       color: $main-white;
+    }
+  }
+
+
+  @media (max-width: 860px) {
+    .footer-size{
+      height: 700px;
     }
   }

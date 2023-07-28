@@ -21,14 +21,14 @@
 
 </head>
 
-<body >
+<body class="bg-color-black">
     <section class="bg-image-small bg-image-car">
         <div>
             <header-component/>
         </div>
     </section>
 
-    <section class="spacing-section bg-color-black">
+    <section class="spacing-section ">
 
       <div class="container dual-col">
         <div class="container w-full dual-col-1">
@@ -118,11 +118,6 @@
     </section>
 
 
-    <div class="bg-color-black">
-      <div class="bg-color-black spacing-section">
-        <hr class="container small-line "  />
-      </div>
-    </div>
     
     <footer-component/>
 </body>
