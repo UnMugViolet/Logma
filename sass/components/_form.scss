@@ -5,11 +5,9 @@
 .input{
     border-radius: 8px;
     border: 1px solid $main-white;
-    color: #ffff;
-    font-size: 13px;
 
+    font-size: 14px;
     font-family: $title-font ;
-
 }
 
 .input-small{
@@ -21,9 +19,12 @@
 
 
 .input-large{
+
     padding-top: 12px;
     padding-right: 12px;
     padding-bottom: 12px;
     padding-left: 12px;
+
+    max-width: 681px ;
     min-height: 180px;
 }
