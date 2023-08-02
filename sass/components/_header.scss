@@ -131,3 +131,9 @@ nav div:nth-child(1) {
     margin-top: 20px;
   }
 }
+
+@media (max-width:768px){
+  .header-content{
+    padding: 20px 0px 20px 0px;
+  }
+}
