@@ -5,7 +5,6 @@
 footer{
 
     a{
-      margin-left: 5px;
       font-family: $main-font;
       font-weight: 300;
       text-decoration: none;
@@ -50,6 +49,7 @@ footer{
   }
   
   .icons-footer{
+
       svg{
         fill: $main-white;
         transition: all 0.4s ease;
@@ -61,9 +61,12 @@ footer{
   }
   
   .text-height{
+    margin-left: 5px;
+
     margin-top: 25px;
     height: 120px;
   }
+  
   .bottom-footer{
     margin-top: 5px;
     margin-bottom: 10px;
@@ -71,7 +74,10 @@ footer{
       margin-top: auto;
       margin-bottom: auto;
     }
-  
+    a{
+      margin-left: 5px;
+
+    }
     a:hover{
       color: $main-white;
     }

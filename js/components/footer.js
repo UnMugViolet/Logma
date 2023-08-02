@@ -26,8 +26,8 @@ class Footer extends HTMLElement {
   
               <div class="triple-col-2 col-center ">
                   <h5 class="color-white text-center-left">Suivez nous</h5>
-                  <div class="center-responsive-left">
-                      <div>
+                  <div class="center-responsive-left text-height">
+                      <div class="flex-col h-full">
                           <a href="https://www.linkedin.com/company/logma-agency/" target="_blank" class="icons-footer">
                               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="vertical-align"
                                   viewBox="-2 -2 24 24">

@@ -85,6 +85,48 @@ p {
   font-size: 14px;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-family: "Noto Serif Makasar", serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 46px;
+  }
+  h2 {
+    font-family: "Noto Serif Makasar", serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  h3 {
+    font-family: "Noto Serif Makasar", serif;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 23px;
+  }
+  h4 {
+    text-transform: uppercase;
+    font-family: "Noto Serif Makasar", serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+  }
+  h5 {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    text-align: left;
+    margin: 0;
+  }
+  p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 14px;
+  }
+}
 /* === MISE EN PAGE GENERAL ===*/
 .absolute {
   position: absolute;
@@ -396,7 +438,6 @@ nav div:nth-child(1) {
 }
 /* === FOOTER ===*/
 footer a {
-  margin-left: 5px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   text-decoration: none;
@@ -448,6 +489,7 @@ footer h3 {
 }
 
 .text-height {
+  margin-left: 5px;
   margin-top: 25px;
   height: 120px;
 }
@@ -459,6 +501,9 @@ footer h3 {
 .bottom-footer p {
   margin-top: auto;
   margin-bottom: auto;
+}
+.bottom-footer a {
+  margin-left: 5px;
 }
 .bottom-footer a:hover {
   color: #f6f8fa;
