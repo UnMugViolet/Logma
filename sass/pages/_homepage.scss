@@ -2,7 +2,7 @@
 
 /* === MAIN ===*/
 
-#BackgroundVideo {
+.background-video-homepage {
     position: relative;
     width: 100%;
     height: 99.3vh;
@@ -63,3 +63,14 @@
 }
 
 @keyframes blink { 50% { border-color: $main-black; }  }
+
+
+
+
+/* Responsive */ 
+
+@media (max-width: 768px){
+  .background-video-homepage {
+    height: 60vh;
+  }
+}
