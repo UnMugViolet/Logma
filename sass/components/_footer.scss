@@ -20,7 +20,7 @@ footer{
     }
   }
   .footer-size{
-    height: 550px;
+    height: 50vh;
   }
 
   .logo-size{
@@ -85,7 +85,18 @@ footer{
 
 
   @media (max-width: 860px) {
+
+    .bottom-footer{
+      margin-bottom: 5px;
+      p{
+        font-size: 11px;
+      }
+      a{
+        font-size: 11px;
+      }
+    }
+
     .footer-size{
-      height: 700px;
+      height: auto;
     }
   }

@@ -453,7 +453,7 @@ footer h3 {
 }
 
 .footer-size {
-  height: 550px;
+  height: 50vh;
 }
 
 .logo-size {
@@ -510,8 +510,17 @@ footer h3 {
 }
 
 @media (max-width: 860px) {
+  .bottom-footer {
+    margin-bottom: 5px;
+  }
+  .bottom-footer p {
+    font-size: 11px;
+  }
+  .bottom-footer a {
+    font-size: 11px;
+  }
   .footer-size {
-    height: 700px;
+    height: auto;
   }
 }
 /* Scrollbar Styling */
