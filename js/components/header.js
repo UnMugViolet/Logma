@@ -2,7 +2,7 @@ class Header extends HTMLElement {
     constructor() {
       super();
     }
-  
+    
     connectedCallback() {
       this.innerHTML = `
       <header class="header-content w-full">
@@ -20,6 +20,9 @@ class Header extends HTMLElement {
                         </li>
                         <li class="nav-item">
                             <a class="link-style-nav" href="./galerie-photo">Galerie Photo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="link-style-nav" href="./login">Connexion</a>
                         </li>
                     </ul>
                     <ul class="flex-container vertical-align spacing-icon-header">

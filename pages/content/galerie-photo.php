@@ -7,7 +7,6 @@
     <title>Galerie Photo | Logma </title>
 
     <!--Feuille de CSS-->
-
     <link rel="stylesheet" href="css/main.css">
     
 

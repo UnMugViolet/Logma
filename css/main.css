@@ -1,3 +1,4 @@
+/* Silence is golden as they say :) */
 /* All variables are stocked right there */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 /* All variables are stocked right there */
@@ -224,6 +225,10 @@ p {
   bottom: 0;
 }
 
+.h-half-screen {
+  height: 50vh;
+}
+
 /* GRID LAYOUT */
 .dual-col {
   display: grid;
@@ -314,6 +319,7 @@ p {
     margin: 0 auto;
   }
 }
+/* Silence is golden as they say :) */
 /* === HEADER ===*/
 nav {
   align-items: center;
@@ -404,7 +410,7 @@ nav div:nth-child(1) {
   }
   .nav-menu {
     position: fixed;
-    right: -100%;
+    right: -200%;
     top: 0;
     gap: 0;
     flex-direction: column;
@@ -523,6 +529,7 @@ footer h3 {
     height: auto;
   }
 }
+/* Silence is golden as they say :) */
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   margin-top: 10px;
@@ -540,6 +547,7 @@ footer h3 {
   border: solid 3px transparent;
 }
 
+/* Silence is golden as they say :) */
 /* Buttons */
 .first-cta {
   padding: 18px 40px;
@@ -654,6 +662,7 @@ footer h3 {
   background-image: url(../ressources/img/car-iceland.jpg);
 }
 
+/* Silence is golden as they say :) */
 /* === MAIN ===*/
 .background-video-homepage {
   position: relative;
@@ -723,6 +732,8 @@ footer h3 {
     height: 60vh;
   }
 }
+/* Silence is golden as they say :) */
+/* Silence is golden as they say :) */
 .margin-whatsapp {
   margin-top: 5px;
   margin-bottom: 15px;
@@ -741,6 +752,4 @@ footer h3 {
 }
 .margin-number a:hover {
   color: #666970;
-}
-
-/* Silence is golden as they say :) *//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -3,14 +3,17 @@ RewriteEngine On
 # Allow htaccess to follow relative links
 Options +FollowSymLinks
 
-# Management of redirecting pages/content file to root
+# Management of redirecting pages/content files to root
 RewriteRule ^a-propos$ /logma/pages/content/a-propos.php [L]
 RewriteRule ^contacts$ /logma/pages/content/contacts.php [L]
 RewriteRule ^galerie-photo$ /logma/pages/content/galerie-photo.php [L]
 
-# Management of redirecting pages/legal file to root
+# Management of redirecting pages/legal files to root
 RewriteRule ^cgu$ /logma/pages/legal/cgu.html [L]
 RewriteRule ^mentions-legales$ /logma/pages/legal/mentions-legales.html [L]
+
+# Management of redirecting pages/admin files to root
+RewriteRule ^login$ /logma/pages/admin/login.php [L]
 
 # Management of errors on website 
 ErrorDocument 404 /logma/pages/errors/404.html
