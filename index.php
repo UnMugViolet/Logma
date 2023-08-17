@@ -20,13 +20,13 @@
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
 
-    <link rel="canonical" href="./index.html" />
+    <link rel="canonical" href="./index.php" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Accueil - logma." />
     <meta property="og:description"
         content="Derniers projets NOHÉ CAMPAGNE PLATYPUS CRAFT DIGITAL TRANSAHARIENNE REPORTAGE VOIR LES VIDÉOS Reportage, campagne de marque, contenu digitaux, motion design, nous vous accompagnons de A à Z afin de vous livrer des images prêtes à être diffusées. Shooting de marque MAROC Interview Mike Horn PARIS Route du Rhum 2022 SAINT-MALO Des clients heureux. Et nous aussi [&hellip;]" />
-    <meta property="og:url" content="index.html" />
+    <meta property="og:url" content="index.php" />
     <meta property="og:site_name" content="logma." />
     <meta property="article:modified_time" content="2023-04-03T10:04:41+00:00" />
     <meta property="og:image" content="./ressources/img/Logo-logma.png" />
@@ -45,7 +45,10 @@
                     <source src="./ressources/video/Bande demo logma.mp4">
                 </video>
             </div>
-            <header-component />
+
+            <?php
+            require "./components/header.php"
+            ?>
 
         </section>
 
@@ -182,7 +185,9 @@
         </section>
     </main>
 
-    <footer-component />
+    <?php
+        require "./components/footer.php"
+    ?>
 
 </body>
 

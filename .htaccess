@@ -9,15 +9,15 @@ RewriteRule ^contacts$ /logma/pages/content/contacts.php [L]
 RewriteRule ^galerie-photo$ /logma/pages/content/galerie-photo.php [L]
 
 # Management of redirecting pages/legal files to root
-RewriteRule ^cgu$ /logma/pages/legal/cgu.html [L]
-RewriteRule ^mentions-legales$ /logma/pages/legal/mentions-legales.html [L]
+RewriteRule ^cgu$ /logma/pages/legal/cgu.php [L]
+RewriteRule ^mentions-legales$ /logma/pages/legal/mentions-legales.php [L]
 
 # Management of redirecting pages/admin files to root
 RewriteRule ^login$ /logma/pages/admin/login.php [L]
 
 # Management of errors on website 
-ErrorDocument 404 /logma/pages/errors/404.html
-ErrorDocument 500 /logma/pages/errors/500.html
+ErrorDocument 404 /logma/pages/errors/404.php
+ErrorDocument 500 /logma/pages/errors/500.php
 ErrorDocument 503 /logma/pages/errors/maintenance-logma.html
 
 

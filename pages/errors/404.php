@@ -18,13 +18,9 @@
 </head>
 <body>
     <section>
-        <div>
-            <header-component/>
-        </div>
         <h1>Erreur 404</h1>
         <p>Cette page n'est pas disponible :(</p>
     </section>
     
-    <footer-component />
 </body>
 </html>

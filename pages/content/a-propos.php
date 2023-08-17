@@ -21,9 +21,9 @@
 
 <body class="bg-color-black">
     <section class="bg-image-layout bg-image-mountains">
-        <div>
-            <header-component/>
-        </div>
+            <?php
+                require "../../components/header.php"
+            ?>
     </section>
     <section class="spacing-section bg-color-white">
         <div class="container spacing-section">
@@ -43,7 +43,10 @@
             </a>
         </div>
     </section>
-    <footer-component/>
+    
+    <?php
+     require "../../components/footer.php"
+    ?>
 </body>
 
 </html>

@@ -22,16 +22,18 @@
 
 <body >
     <section>
-        <div>
-            <header-component/>
-        </div>
+            <?php
+                require "../../components/header.php"
+            ?>
     </section>
     <?php
         $name = "Paul & Ben";
         echo "<h1>Bonjour ! ce site a été conçu par {$name}</h1> ";
     ?>
 
-    <footer-component/>
+    <?php
+        require "../../components/footer.php"
+    ?>
 </body>
 
 </html>

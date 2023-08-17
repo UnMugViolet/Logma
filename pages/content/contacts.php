@@ -23,9 +23,9 @@
 
 <body class="bg-color-black">
     <section class="bg-image-small bg-image-car">
-        <div>
-            <header-component/>
-        </div>
+            <?php
+                require "../../components/header.php"
+            ?>
     </section>
 
     <section class="spacing-section ">
@@ -117,9 +117,9 @@
       </div>
     </section>
 
-
-    
-    <footer-component/>
+    <?php
+      require "../../components/footer.php"
+    ?>
 </body>
 
 </html>
