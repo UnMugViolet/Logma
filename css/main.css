@@ -5,6 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 /* All variables are stocked right there */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/* All variables are stocked right there */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 :root .color-black {
   color: #010001;
 }
@@ -225,6 +227,14 @@ p {
   bottom: 0;
 }
 
+.h-full-screen {
+  height: 100vh;
+}
+
+.h-quarter-screen {
+  height: 75vh;
+}
+
 .h-half-screen {
   height: 50vh;
 }
@@ -345,12 +355,12 @@ nav div:nth-child(1) {
   width: 80%;
 }
 
-.spacing-components-header {
-  gap: 60px;
-}
-
 .spacing-icon-header {
   gap: 20px;
+}
+
+.spacing-components-header {
+  gap: 60px;
 }
 
 .link-style-nav {
@@ -433,8 +443,11 @@ nav div:nth-child(1) {
     width: 73%;
   }
   .spacing-components-header {
-    gap: 30px;
+    gap: 15px;
     margin-top: 20px;
+  }
+  .spacing-icon-header {
+    gap: 0px;
   }
 }
 @media (max-width: 768px) {
@@ -473,6 +486,7 @@ footer h3 {
 
 .container-contact {
   display: flex;
+  text-decoration: none;
 }
 
 .container-contact-icon {
@@ -752,4 +766,12 @@ footer h3 {
 }
 .margin-number a:hover {
   color: #666970;
+}
+
+.spacing-button {
+  margin-top: 50px;
+}
+
+.spacing-title {
+  margin-top: 75px;
 }/*# sourceMappingURL=main.css.map */

@@ -11,8 +11,6 @@
     
 
     <!-- JS -->
-    <script src="./js/components/header.js" type="text/javascript"></script>
-    <script src="./js/components/footer.js" type="text/javascript"></script>
     <script src="./js/script.js" type="text/javascript" defer></script>
     
     <!-- Favicon -->
@@ -23,30 +21,52 @@
 <body class="bg-color-black">
     <section>
         <div>
-            <header-component/>
+            <?php
+                require "../../components/header.php"
+            ?>
         </div>
     </section>
 
     <section class="spacing-section">
-        <div class="container h-half-screen vertical-align object-center">
-            <div class="">
+        <div class="container h-quarter-screen vertical-align object-center">
+            <div class="spacing-title">
                 <div>
                     <h1 class="color-white">Se connecter :</h1>
+                    <h1 class="color-white">Vous êtes connecté</h1>
                 </div>
                 <div>
                     <form action="includes/login.inc.php" method="post">
                         <input class="w-full input input-small bg-color-black color-white"  type="text" name="mailuid" placeholder="Nom d'utilisateur/E-mail...">
                         <p class="color-white"><?php if(isset($email_error)) echo $email_error; ?></p>
                         
-                        <input class="w-full input input-small bg-color-black color-white"  type="text" placeholder="Mot de passe">
+                        <input class="w-full input input-small bg-color-black color-white"  type="password" name="pwd" placeholder="Mot de passe">
                         <p class="color-white"><?php if(isset($subject_error)) echo $subject_error; ?></p>
+                        <div class="object-center spacing-button">
+                            <button type="submit" class="submit-cta" name="login-submit">Se connecter</button>
+                        </div>
+                    </form>
+                    <div>
+                        <a href="signup.php" class="container-contact color-white">
+                        <p>Créer un compte </p>
+                        <p class="container-contact-icon"> →</p>
+                        </a>
+                    </div>
+
+
+
+                    <form action="includes/logout.inc.php" method="post">
+                        <div class="object-center spacing-button">
+                            <button type="submit" class="submit-cta" name="logout-submit">Déconnexion</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer-component/>
+    <?php
+        require "../../components/footer.php"
+    ?>
 </body>
 
 </html>
