@@ -27,14 +27,14 @@ nav div:nth-child(1) {
   width: 80%;
 }
 
+.spacing-icon-header{
+  gap: 20px;
+}
 
 .spacing-components-header{
   gap: 60px;
 }
 
-.spacing-icon-header{
-  gap: 20px;
-}
 
 .link-style-nav{
   position: relative;
@@ -127,8 +127,12 @@ nav div:nth-child(1) {
   }
 
   .spacing-components-header{
-    gap:30px;
+    gap:15px;
     margin-top: 20px;
+  }
+
+  .spacing-icon-header{
+    gap: 0px;
   }
 }
 
