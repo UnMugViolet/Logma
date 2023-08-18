@@ -36,7 +36,7 @@
                 </div>
                 <div>
                     <form action="includes/login.inc.php" method="post">
-                        <input class="w-full input input-small bg-color-black color-white"  type="text" name="mailuid" placeholder="Nom d'utilisateur/E-mail...">
+                        <input class="w-full input input-small bg-color-black color-white"  type="text" name="uid" placeholder="Nom d'utilisateur/E-mail...">
                         <p class="color-white"><?php if(isset($email_error)) echo $email_error; ?></p>
                         
                         <input class="w-full input input-small bg-color-black color-white"  type="password" name="pwd" placeholder="Mot de passe">
@@ -45,13 +45,13 @@
                             <button type="submit" class="submit-cta" name="login-submit">Se connecter</button>
                         </div>
                     </form>
+
                     <div>
                         <a href="signup.php" class="container-contact color-white">
-                        <p>Créer un compte </p>
+                        <p>Ajouter un compte admin </p>
                         <p class="container-contact-icon"> →</p>
                         </a>
                     </div>
-
 
 
                     <form action="includes/logout.inc.php" method="post">

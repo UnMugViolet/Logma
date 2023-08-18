@@ -9,13 +9,13 @@
                 <li class="nav-item">
                     <a class="link-style-nav" href="./a-propos">A propos</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item vertical-align ">
                     <a class="link-style-nav" href="./contacts">Contacts</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item vertical-align ">
                     <a class="link-style-nav" href="./galerie-photo">Galerie Photo</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item vertical-align ">
                     <a class="link-style-nav" href="./login">Connexion</a>
                 </li>
             </ul>
