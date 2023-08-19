@@ -101,12 +101,18 @@
   height: 100vh;
 }
 
-.h-quarter-screen{
-  height: 75vh;
+/* General Spacing */
+
+.mt-50{
+  margin-top: 50px;
 }
 
-.h-half-screen{
-  height: 50vh;
+.mt-100{
+  margin-top: 100px;
+}
+
+.mb-10{
+  margin-bottom: 10px;
 }
 
 /* GRID LAYOUT */

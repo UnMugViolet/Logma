@@ -80,10 +80,10 @@
 
                   <?php 
                   if(isset($_POST['submit']) && !isset($name_error) && !isset($subject_error) && !isset($email_error) && !isset($message_error)){
-                      $to = 'contact@logma-production.com'; // edit here
+                      $to = 'contact@logma-production.com'; // Changer le mail ici
                       $body = " Name: $name\n E-mail: $email\n Message:\n $message";
                       if(mail($to, $subject, $body)){
-                      echo '<p style="color: green">Message envoyé avec succès</p>';
+                      echo '<p style="color: green">Message envoyé avec succès !</p>';
                       }else{
                       echo '<p class="color-white">Une erreur s\'est produite, vous pouvez nous contacter à contact@logma-production.com</p>';
                       }

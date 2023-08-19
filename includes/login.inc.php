@@ -1,6 +1,6 @@
 <?php 
 
-if(isset($_POST["submit"]))
+if(isset($_POST["login-submit"]))
 {
     // Grabbing data 
     $uid = $_POST["uid"];

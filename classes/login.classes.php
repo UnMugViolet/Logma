@@ -4,16 +4,17 @@ class Login extends Dbh {
 
     protected function getUser($uid, $pwd){
         $stmt = $this->connect()->prepare('SELECT users_pwd FROM users WHERE users_uid = ? OR users_email = ?;');
+        $loginData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if (!$stmt->execute(array($uid, $pwd))){
             $stmt =null;
-            header("location: ../../login.php?error=stmtfailed");
+            header("location: ../pages/admin/login.php?error=stmtfailed");
             exit();
         }
 
-        if ($stmt->rowCount() == 0){
+        if (count($loginData) == 0){
             $stmt = null;
-            header("location: ../../login.php?error=usernotfound");
+            header("location: ../pages/admin/login.php?error=usernotfound");
             exit();
         }
         
@@ -22,7 +23,7 @@ class Login extends Dbh {
 
         if ($checkPwd == false){
             $stmt = null;
-            header("location: ../../login.php?error=wrongpassword");
+            header("location: ../pages/admin/login.php?error=wrongpassword");
             exit();
         }
         elseif($checkPwd == true){
@@ -30,13 +31,13 @@ class Login extends Dbh {
 
             if (!$stmt->execute(array($uid, $uid, $pwd))){
                 $stmt =null;
-                header("location: ../../login.php?error=stmtfailed");
+                header("location: ../pages/admin/login.php?error=stmtfailed");
                 exit();
             }
 
-            if ($stmt->rowCount() != 0){
+            if (count($loginData ) != 0){
                 $stmt = null;
-                header("location: ../../login.php?error=usernotfound");
+                header("location: ../pages/admin/login.php?error=usernotfound");
                 exit();
             }
 
@@ -48,10 +49,6 @@ class Login extends Dbh {
             
             $stmt = null;
         }
-
-
     }
-
-
-
 }
+?>

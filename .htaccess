@@ -13,7 +13,9 @@ RewriteRule ^cgu$ /logma/pages/legal/cgu.php [L]
 RewriteRule ^mentions-legales$ /logma/pages/legal/mentions-legales.php [L]
 
 # Management of redirecting pages/admin files to root
-RewriteRule ^login$ /logma/pages/admin/login.php [L]
+# RewriteRule ^access-admin-logma$ /logma/pages/admin/login.php [L]
+# RewriteRule ^signup$ /logma/pages/admin/signup.php [L]
+
 
 # Management of errors on website 
 ErrorDocument 404 /logma/pages/errors/404.php
