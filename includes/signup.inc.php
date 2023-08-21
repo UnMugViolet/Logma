@@ -19,5 +19,5 @@ if(isset($_POST["signup-submit"]))
     $signup->signupUser();
 
     // Going back to login
-    header("location: ../pages/admin/signup.php?error=none");
+    header("location: ../access-admin-logma/signup?error=none");
 }

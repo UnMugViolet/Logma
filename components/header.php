@@ -16,7 +16,7 @@
                     <a class="link-style-nav" href="./galerie-photo">Galerie Photo</a>
                 </li>
                 <li class="nav-item vertical-align ">
-                    <a class="link-style-nav" href="./pages/admin/login.php">Connexion</a>
+                    <a class="link-style-nav" href="./access-admin-logma">Connexion</a>
                 </li>
             </ul>
             <ul class="flex-container vertical-align spacing-icon-header">

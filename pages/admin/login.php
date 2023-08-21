@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+include "../../includes/login.inc.php"
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -7,10 +13,10 @@
     <title>Connexion | Logma </title>
 
     <!--Feuille de CSS-->
-    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     
     <!-- Favicon -->
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
 </head>
 
@@ -20,31 +26,41 @@
             <div>
                 <div>
                     <h1 class="color-white">Se connecter :</h1>
-                    <h1 class="color-white">Vous êtes connecté</h1>
                 </div>
                 <div>
-                    <form action="../../includes/login.inc.php" method="post">
-                        <input class="w-full input input-small bg-color-black color-white mb-10"  type="text" name="uid" placeholder="Nom d'utilisateur/E-mail...">
-                        
-                        <input class="w-full input input-small bg-color-black color-white"  type="password" name="pwd" placeholder="Mot de passe">
+                    <form action="./includes/login.inc.php" method="post">
+                        <input type="text" name="uid" placeholder="Nom d'utilisateur/E-mail..." class="flex w-full input input-small input-min-size bg-color-black color-white mb-10">
+                        <input type="password" name="pwd" placeholder="Mot de passe" class="flex w-full input input-small input-min-size bg-color-black color-white">
+
                         <div class="object-center mt-50">
                             <button type="submit" class="submit-cta" name="login-submit">Se connecter</button>
                         </div>
                     </form>
+                    <form action="./includes/logout.inc.php" method="post">
+                            <div class="object-center mt-50">
+                                <button type="submit" class="submit-cta" name="logout-submit">Déconnexion</button>
+                            </div>
+                        </form>
 
-                    <div>
-                        <a href="./signup.php" class="container-contact color-white">
-                        <p>Ajouter un compte admin </p>
-                        <p class="container-contact-icon"> →</p>
-                        </a>
-                    </div>
 
-                    
-                    <form action="../../includes/logout.inc.php" method="post">
-                        <div class="object-center mt-50">
-                            <button type="submit" class="submit-cta" name="logout-submit">Déconnexion</button>
+                    <?php
+                        if(isset($_SESSION["userid"]))
+                        {
+                        echo 
+                        '                    
+
+                        <a href="./access-admin-logma/signup" class="container-link-cta color-white">
+                                <div class="flex">
+                            <p>Ajouter un compte admin </p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
                         </div>
-                    </form>
+                        ';
+                        print_r($_SESSION["userid"]);
+                        }
+                        
+                        else{}
+                    ?>
                 </div>
             </div>
         </div>

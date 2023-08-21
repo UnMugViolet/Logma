@@ -232,6 +232,10 @@ p {
 }
 
 /* General Spacing */
+.mt-10 {
+  margin-top: 10px;
+}
+
 .mt-50 {
   margin-top: 50px;
 }
@@ -489,22 +493,6 @@ footer h3 {
   margin-bottom: 15px;
 }
 
-.container-contact {
-  display: flex;
-  text-decoration: none;
-}
-
-.container-contact-icon {
-  margin-left: 5px;
-  margin-bottom: 5px;
-  transform: translateZ(10);
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.container-contact:hover .container-contact-icon {
-  transform: translateX(5px) translateZ(0);
-}
-
 .icons-footer svg {
   fill: #f6f8fa;
   transition: all 0.4s ease;
@@ -627,6 +615,22 @@ footer h3 {
   border: 1px solid #010001;
 }
 
+.container-link-cta {
+  display: flex;
+  text-decoration: none;
+}
+
+.icon-link-cta {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  transform: translateZ(10);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container-link-cta:hover .icon-link-cta {
+  transform: translateX(5px) translateZ(0);
+}
+
 /* === FORM ===*/
 .input {
   border-radius: 8px;
@@ -651,6 +655,15 @@ footer h3 {
   min-height: 180px;
 }
 
+.input-min-size {
+  min-width: 611px;
+}
+
+@media (max-width: 768px) {
+  .input-min-size {
+    min-width: 0px;
+  }
+}
 .bg-image-layout {
   height: 98vh;
   background-size: cover;

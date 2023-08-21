@@ -11,9 +11,9 @@
                         simplement discuter.</p>
                 </div>
 
-                <a href="mailto:contact@logma-production" class="container-contact color-white">
+                <a href="mailto:contact@logma-production" class="container-link-cta color-white">
                     <h5>contact@logma-production </h5>
-                    <h5 class="container-contact-icon"> →</h5>
+                    <h5 class="icon-link-cta"> →</h5>
                 </a>
             </div>
 

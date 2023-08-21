@@ -17,23 +17,23 @@ class SignupContr extends Signup {
 
     public function signupUser(){
         if ($this->emptyInput() == false) {
-            header("location ./signup?error=emptyinput");
+            header("location: ../access-admin-logma/signup?error=emptyinput");
             exit();
         }
         if ($this->invalidUid() == false) {
-            header("location ./signup?error=username");
+            header("location: ../access-admin-logma/signup?error=username");
             exit();
         }
         if ($this->invalidEmail() == false) {
-            header("location ./signup?error=email");
+            header("location: ../access-admin-logma/signup?error=email");
             exit();
         }
         if ($this->pwdMatch() == false) {
-            header("location ./signup?error=passwordmatch");
+            header("location: ../access-admin-logma/signup?error=passwordmatch");
             exit();
         }
         if ($this->uidTakenCheck() == false) {
-            header("location ./signup?error=useroremailtaken");
+            header("location: ../access-admin-logma/signup?error=useroremailtaken");
             exit();
         }
 

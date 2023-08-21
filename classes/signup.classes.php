@@ -10,7 +10,7 @@ class Signup extends Dbh {
         
         if (!$stmt->execute(array($uid, $hashedPwd, $email))) {
             $stmt = null;
-            header("location: ./signup?error=stmtfailed");
+            header("location: ../access-admin-logma/signup?error=stmtfailed");
             exit();
         }
 
@@ -19,11 +19,11 @@ class Signup extends Dbh {
 
     protected function checkUser($uid, $email){
 
-        $stmt = $this->connect()->prepare('SELECT users_uid WHERE users_uid = ? OR users_email = ?;');
+        $stmt = $this->connect()->prepare('SELECT users_uid FROM users WHERE users_uid = ? OR users_email = ?;');
         
         if (!$stmt->execute(array($uid, $email))) {
             $stmt = null;
-            header("location: ./signup?error=stmtfailed");
+            header("location: ../access-admin-logma/signup?error=stmtfailed");
             exit();
         }
 
