@@ -33,22 +33,6 @@ footer{
     margin-bottom: 15px;
   }
   
-  .container-contact{
-    display: flex;
-    text-decoration: none;
-  }
-  
-  .container-contact-icon {
-    margin-left: 5px;
-    margin-bottom: 5px;
-    transform: translateZ(10);
-    transition: transform .6s cubic-bezier(.165,.84,.44,1)
-  }
-  
-  .container-contact:hover .container-contact-icon {
-    transform: translateX(5px) translateZ(0)
-  }
-  
   .icons-footer{
 
       svg{

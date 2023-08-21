@@ -15,10 +15,8 @@
     padding-top: 12px;
     padding-right: 12px;
     padding-bottom: 12px;
-    padding-left: 12px;
-    
+    padding-left: 12px;    
 }
-
 
 .input-large{
 
@@ -30,3 +28,13 @@
     min-height: 180px;
 }
 
+.input-min-size{
+    min-width: 611px;
+}
+
+@media (max-width:768px){
+
+    .input-min-size{
+        min-width: 0px;
+    }
+}

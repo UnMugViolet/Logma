@@ -2,6 +2,8 @@
 
 /* Buttons */
 
+  // First CTA
+
 .first-cta {
     padding: 18px 40px;
     background-color: $main-black;
@@ -21,6 +23,8 @@
   color: $main-black;
   border: 1px solid $main-white;
 }
+
+ // Second CTA
 
 .second-cta {
   padding: 18px 40px;
@@ -42,6 +46,8 @@
   border: 1px solid $main-black;}
 
 
+// Submit CTA
+
 .submit-cta {
   padding: 13px 35px;
   background-color: $main-black;
@@ -62,4 +68,22 @@
   background-color: $main-white;
   color: $main-black;
   border: 1px solid $main-black;
+}
+
+// Link CTA
+
+.container-link-cta{
+  display: flex;
+  text-decoration: none;
+}
+
+.icon-link-cta{
+  margin-left: 5px;
+  margin-bottom: 5px;
+  transform: translateZ(10);
+  transition: transform .6s cubic-bezier(.165,.84,.44,1)
+}
+
+.container-link-cta:hover .icon-link-cta {
+  transform: translateX(5px) translateZ(0)
 }
