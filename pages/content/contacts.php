@@ -24,7 +24,7 @@
 <body class="bg-color-black">
     <section class="bg-image-small bg-image-car">
             <?php
-                require "../../components/header.php"
+                include_once "../../components/header.php"
             ?>
     </section>
 
@@ -118,7 +118,7 @@
     </section>
 
     <?php
-      require "../../components/footer.php"
+      include_once "../../components/footer.php"
     ?>
 </body>
 

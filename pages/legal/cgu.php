@@ -22,7 +22,7 @@
 <body >
     <section>
         <?php
-            require "../../components/header.php"
+            include_once "../../components/header.php"
         ?>
     </section>
     <section class="spacing-section">
@@ -30,7 +30,7 @@
     </section>
     
     <?php
-        require "../../components/footer.php"
+        include_once "../../components/footer.php"
     ?>
 </body>
 

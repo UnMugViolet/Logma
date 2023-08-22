@@ -22,7 +22,7 @@
 <body class="bg-color-black">
     <section class="bg-image-layout bg-image-mountains">
             <?php
-                require "../../components/header.php"
+                include_once "../../components/header.php"
             ?>
     </section>
     <section class="spacing-section bg-color-white">
@@ -45,7 +45,7 @@
     </section>
     
     <?php
-     require "../../components/footer.php"
+     include_once "../../components/footer.php"
     ?>
 </body>
 
