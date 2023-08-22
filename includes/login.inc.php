@@ -14,6 +14,7 @@ if(isset($_POST["login-submit"]))
     // Running error handling and user signing up
     $login->loginUser();
 
+    // Confirm login in url
     header("location: ../access-admin-logma?error=none");
 
 }

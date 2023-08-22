@@ -1,35 +1,33 @@
 <?php 
 
 class Login extends Dbh {
-
     protected function getUser($uid, $pwd){
-        $stmt = $this->connect()->prepare('SELECT users_pwd FROM users WHERE users_uid = ? OR users_email = ?;');
+        $stmt = $this->connect()->prepare('SELECT * FROM users WHERE users_uid = ? OR users_email = ?;');
 
         if (!$stmt->execute(array($uid, $uid))){
-            $stmt =null;
-            header("location: ../access-admin-logma?error=stmtfailed1");
+            $stmt = null;
+            header("location: ../access-admin-logma?error=stmtfailed");
             exit();
         }
 
-        $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if (count($user) == 0){
+        if (!$user){
             $stmt = null;
             header("location: ../access-admin-logma?error=usernotfound");
             exit();
         }
         
-        $checkPwd = password_verify($pwd, $user[0]["users_pwd"]);
+        $checkPwd = password_verify($pwd, $user["users_pwd"]);
 
-        if ($checkPwd == false){
+        if (!$checkPwd){
             header("location: ../access-admin-logma?error=wrongpassword");
             exit();
         }
-        elseif($checkPwd == true){
+        else {
             session_start();
-            $_SESSION["userid"] = $user[0]["users_id"];
-            $_SESSION["useruid"] = $user[0]["users_uid"];   
-            
+            $_SESSION["userid"] = $user["users_id"];
+            $_SESSION["useruid"] = $user["users_uid"];
             $stmt = null;
         }
     }
