@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,6 +21,10 @@
 <body class="bg-color-black">
     <section class="h-full-screen">
         <div class="container h-full vertical-align object-center">
+            <?php
+                if(isset($_SESSION["userid"]))
+                {
+            ?>
             <div>
                 <div>
                     <h1 class="color-white">Ajouter un compte</h1>
@@ -40,6 +48,28 @@
                     </a>
                 </div>
             </div>
+            
+            <?php
+                }
+                else{
+            ?>
+            <div>
+                <div>
+                    <h1 class="color-white text-center">Accès refusé :)</h1>
+                </div>
+                <div>
+                    <div class="flex mt-10 object-center">
+                        <a href="../" class="container-link-cta color-white">
+                        <p>Retour à la page d'accueil </p>
+                        <p class="icon-link-cta"> →</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?php
+                }
+            ?>
+
         </div>
     </section>
 
