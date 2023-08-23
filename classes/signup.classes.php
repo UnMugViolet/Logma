@@ -10,7 +10,7 @@ class Signup extends Dbh {
         
         if (!$stmt->execute(array($uid, $hashedPwd, $email))) {
             $stmt = null;
-            header("location: ../access-admin-logma/signup?error=stmtfailed");
+                header("location: ../access-admin-logma/signup?error=stmtfailed");
             exit();
         }
 

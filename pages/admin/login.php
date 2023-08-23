@@ -58,13 +58,15 @@
                     </div>
                     <div>
                         <form action="./includes/login.inc.php" method="post">
-                            <input type="text" name="uid" placeholder="Nom d'utilisateur/E-mail..." class="flex w-full input input-small input-min-size bg-color-black color-white mb-10">
-                            <input type="password" name="pwd" placeholder="Mot de passe" class="flex w-full input input-small input-min-size bg-color-black color-white">
+                            <input type="text" name="uid" placeholder="Nom d'utilisateur/E-mail..." class="flex w-full input input-small input-size bg-color-black color-white mb-10">
+                            <input type="password" name="pwd" placeholder="Mot de passe" class="flex w-full input input-small input-size bg-color-black color-white">
 
                             <div class="object-center mt-50">
                                 <button type="submit" class="submit-cta" name="login-submit">Se connecter</button>
                             </div>
                         </form>
+
+
                 </div>
             </div>
             <?php

@@ -88,6 +88,13 @@ p {
   font-size: 14px;
 }
 
+.small-p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 12px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   h1 {
@@ -637,7 +644,6 @@ footer h3 {
   border: 1px solid #f6f8fa;
   font-size: 14px;
   font-family: "Noto Serif Makasar", serif;
-  max-width: 681px;
 }
 
 .input-small {
@@ -655,13 +661,13 @@ footer h3 {
   min-height: 180px;
 }
 
-.input-min-size {
-  min-width: 611px;
+.input-size {
+  width: 611px;
 }
 
 @media (max-width: 768px) {
-  .input-min-size {
-    min-width: 0px;
+  .input-size {
+    width: 100%;
   }
 }
 .bg-image-layout {
@@ -692,6 +698,14 @@ footer h3 {
 
 .bg-image-car {
   background-image: url(../ressources/img/car-iceland.jpg);
+}
+
+/* Silence is golden as they say :) */
+#hidden {
+  display: none;
+  opacity: 0;
+  margin-bottom: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Silence is golden as they say :) */

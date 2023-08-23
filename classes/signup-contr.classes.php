@@ -28,6 +28,10 @@ class SignupContr extends Signup {
             header("location: ../access-admin-logma/signup?error=email");
             exit();
         }
+        if ($this->pwdRequirement() == false) {
+            header("location: ../access-admin-logma/signup?error=pwdrequirement");
+            exit();
+        }
         if ($this->pwdMatch() == false) {
             header("location: ../access-admin-logma/signup?error=passwordmatch");
             exit();
@@ -74,6 +78,24 @@ class SignupContr extends Signup {
             $result = true;
         }
         return $result; 
+    }
+
+    private function pwdRequirement(){
+        $pwdMandatoryLength = 20;
+        $specialCharCount = 0;
+        $uppercaseCharCount = 0;
+    
+        for ($i = 0; $i < strlen($this->pwd); $i++) {
+            $char = $this->pwd[$i];
+            
+            if (ctype_upper($char)) {
+                $uppercaseCharCount++;
+            } elseif (preg_match('/[!@#$%^&*()\-_=+{};:,<.>]/', $char)) {
+                $specialCharCount++;
+            }
+        }
+    
+        return strlen($this->pwd) >= $pwdMandatoryLength && $specialCharCount >= 2 && $uppercaseCharCount >= 2;
     }
 
     private function pwdMatch(){

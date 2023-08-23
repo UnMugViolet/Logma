@@ -8,8 +8,8 @@
 
     font-size: 14px;
     font-family: $title-font ;
-    max-width: 681px;
 }
+
 
 .input-small{
     padding-top: 12px;
@@ -28,13 +28,13 @@
     min-height: 180px;
 }
 
-.input-min-size{
-    min-width: 611px;
+.input-size{
+    width: 611px;
 }
 
 @media (max-width:768px){
 
-    .input-min-size{
-        min-width: 0px;
+    .input-size{
+        width: 100%;
     }
 }

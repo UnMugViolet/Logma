@@ -1,0 +1,8 @@
+    @use '../abstracts'as *;
+
+    #hidden {
+        display: none;
+        opacity: 0;
+        margin-bottom: 0;
+        transition: opacity 0.3s ease-in-out;
+    }

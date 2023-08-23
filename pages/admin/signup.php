@@ -13,6 +13,9 @@
     <!--Feuille de CSS-->
     <link rel="stylesheet" href="../css/main.css">
 
+    <!-- JS -->
+    <script src="../js/components/hide-content.js" type="text/javascript" defer></script>
+
     <!-- Favicon -->
     <link rel="icon" href="../favicon.ico">
 
@@ -29,10 +32,13 @@
                 <div>
                     <h1 class="color-white">Ajouter un compte</h1>
                 </div>
-                <div>
+                <div class="input-size">
                     <form action="../includes/signup.inc.php" method="post">
                         <input type="text" name="uid" placeholder="Nom d'utilisateur" class="flex w-full input input-small bg-color-black color-white mb-10">
-                        <input type="password" name="pwd" placeholder="Mot de passe" class="w-full input input-small bg-color-black color-white mb-10">
+                        <input id="trigger" type="password" name="pwd" placeholder="Mot de passe" class="w-full input input-small bg-color-black color-white mb-10">
+                       
+                        <p id="hidden" class="color-white text-center-left small-p mb-10">Le mot de passe doit contenir au minimum 20 caractères, majuscule et minuscule ainsi que 2 caractères spéciaux</p>                      
+                       
                         <input type="password" name="pwdrepeat" placeholder="Confirmation du mot de passe" class="w-full input input-small bg-color-black color-white mb-10">
                         <input type="text" name="email" placeholder="E-mail" class="w-full input input-small bg-color-black color-white">
 
