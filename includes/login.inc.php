@@ -1,10 +1,10 @@
 <?php 
 
-if(isset($_POST["login-submit"]))
+if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     // Grabbing data 
-    $uid = $_POST["uid"];
-    $pwd = $_POST["pwd"];
+    $uid = htmlspecialchars($_POST["uid"], ENT_QUOTES, 'UFT-8');
+    $pwd = htmlspecialchars($_POST["pwd"], ENT_QUOTES, 'UFT-8');
 
     include "../classes/dbh.classes.php";
     include "../classes/login.classes.php";

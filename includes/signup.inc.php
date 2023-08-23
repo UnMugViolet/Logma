@@ -1,12 +1,12 @@
 <?php
 
-if(isset($_POST["signup-submit"]))
+if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     // Grabbing the data
-    $uid = $_POST["uid"];
-    $pwd = $_POST["pwd"];
-    $pwdRepeat = $_POST["pwdrepeat"];
-    $email = $_POST["email"];
+    $uid = htmlspecialchars($_POST["uid"], ENT_QUOTES, 'UFT-8');
+    $pwd = htmlspecialchars($_POST["pwd"], ENT_QUOTES, 'UFT-8');
+    $pwdRepeat = htmlspecialchars($_POST["pwdrepeat"], ENT_QUOTES, 'UFT-8');
+    $email = htmlspecialchars($_POST["email"], ENT_QUOTES, 'UFT-8');
 
     // Instantiaite SignupContr class
     include "../classes/dbh.classes.php";
