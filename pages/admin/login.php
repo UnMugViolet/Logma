@@ -12,6 +12,9 @@
 
     <!--Feuille de CSS-->
     <link rel="stylesheet" href="./css/main.css">
+
+    <!-- JS -->
+    <script src="./js/error/modal.error.js" type="module" defer></script>
     
     <!-- Favicon -->
     <link rel="icon" href="./favicon.ico">
@@ -47,6 +50,7 @@
             </div>
 
 
+
             <?php
                 }
                 else{
@@ -54,7 +58,7 @@
             <div class="container h-full vertical-align object-center">
                 <div>
                     <div>
-                        <h1 class="color-white">Se connecter :</h1>
+                        <h1 class="color-white">Se connecter</h1>
                     </div>
                     <div>
                         <form action="./includes/login.inc.php" method="post">
@@ -65,14 +69,19 @@
                                 <button type="submit" class="submit-cta" name="login-submit">Se connecter</button>
                             </div>
                         </form>
-
-
                 </div>
             </div>
             <?php
                 }
             ?>
-
+            
+            <!-- Error Modal -->
+            <div id="errorModal" class="modal h-full w-full bg-faded-black">
+                <div class="modal-content bg-color-white w-full flex-container vertical-align ">
+                    <p id="modalText">Text par défaut</p>
+                    <span class="close color-main">&times;</span>
+                </div>
+            </div>
         </div>
     </section>
 

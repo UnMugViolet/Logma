@@ -15,6 +15,7 @@
 
     <!-- JS -->
     <script src="../js/components/hide-content.js" type="text/javascript" defer></script>
+    <script src="../js/error/modal.error.js" type="module" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" href="../favicon.ico">
@@ -75,6 +76,13 @@
             <?php
                 }
             ?>
+            <!-- Error Modal -->
+            <div id="errorModal" class="modal h-full w-full bg-faded-black">
+                <div class="modal-content bg-color-white w-full flex-container vertical-align ">
+                    <p id="modalText" class="">Text par défaut</p>
+                    <span class="close color-main">&times;</span>
+                </div>
+            </div>
 
         </div>
     </section>

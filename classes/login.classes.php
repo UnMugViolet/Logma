@@ -21,7 +21,7 @@ class Login extends Dbh {
         $checkPwd = password_verify($pwd, $user["users_pwd"]);
 
         if (!$checkPwd){
-            header("location: ../access-admin-logma?error=wrongpassword");
+            header("location: ../access-admin-logma?error=wronginformations");
             exit();
         }
         else {

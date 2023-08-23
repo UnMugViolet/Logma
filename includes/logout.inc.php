@@ -6,5 +6,5 @@ session_destroy();
 
 
 // Going back to root
-header("location: ../index.php?loggedout=true");
+header("location: ../index.php?error=none");
 
