@@ -9,9 +9,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $email = htmlspecialchars($_POST["email"], ENT_QUOTES, 'UFT-8');
 
     // Instantiaite SignupContr class
-    include "../classes/dbh.classes.php";
-    include "../classes/signup.classes.php";
-    include "../classes/signup-contr.classes.php";
+    require "../classes/dbh.classes.php";
+    require "../classes/signup.classes.php";
+    require "../classes/signup-contr.classes.php";
 
     $signup = new SignupContr($uid, $pwd, $pwdRepeat, $email);
     

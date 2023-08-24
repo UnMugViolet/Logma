@@ -1,27 +1,24 @@
 <?php
 
-class Signup extends Dbh {
+class Upload extends Dbh {
 
-    protected function setUser($uid, $pwd, $email){
+    protected function setImage($filetitle, $city){
 
-        $stmt = $this->connect()->prepare('INSERT INTO users (users_uid, users_pwd, users_email) VALUES (?,?,?);');
-
-        $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+        $stmt = $this->connect()->prepare('INSERT INTO gallery (gallery_title, gallery_city, gallery_imgFullName) VALUES (?,?,?,?);');
         
-        if (!$stmt->execute(array($uid, $hashedPwd, $email))) {
+        if (!$stmt->execute(array($filetitle, $city))) {
             $stmt = null;
                 header("location: ../access-admin-logma/signup?error=stmtfailed");
             exit();
         }
-
-            $stmt = null;
+        $stmt = null;
     }
 
-    protected function checkUser($uid, $email){
+    protected function checkImage($newFileName){
 
-        $stmt = $this->connect()->prepare('SELECT users_uid FROM users WHERE users_uid = ? OR users_email = ?;');
+        $stmt = $this->connect()->prepare('SELECT gallery_title FROM gallery WHERE gallery_title = ?;');
         
-        if (!$stmt->execute(array($uid, $email))) {
+        if (!$stmt->execute(array($newFileName))) {
             $stmt = null;
             header("location: ../access-admin-logma/signup?error=stmtfailed");
             exit();

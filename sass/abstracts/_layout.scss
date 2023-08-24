@@ -28,7 +28,6 @@
   margin: 0 auto;
 }
 
-
 .container {
   width: 80%;
   margin: 0 auto;
@@ -108,6 +107,11 @@
   margin-top: 10px;
 }
 
+.mt-20{
+  margin-top: 20px;
+}
+
+
 .mt-50{
   margin-top: 50px;
 }
@@ -119,6 +123,14 @@
   // Bottom
 .mb-10{
   margin-bottom: 10px;
+}
+
+.mb-100{
+  margin-bottom: 100px;
+}
+
+.pad-10{
+  padding: 10px;
 }
 
 /* GRID LAYOUT */

@@ -99,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="container ">
+            <div class="container">
                 <div class="triple-col spacing-last-projects ">
                     <span class="triple-col-1">
                         <a href="https://youtu.be/jGQK5btw2xc" class="relative video-hover">
