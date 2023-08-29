@@ -10,9 +10,15 @@ class Dbh {
             return $dbh;
         } 
         catch (PDOException $e) {
-            print "Erreur !:" . $e->getMessage() . "<br/>";
-            die();
+            die("Erreur !:" . $e->getMessage() . "<br/>");
         }
     }
 
 }
+
+$servername = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "logma-bdd";
+
+$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);

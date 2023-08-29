@@ -9,6 +9,7 @@ class Login extends Dbh {
             header("location: ../access-admin-logma?error=stmtfailed");
             exit();
         }
+        
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 

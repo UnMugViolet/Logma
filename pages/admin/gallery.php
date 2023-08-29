@@ -36,8 +36,9 @@
                 </div>
                 <div class="input-size">
                     <form action="../includes/gallery-upload.inc.php" method="post" enctype="multipart/form-data">
+                        <input type="text" name="filename" placeholder="Nom du fichier..." class="flex w-full input input-small bg-color-black color-white mb-10">
                         <input type="text" name="filetitle" placeholder="Titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
-                        <input  id="trigger" type="text" name="city" placeholder="Ville..." class="flex w-full input input-small bg-color-black color-white mb-10">
+                        <input id="trigger" type="text" name="projectName" placeholder="Nom du projet..." class="flex w-full input input-small bg-color-black color-white mb-10">
                         
                             <p id="hidden" class="color-white text-center-left small-p mb-10">
                                 Rappel : Pour garder l'esthétique du site il est préférable d'uploader les images par 3 ! 

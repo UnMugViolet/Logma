@@ -24,28 +24,56 @@
             ?>
     </section>
     <section class="w-full pad-10 ">
-        <div class="triple-col spacing-last-projects">
-            <span class="triple-col-1">
-                <div>
-                    <img src="./ressources/img/shooting-de-marque.jpg">
-                </div>
-                <h4 class="color-white">Shooting de marque</h4>
-                <h5 class="color-white">MAROC</h5>
-            </span>
-            <span class="triple-col-2">
-                <div>
-                    <img src="./ressources/img/interview-mike-horn.jpg">
-                </div>
-                <h4 class="color-white">Interview Mike Horn</h4>
-                <h5 class="color-white">PARIS</h5>
-            </span>
-            <span class="triple-col-3">
-                <div>
-                    <img src="./ressources/img/shooting-route-du-rhum.jpg">
-                </div>
-                <h4 class="color-white">Route du Rhum 2022</h4>
-                <h5 class="color-white">SAINT-MALO</h5>
-            </span>
+
+    <?php
+        include_once '../../classes/dbh.classes.php';
+
+        $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC";
+        $stmt = mysqli_stmt_init($conn);
+        $result = "";
+
+        $columnClasses = ['triple-col-1', 'triple-col-2', 'triple-col-3'];
+        $columnIndex = 0;
+        $pictureCounter = 0;
+
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+            echo 'Erreur SQL';
+        } else { 
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+
+            echo '<div class="triple-col spacing-last-projects">';
+
+            while($row = mysqli_fetch_assoc($result)) {
+                $currentClass = $columnClasses[$columnIndex % count($columnClasses)];
+
+                echo '
+                <span class="' . $currentClass . '">
+                    <div>
+                        <img class="gallery-image-size" src="./ressources/img/gallery/'. $row["imgFullNameGallery"] .'" alt="'. $row["titleGallery"] .'">
+                    </div>
+                    <h4 class="color-white">'. $row["titleGallery"] .'</h4>
+                    <h5 class="color-white">'. $row["projectGallery"] .'</h5>
+                </span>';
+
+                $columnIndex++;
+                $pictureCounter++;
+
+                if ($pictureCounter === 3) {
+                    echo '</div>'; 
+                    $pictureCounter = 0;
+                    if ($columnIndex > 0) {
+                        echo '<div class="triple-col spacing-last-projects">'; // Open a new div
+                    }
+                }
+            }
+
+            // Close the last div if it's not closed already
+            if ($pictureCounter > 0) {
+                echo '</div>';
+            }
+        }
+?>
         </div>
     </section>
     <?php
