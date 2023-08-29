@@ -63,9 +63,9 @@
                     echo '</div>'; 
                     $pictureCounter = 0;
                     if ($columnIndex > 0) {
-                        echo '<div class="triple-col spacing-last-projects">'; // Open a new div
+                        echo '<div class="triple-col spacing-last-projects">';
                     }
-                }
+                } 
             }
 
             // Close the last div if it's not closed already
