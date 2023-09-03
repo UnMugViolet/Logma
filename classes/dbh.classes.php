@@ -1,24 +1,21 @@
 <?php
 
-class Dbh {
-
-    protected function connect(){
+class Dbh
+{
+    public function connect()
+    {
         try {
+
             $dbusername = "root";
             $dbpassword = "";
             $dbh = new PDO('mysql:host=localhost;dbname=logma-bdd', $dbusername, $dbpassword);
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $dbh;
-        } 
-        catch (PDOException $e) {
+
+        } catch (PDOException $e) {
+
             die("Erreur !:" . $e->getMessage() . "<br/>");
+            
         }
     }
-
 }
-
-$servername = "localhost";
-$dbusername = "root";
-$dbpassword = "";
-$dbname = "logma-bdd";
-
-$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);

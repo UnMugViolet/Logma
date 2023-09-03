@@ -836,7 +836,6 @@ footer h3 {
 }
 
 .gallery-image-size {
-  height: 47vh;
   background-size: contain;
   background-repeat: no-repeat;
 }
