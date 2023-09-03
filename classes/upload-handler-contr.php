@@ -16,23 +16,23 @@ class UploadHandler
         $allowed = array("gif", "jpg", "jpeg", "png");
 
         if(empty($file) || empty($imageTitle) || empty($projectName)) {
-            header("location: ../access-admin-logma/signup?error=emptyinput");
+            $this->redirectToGallery("emptyinput");
             exit();
         }
 
         if (!in_array($fileActualExt, $allowed)) {
             $this->redirectToGallery("filetype");
-            return;
+            exit();
         }
 
         if ($fileError !== 0) {
             $this->redirectToGallery("default");
-            return;
+            exit();
         }
 
         if ($fileSize >= 2000000) {
             $this->redirectToGallery("filesize");
-            return;
+            exit();
         }
 
         // Generate a unique image name
@@ -53,7 +53,7 @@ class UploadHandler
     {
         // Prepare SQL statement to count rows in the 'gallery' table
         $sql = 'SELECT * FROM gallery;';
-        $stmt = $dbHandler->getDatabaseConnection()->prepare($sql);
+        $stmt = $dbHandler->connect()->prepare($sql);
 
         if (!$stmt) {
             $this->redirectToGallery("stmtfailed");

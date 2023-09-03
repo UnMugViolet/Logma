@@ -7,7 +7,7 @@ class DataHandler extends Dbh{
         $this->conn = $conn;
     }
 
-    protected function insertGalleryRecord($imageTitle, $projectName, $imageFullName, $setImageOrder, $fileDestination) {
+    public function insertGalleryRecord($imageTitle, $projectName, $imageFullName, $setImageOrder, $fileDestination) {
         // Insert data into the database
         $sql = "INSERT INTO gallery (titleGallery, projectGallery, imgFullNameGallery, orderGallery) VALUES (?, ?, ?, ?);";
         $stmt = $this->conn->prepare($sql);
@@ -32,7 +32,7 @@ class DataHandler extends Dbh{
     }
 
     // Add a method to get the database connection
-    protected function getDatabaseConnection() {
+    public function getDatabaseConnection() {
         return $this->conn;
     }
 }
