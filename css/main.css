@@ -15,11 +15,17 @@
 :root .color-main {
   color: #666970;
 }
+:root .color-red {
+  color: #D11A2A;
+}
 :root .bg-color-black {
   background-color: #010001;
 }
 :root .bg-color-white {
   background-color: #f6f8fa;
+}
+:root .bg-color-red {
+  background-color: #D11A2A;
 }
 :root .bg-color-main {
   background-color: #666970;
@@ -234,6 +240,18 @@ p {
 
 .bottom-0 {
   bottom: 0;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
 }
 
 .h-full-screen {
@@ -649,6 +667,30 @@ footer h3 {
   transform: translateX(5px) translateZ(0);
 }
 
+.delete-cta {
+  background-color: #D11A2A;
+  color: #f6f8fa;
+  border: 1px solid #D11A2A;
+  border-radius: 8px;
+  transition: all 0.7s ease;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+.delete-cta:hover {
+  opacity: 0.7;
+}
+.delete-cta::before {
+  content: "";
+  background-image: url("../ressources/img/Trash.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 25px;
+  display: block;
+  margin: 0 auto;
+}
+
 /* === FORM ===*/
 .input {
   border-radius: 8px;
@@ -833,11 +875,6 @@ footer h3 {
 }
 .margin-number a:hover {
   color: #666970;
-}
-
-.gallery-image-size {
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .spacing-button {

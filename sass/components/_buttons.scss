@@ -87,3 +87,32 @@
 .container-link-cta:hover .icon-link-cta {
   transform: translateX(5px) translateZ(0)
 }
+
+
+// Delete CTA
+
+.delete-cta {
+  background-color: $main-red;
+  color: $main-white;
+  border: 1px solid $main-red;
+  border-radius: 8px;
+  transition: all 0.7s ease;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    opacity: 0.7; 
+  }
+
+  &::before {
+    content: ''; 
+    background-image: url('../ressources/img/Trash.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 25px;
+    display: block;
+    margin: 0 auto;
+  }
+}
