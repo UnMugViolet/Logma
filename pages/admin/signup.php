@@ -41,11 +41,16 @@
                         <input type="text" name="uid" placeholder="Nom d'utilisateur" class="flex w-full input input-small bg-color-black color-white mb-10">
                         <input id="trigger" type="password" name="pwd" placeholder="Mot de passe" class="w-full input input-small bg-color-black color-white mb-10">
                        
-                        <p id="hidden" class="color-white text-center-left small-p mb-10">Le mot de passe doit contenir au minimum 20 caractères, majuscule et minuscule ainsi que 2 caractères spéciaux</p>                      
+                        <p id="hidden" class="color-white text-center-left small-p mb-10">Le mot de passe doit contenir au minimum 16 caractères, majuscule et minuscule ainsi que 2 caractères spéciaux</p>                      
                        
                         <input type="password" name="pwdrepeat" placeholder="Confirmation du mot de passe" class="w-full input input-small bg-color-black color-white mb-10">
-                        <input type="text" name="email" placeholder="E-mail" class="w-full input input-small bg-color-black color-white">
+                        <input type="text" name="email" placeholder="E-mail" class="w-full input input-small bg-color-black color-white mb-10">
 
+                        <select name="userrole" class="w-full input input-small bg-color-black color-white mb-10">
+                            <option value="admin">Admin</option>
+                            <option value="dev">Dev</option>
+                            <option value="user">User</option>
+                        </select>
                         <div class="object-center mt-50">
                             <button type="submit" class="submit-cta" name="signup-submit">Créer un compte</button>
                         </div>
@@ -80,7 +85,7 @@
                 }
             ?>
             <!-- Error Modal -->
-            <div id="errorModal" class="modal h-full w-full bg-faded-black">
+            <div id="errorModal" class="modal top-0 left-0 h-full w-full bg-faded-black">
                 <div class="modal-content bg-color-white w-full flex-container vertical-align ">
                     <p id="modalText" class="">Text par défaut</p>
                     <span class="close color-main">&times;</span>

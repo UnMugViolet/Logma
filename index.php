@@ -38,7 +38,7 @@
     <main>
         <section>
             <div>
-                <video autoplay muted loop class="background-video-homepage">
+                <video autoplay muted loop class="background-video-homepage top-0 left-0 right-0">
                     <source src="./ressources/video/Bande demo logma.mp4">
                 </video>
             </div>
