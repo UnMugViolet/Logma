@@ -5,7 +5,6 @@ class Dbh
     public function connect()
     {
         try {
-
             $dbusername = "root";
             $dbpassword = "";
             $dbh = new PDO('mysql:host=localhost;dbname=logma-bdd', $dbusername, $dbpassword);
@@ -13,9 +12,7 @@ class Dbh
             return $dbh;
 
         } catch (PDOException $e) {
-
             die("Erreur !:" . $e->getMessage() . "<br/>");
-            
         }
     }
 }

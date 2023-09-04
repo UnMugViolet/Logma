@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -11,6 +16,7 @@
 
     <!-- JS -->
     <script src="./js/script.js" type="text/javascript" defer></script>
+    <script src="./js/error/modal.error.js" type="module" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
@@ -35,7 +41,8 @@
         $stmt = $db->prepare($sql);
 
         if (!$stmt) {
-            echo 'Erreur SQL';
+            header("location: ./galerie-photo?error=stmtfailed");
+            exit();
         } else {
             $stmt->execute();
             $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -47,19 +54,41 @@
             echo '<div class="triple-col spacing-last-projects">';
 
             foreach ($images as $row) {
-                $currentClass = $columnClasses[$columnIndex % count($columnClasses)];
 
                 // Generate the image source path
                 $imageSrc = "./ressources/img/gallery/" . $row["imgFullNameGallery"];
+                $imageAlt = $row["titleGallery"];
+                $title = $row["titleGallery"];
+                $project = $row["projectGallery"];
 
-                echo '
-                <span class="' . $currentClass . '">
-                    <div class="gallery-image-size h-full-screen" style="background-image:url(./ressources/img/gallery/'. $row["imgFullNameGallery"] .');">
-                    </div>
-                    <h4 class="color-white">' . $row["titleGallery"] . '</h4>
-                    <h5 class="color-white">' . $row["projectGallery"] . '</h5>
-                </span>';
+                // Determine the CSS class
+                $currentClass = $columnClasses[$columnIndex % count($columnClasses)];
 
+
+                // Check if the user is an admin
+                if ($userAdmin) {
+                    $form = '
+                        <form class="absolute right-0 top-0 pad-10" action="./includes/gallery-delete.inc.php" method="post">
+                            <input type="hidden" name="filename" value="' . $row["imgFullNameGallery"] . '">
+                            <button class ="delete-cta" type="submit" name="deleteImage" value="Delete Image"></button>
+                        </form>
+                    ';
+                } else {
+                    $form = '';
+                }
+
+                // Output the HTML
+                echo <<<HTML
+                    <span class="$currentClass">
+                        <div class="relative">
+                            <img class="gallery-image-size w-full" src="$imageSrc" alt="$imageAlt">
+                            $form
+                        </div>
+                        <h4 class="color-white">$title</h4>
+                        <h5 class="color-white">$project</h5>
+                    </span>
+                HTML;
+                
                 $columnIndex++;
                 $pictureCounter++;
 

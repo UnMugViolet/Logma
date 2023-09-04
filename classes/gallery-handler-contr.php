@@ -1,6 +1,6 @@
 <?php
 
-class UploadHandler
+class UploadHandler 
 {
     public function handleFileUpload($dbHandler, $imageTitle, $projectName, $newFileName)
     {
@@ -15,7 +15,7 @@ class UploadHandler
 
         $allowed = array("gif", "jpg", "jpeg", "png");
 
-        if(empty($file) || empty($imageTitle) || empty($projectName)) {
+        if(empty($newFileName) || empty($file) || empty($imageTitle) || empty($projectName)) {
             $this->redirectToGallery("emptyinput");
             exit();
         }
@@ -34,19 +34,28 @@ class UploadHandler
             $this->redirectToGallery("filesize");
             exit();
         }
+        
 
-        // Generate a unique image name
-        $imageFullName = $newFileName . "." . uniqid("", false) . "." . $fileActualExt;
-        $fileDestination = "../ressources/img/gallery/" . $imageFullName;
+            // Generate a unique image name
+            $imageFullName = $newFileName . "." . uniqid("", false) . "." . $fileActualExt;
+            $fileDestination = "../ressources/img/gallery/" . $imageFullName;
 
-        // Calculate $setImageOrder by calling the calculateImageOrder method
-        $setImageOrder = $this->calculateImageOrder($dbHandler);
+            // Calculate $setImageOrder by calling the calculateImageOrder method
+            $setImageOrder = $this->calculateImageOrder($dbHandler);
 
-        // Insert data into the database
-        $dbHandler->insertGalleryRecord($imageTitle, $projectName, $imageFullName, $setImageOrder, $fileDestination);
+            // Insert data into the database
+            $dbHandler->insertGalleryRecord($imageTitle, $projectName, $imageFullName, $setImageOrder, $fileDestination);
 
-        // Move the uploaded file to its destination
-        move_uploaded_file($fileTempName, $fileDestination);
+            // Move the uploaded file to its destination
+            move_uploaded_file($fileTempName, $fileDestination);
+    }
+
+
+
+    private function redirectToGallery($errorType)
+    {
+        header("location: ../access-admin-logma/gallery?error=$errorType");
+        exit();
     }
 
     private function calculateImageOrder($dbHandler)
@@ -69,11 +78,5 @@ class UploadHandler
 
         // Calculate the new $setImageOrder
         return $rowCount + 1;
-    }
-
-    private function redirectToGallery($errorType)
-    {
-        header("location: ../access-admin-logma/gallery?error=$errorType");
-        exit();
     }
 }
