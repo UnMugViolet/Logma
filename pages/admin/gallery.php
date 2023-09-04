@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
 ?>
 
 <!DOCTYPE html>
@@ -27,8 +28,9 @@
         <div class="container h-full vertical-align object-center">
             <!-- Logged -->
             <?php
-                if(isset($_SESSION["userid"]))
+                if($userAdmin)
                 {
+
             ?>
             <div>
                 <div>

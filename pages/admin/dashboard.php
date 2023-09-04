@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
+
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +25,9 @@
 <body class="bg-color-black">
     <section class="h-full-screen">
             <?php
-                if(isset($_SESSION["userid"]))
+                if($userAdmin)
                 {
+                
             ?>
             <div class="container">
                 <div>
