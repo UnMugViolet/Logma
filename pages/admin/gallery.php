@@ -1,6 +1,8 @@
 <?php
     session_start();
-    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
+    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin" ;
+    $userDev = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "dev";
+
 ?>
 
 <!DOCTYPE html>
@@ -28,25 +30,25 @@
         <div class="container h-full vertical-align object-center">
             <!-- Logged -->
             <?php
-                if($userAdmin)
+                if($userAdmin || $userDev)
                 {
 
             ?>
             <div>
                 <div>
-                    <h1 class="color-white">Télécharger des images</h1>
+                    <h1 class="color-white">Télécharger des images.</h1>
                 </div>
                 <div class="input-size">
                     <form action="../includes/gallery-upload.inc.php" method="post" enctype="multipart/form-data">
-                        <input type="text" name="filename" placeholder="Nom du fichier..." class="flex w-full input input-small bg-color-black color-white mb-10">
                         <input type="text" name="filetitle" placeholder="Titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
-                        <input id="trigger" type="text" name="projectName" placeholder="Nom du projet..." class="flex w-full input input-small bg-color-black color-white mb-10">
+                        <input id="trigger" type="text" name="projectName" placeholder="Sous-titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
                         
-                            <p id="hidden" class="color-white text-center-left small-p mb-10">
-                                Rappel : Pour garder l'esthétique du site il est préférable d'uploader les images par 3 ! 
-                            </p>   
-
-                        <input type="file" name="file" class="flex color-white mt-20">
+                        <p id="hidden" class="color-white text-center-left small-p mb-10">
+                            Rappel : Pour garder l'esthétique du site il est préférable d'uploader les images par 3 ! 
+                        </p>   
+                        
+                        <input type="file" name="file" class="flex color-white mt-30 vertical-align mb-10">
+                        <input type="text" name="filename" placeholder="Nom du fichier... " class="flex w-full input input-small bg-color-black color-white mb-10">
 
 
                         <div class="object-center mt-50">

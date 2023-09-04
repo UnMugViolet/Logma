@@ -169,6 +169,11 @@ p {
   margin: 0 auto;
 }
 
+.text-left {
+  text-align: left;
+  margin: 0 auto;
+}
+
 .text-center-left {
   text-align: center;
   margin: 0 auto;
@@ -267,6 +272,10 @@ p {
   margin-top: 20px;
 }
 
+.mt-30 {
+  margin-top: 50px;
+}
+
 .mt-50 {
   margin-top: 50px;
 }
@@ -277,6 +286,10 @@ p {
 
 .mb-10 {
   margin-bottom: 10px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
 }
 
 .mb-100 {
@@ -429,9 +442,6 @@ nav div:nth-child(1) {
 
 .header-content {
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   z-index: 9;
   background: rgba(0, 0, 0, 0.15);
   box-shadow: 0px 7px 60px 47px rgba(0, 0, 0, 0.15);
@@ -765,8 +775,6 @@ footer h3 {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 0;
-  top: 0;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -797,9 +805,6 @@ footer h3 {
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
-  left: 0;
-  right: 0;
-  top: 0;
   bottom: 0;
   z-index: -1;
 }

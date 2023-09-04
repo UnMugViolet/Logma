@@ -2,19 +2,18 @@
 
 class Signup extends Dbh {
 
-    protected function setUser($uid, $pwd, $email){
+    protected function setUser($uid, $pwd, $email, $userRole){
 
-        $sql = 'INSERT INTO users (users_uid, users_pwd, users_email) VALUES (?,?,?);';
+        $sql = 'INSERT INTO users (users_uid, users_pwd, users_email, users_role) VALUES (?,?,?,?);';
         $stmt = $this->connect()->prepare($sql);
 
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
         
-        if (!$stmt->execute(array($uid, $hashedPwd, $email))) {
+        if (!$stmt->execute(array($uid, $hashedPwd, $email, $userRole))) {
             $stmt = null;
                 header("location: ../access-admin-logma/signup?error=stmtfailed");
             exit();
         }
-
             $stmt = null;
     }
 

@@ -1,7 +1,7 @@
 <?php
     session_start();
     $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
-
+    $userDev = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "dev";
 ?>
 
 <!DOCTYPE html>
@@ -25,25 +25,35 @@
 <body class="bg-color-black">
     <section class="h-full-screen">
             <?php
-                if($userAdmin)
+                if($userAdmin || $userDev)
                 {
                 
             ?>
             <div class="container">
-                <div>
-                    <h1 class="color-white">
+                <div class="mt-50 mb-50">
+                    <h1 class="color-white text-left mb-10">
                         Bienvenue 
                         <?php echo $_SESSION["useruid"]; ?>
                         !   
                     </h1>
+                    <h5 class="color-white">
+                        Le plus valereux des 
+                        <?php echo $_SESSION["userrole"]; ?>
+                        !   
+                    </h5>
                 </div>
-
+                <?php
+                    if($userAdmin){
+                ?>
                 <div class="flex mt-10">
                     <a href="./signup" class="container-link-cta color-white">
                     <p>Ajouter un compte admin </p>
                     <p class="icon-link-cta"> →</p>
                     </a>
                 </div>
+                <?php
+                    }
+                ?>
                 <div class="flex">
                     <a href="./gallery" class="container-link-cta color-white">
                     <p>Ajouter des images à la galerie </p>
