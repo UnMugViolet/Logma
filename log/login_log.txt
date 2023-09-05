@@ -1,1 +1,10 @@
 
+[2023-09-05 16:39:31] ✅ SUCCESS: User logged out successfully
+[2023-09-05 16:39:45] ❌ Connexion attempt with unknow user
+[2023-09-05 16:47:18] 🌠 SUCCESS: User 3 logged out successfully
+[2023-09-05 16:47:44] ✅ Successful login for user: test
+[2023-09-05 16:47:51] 🌠 SUCCESS: User test logged out successfully
+[2023-09-05 16:48:06] ❌ Connexion attempt with unknow user
+[2023-09-05 16:48:18] ✅ Successful login for user: test
+[2023-09-05 16:48:24] 🌠 SUCCESS: User test logged out successfully
+[2023-09-05 16:48:33] ⚠️ Connexion attempt with known user

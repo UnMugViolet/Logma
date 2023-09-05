@@ -90,9 +90,15 @@
                             <h2 class="color-white">Fonctions Admin :</h2>
                         </div>
 
-                        <div class="flex mt-10">
+                        <div class="flex">
                             <a href="./signup" class="container-link-cta color-white">
                             <p>Ajouter un compte</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                        <div class="flex">
+                            <a href="./logs" class="container-link-cta color-white">
+                            <p>Journal de logs</p>
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>

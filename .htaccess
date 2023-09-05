@@ -17,6 +17,7 @@ RewriteRule ^access-admin-logma$ /logma/pages/admin/login.php [L]
 RewriteRule ^access-admin-logma/signup$ /logma/pages/admin/signup.php [L]
 RewriteRule ^access-admin-logma/gallery$ /logma/pages/admin/gallery.php [L]
 RewriteRule ^access-admin-logma/dashboard$ /logma/pages/admin/dashboard.php [L]
+RewriteRule ^access-admin-logma/logs$ /logma/pages/admin/logs.php [L]
 
 
 # Management of errors on website 

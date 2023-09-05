@@ -46,17 +46,17 @@ class Login extends Dbh {
         }
     }
 
-    private function logEvent($message, $severity = "INFO") {
+    private function logEvent($message, $severity = "LOGINOK") {
         $logFile = "../log/login_log.txt";
         $timestamp = date("Y-m-d H:i:s");
 
         $severityIcons = [
-            "INFO" => "ℹ️",
+            "LOGINOK" => "✅",
             "WARNING" => "⚠️",
             "ERROR" => "❌",
         ];
 
-        $severityIcon = isset($severityIcons[$severity]) ? $severityIcons[$severity] : $severityIcons["INFO"];
+        $severityIcon = isset($severityIcons[$severity]) ? $severityIcons[$severity] : $severityIcons["LOGINOK"];
         $logMessage = "[$timestamp] $severityIcon $message" . PHP_EOL;
 
         // Append the log message to the log file

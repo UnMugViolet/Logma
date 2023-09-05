@@ -3,7 +3,7 @@
 session_start();
 
 // Log a successful logout
-logEvent("SUCCESS: User logged out successfully", "OK");
+logEvent("SUCCESS: User ".$_SESSION["useruid"] ." logged out successfully", "LOGOUTOK");
 
 // Unset and destroy the session
 session_unset();
@@ -13,19 +13,19 @@ session_destroy();
 header("location: ../index.php?error=none");
 
 // Function to log events with severity indicators
-function logEvent($message, $severity = "INFO") {
+function logEvent($message, $severity = "LOGOUTOK") {
     $logFile = "../log/login_log.txt";
     $timestamp = date("Y-m-d H:i:s");
 
     // Define ASCII characters for severity indicators
     $severityIcons = [
-        "OK" => "✅",
+        "LOGOUTOK" => "🌠",
         "WARNING" => "⚠️",
         "ERROR" => "❌",
     ];
 
     // Check if the specified severity exists in the array, otherwise default to "INFO"
-    $severityIcon = isset($severityIcons[$severity]) ? $severityIcons[$severity] : $severityIcons["INFO"];
+    $severityIcon = isset($severityIcons[$severity]) ? $severityIcons[$severity] : $severityIcons["LOGOUTOK"];
 
     $logMessage = "[$timestamp] $severityIcon $message" . PHP_EOL;
 
