@@ -32,6 +32,7 @@ class Login extends Dbh {
             $_SESSION["userid"] = $user["users_id"];
             $_SESSION["useruid"] = $user["users_uid"];
             $_SESSION["userrole"] = $user["users_role"];
+            $_SESSION['last_activity'] = $_SERVER['REQUEST_TIME'];
             $stmt = null;
         }
     }

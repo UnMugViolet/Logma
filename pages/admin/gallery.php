@@ -4,7 +4,18 @@
     $userAdmin = false;
     $userDev = false;
     $user = false;
+    $userRole = '';
     
+    $auto_logout_time = 1800; 
+    $time = $_SERVER['REQUEST_TIME'];
+
+    // Autologout
+    if (isset($_SESSION['last_activity']) && ($time - $_SESSION['last_activity']) > $auto_logout_time) {
+        include("../../includes/logout.inc.php");
+        exit();
+    }
+
+    // Role checker
     if (isset($_SESSION["userrole"])) {
         $userRole = $_SESSION["userrole"];
     } else {
