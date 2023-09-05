@@ -1,6 +1,15 @@
 <?php
     session_start();
+    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
+    $userDev = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "dev";
+
+    // Redirect user already logged in dashboard
+    if ($userAdmin || $userDev) {
+        header("Location: ./access-admin-logma/dashboard");
+        exit();
+    }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,7 +26,7 @@
     <script src="./js/error/modal.error.js" type="module" defer></script>
     
     <!-- Favicon -->
-    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
 </head>
 

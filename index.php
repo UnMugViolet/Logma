@@ -15,7 +15,7 @@
     <script src="./js/script.js" type="text/javascript" defer></script>
     
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="canonical" href="./index.php" />
     <meta property="og:locale" content="fr_FR" />
