@@ -1,7 +1,33 @@
 <?php
     session_start();
-    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
-    $userDev = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "dev";
+
+    $userAdmin = false;
+    $userDev = false;
+    $user = false;
+    $userRole = '';
+
+    if (isset($_SESSION["userrole"])) {
+        $userRole = $_SESSION["userrole"];
+    } else {
+
+    }
+
+    switch ($userRole) {
+        case "admin":
+            $userAdmin = true;
+            break;
+        
+        case "dev":
+            $userDev = true;
+            break;
+        
+        case "user":
+            $user = true;
+            break;
+
+        default:
+            break;
+    }
 
     // Redirect user already logged in dashboard
     if ($userAdmin || $userDev) {

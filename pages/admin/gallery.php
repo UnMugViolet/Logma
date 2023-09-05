@@ -1,8 +1,38 @@
 <?php
     session_start();
-    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin" ;
-    $userDev = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "dev";
-
+    
+    $userAdmin = false;
+    $userDev = false;
+    $user = false;
+    
+    if (isset($_SESSION["userrole"])) {
+        $userRole = $_SESSION["userrole"];
+    } else {
+        header("HTTP/1.1 403 Forbidden");
+        include("../errors/403.html");
+        exit();
+    }
+    
+    switch ($userRole) {
+        case "admin":
+            $userAdmin = true;
+            break;
+        
+        case "dev":
+            $userDev = true;
+            $userAdmin = false;
+            break;
+        
+        case "user":
+            header("HTTP/1.1 403 Forbidden");
+            include("../errors/403.html");
+            exit();
+    
+        default:
+            header("HTTP/1.1 403 Forbidden");
+            include("../errors/403.html");
+            exit();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -28,13 +58,10 @@
 <body class="bg-color-black">
     <section class="h-full-screen">
         <div class="container h-full vertical-align object-center">
-            <!-- Logged -->
-            <?php
-                if($userAdmin || $userDev)
-                {
-
-            ?>
             <div>
+                <div class="block container icon-error mb-50">
+                    <img src="/logma/ressources/img/DownloadImage.svg" alt="Télécharger une image">
+                </div>
                 <div>
                     <h1 class="color-white">Télécharger des images.</h1>
                 </div>
@@ -64,27 +91,6 @@
                 </div>
             </div>
 
-            <!-- Not logged -->
-            <?php
-                }
-                else{
-            ?>
-            <div>
-                <div>
-                    <h1 class="color-white text-center">Accès refusé :)</h1>
-                </div>
-                <div>
-                    <div class="flex mt-10 object-center">
-                        <a href="../" class="container-link-cta color-white">
-                        <p>Retour à la page d'accueil </p>
-                        <p class="icon-link-cta"> →</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <?php
-                }
-            ?>
             <!-- Error Modal -->
             <div id="errorModal" class="modal top-0 left-0 h-full w-full bg-faded-black">
                 <div class="modal-content bg-color-white w-full flex-container vertical-align ">

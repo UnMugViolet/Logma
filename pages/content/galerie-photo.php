@@ -1,8 +1,35 @@
 <?php
     session_start();
-    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
 
+    $userAdmin = false;
+    $userDev = false;
+    $user = false;
+    $userRole = '';
+
+    if (isset($_SESSION["userrole"])) {
+        $userRole = $_SESSION["userrole"];
+    } else {
+        
+    }
+
+    switch ($userRole) {
+        case "admin":
+            $userAdmin = true;
+            break;
+        
+        case "dev":
+            $userDev = true;
+            break;
+        
+        case "user":
+            $user = true;
+            break;
+
+        default:
+            break;
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -51,7 +78,7 @@
             $columnIndex = 0;
             $pictureCounter = 0;
 
-            echo '<div class="triple-col spacing-last-projects">';
+            echo '<div class="triple-col spacing-last-projects vertical-align">';
 
             foreach ($images as $row) {
 
@@ -66,7 +93,7 @@
 
 
                 // Check if the user is an admin
-                if ($userAdmin) {
+                if ($userAdmin || $userDev) {
                     $form = '
                         <form class="absolute right-0 top-0 pad-10" action="./includes/gallery-delete.inc.php" method="post">
                             <input type="hidden" name="filename" value="' . $row["imgFullNameGallery"] . '">
