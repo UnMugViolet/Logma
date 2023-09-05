@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
+    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin" ;
+    $userDev = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "dev";
 
 ?>
 
@@ -29,30 +30,29 @@
         <div class="container h-full vertical-align object-center">
             <!-- Logged -->
             <?php
-                if($userAdmin)
+                if($userAdmin || $userDev)
                 {
+
             ?>
             <div>
                 <div>
-                    <h1 class="color-white">Ajouter un compte</h1>
+                    <h1 class="color-white">Télécharger des images.</h1>
                 </div>
                 <div class="input-size">
-                    <form action="../includes/signup.inc.php" method="post">
-                        <input type="text" name="uid" placeholder="Nom d'utilisateur" class="flex w-full input input-small bg-color-black color-white mb-10">
-                        <input id="trigger" type="password" name="pwd" placeholder="Mot de passe" class="w-full input input-small bg-color-black color-white mb-10">
-                       
-                        <p id="hidden" class="color-white text-center-left small-p mb-10">Le mot de passe doit contenir au minimum 16 caractères, majuscule et minuscule ainsi que 2 caractères spéciaux</p>                      
-                       
-                        <input type="password" name="pwdrepeat" placeholder="Confirmation du mot de passe" class="w-full input input-small bg-color-black color-white mb-10">
-                        <input type="text" name="email" placeholder="E-mail" class="w-full input input-small bg-color-black color-white mb-10">
+                    <form action="../includes/gallery-upload.inc.php" method="post" enctype="multipart/form-data">
+                        <input type="text" name="filetitle" placeholder="Titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
+                        <input id="trigger" type="text" name="projectName" placeholder="Sous-titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
+                        
+                        <p id="hidden" class="color-white text-center-left small-p mb-10">
+                            Rappel : Pour garder l'esthétique du site il est préférable d'uploader les images par 3 ! 
+                        </p>   
+                        
+                        <input type="file" name="file" class="flex color-white mt-30 vertical-align mb-10">
+                        <input type="text" name="filename" placeholder="Nom du fichier... " class="flex w-full input input-small bg-color-black color-white mb-10">
 
-                        <select name="userrole" class="w-full input input-small bg-color-black color-white mb-10">
-                            <option value="admin">Admin</option>
-                            <option value="dev">Dev</option>
-                            <option value="user">User</option>
-                        </select>
+
                         <div class="object-center mt-50">
-                            <button type="submit" class="submit-cta" name="signup-submit">Créer un compte</button>
+                            <button type="submit" class="submit-cta" name="image-submit">Télécharger</button>
                         </div>
                     </form>
                 </div>
@@ -63,6 +63,7 @@
                     </a>
                 </div>
             </div>
+
             <!-- Not logged -->
             <?php
                 }

@@ -2,24 +2,25 @@
 
 class Signup extends Dbh {
 
-    protected function setUser($uid, $pwd, $email){
+    protected function setUser($uid, $pwd, $email, $userRole){
 
-        $stmt = $this->connect()->prepare('INSERT INTO users (users_uid, users_pwd, users_email) VALUES (?,?,?);');
+        $sql = 'INSERT INTO users (users_uid, users_pwd, users_email, users_role) VALUES (?,?,?,?);';
+        $stmt = $this->connect()->prepare($sql);
 
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
         
-        if (!$stmt->execute(array($uid, $hashedPwd, $email))) {
+        if (!$stmt->execute(array($uid, $hashedPwd, $email, $userRole))) {
             $stmt = null;
                 header("location: ../access-admin-logma/signup?error=stmtfailed");
             exit();
         }
-
-        $stmt = null;
+            $stmt = null;
     }
 
     protected function checkUser($uid, $email){
 
-        $stmt = $this->connect()->prepare('SELECT users_uid FROM users WHERE users_uid = ? OR users_email = ?;');
+        $sql = 'SELECT users_uid FROM users WHERE users_uid = ? OR users_email = ?;';
+        $stmt = $this->connect()->prepare($sql);
         
         if (!$stmt->execute(array($uid, $email))) {
             $stmt = null;
@@ -31,7 +32,7 @@ class Signup extends Dbh {
         $loginData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         $resultCheck= "";
-        if (count($loginData ) > 0) {
+        if (count($loginData) > 0) {
             $resultCheck = false;
         }
         else{

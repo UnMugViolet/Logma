@@ -23,11 +23,15 @@
   margin: 0 auto;
 }
 
+.text-left {
+  text-align: left;
+  margin: 0 auto;
+}
+
 .text-center-left {
   text-align: center;
   margin: 0 auto;
 }
-
 
 .container {
   width: 80%;
@@ -97,6 +101,18 @@
   bottom: 0;
 }
 
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
 .h-full-screen{
   height: 100vh;
 }
@@ -106,6 +122,14 @@
 
 .mt-10{
   margin-top: 10px;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
+.mt-30{
+  margin-top: 50px;
 }
 
 .mt-50{
@@ -119,6 +143,18 @@
   // Bottom
 .mb-10{
   margin-bottom: 10px;
+}
+
+.mb-50{
+  margin-bottom: 50px;
+}
+
+.mb-100{
+  margin-bottom: 100px;
+}
+
+.pad-10{
+  padding: 10px;
 }
 
 /* GRID LAYOUT */

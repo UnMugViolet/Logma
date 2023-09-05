@@ -10,6 +10,10 @@
     .color-main {
       color: $main-color;
     }
+    .color-red {
+      color: $main-red;
+    }
+    
   
     // Background
   
@@ -18,6 +22,9 @@
     }
     .bg-color-white {
       background-color: $main-white;
+    }
+    .bg-color-red {
+      background-color: $main-red;
     }
     .bg-color-main {
       background-color: $main-color;

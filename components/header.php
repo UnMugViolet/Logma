@@ -1,10 +1,10 @@
 
-<header class="header-content w-full">
+<header class="header-content top-0 w-full">
     <nav class="container flex-container spacing-nav">
         <div class="logo-size">
             <a href="./index.php"><img src="./ressources/img/Logo-logma.png" alt="Logo société Logma"></a>
         </div>
-        <div class="vertical-align w-trois-quart nav-menu">
+        <div class="vertical-align w-trois-quart nav-menu w-full h-full">
             <ul class="flex-end w-full spacing-components-header">
                 <li class="nav-item">
                     <a class="link-style-nav" href="./a-propos">A propos</a>

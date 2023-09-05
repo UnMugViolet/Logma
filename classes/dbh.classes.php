@@ -1,18 +1,18 @@
 <?php
 
-class Dbh {
-
-    protected function connect(){
+class Dbh
+{
+    public function connect()
+    {
         try {
-            $username = "root";
-            $password = "";
-            $dbh = new PDO('mysql:host=localhost;dbname=logma-bdd', $username, $password);
+            $dbusername = "root";
+            $dbpassword = "";
+            $dbh = new PDO('mysql:host=localhost;dbname=logma-bdd', $dbusername, $dbpassword);
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $dbh;
-        } 
-        catch (PDOException $e) {
-            print "Erreur !:" . $e->getMessage() . "<br/>";
-            die();
+
+        } catch (PDOException $e) {
+            die("Erreur !:" . $e->getMessage() . "<br/>");
         }
     }
-
 }

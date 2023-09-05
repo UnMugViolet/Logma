@@ -8,6 +8,9 @@ const errorMessageMap = {
     pwdrequirement: "Le mot de passe ne comporte pas les critères attendus",
     passwordmatch: "La confirmation du mot de passe est différente du mot de passe rentré",
     useroremailtaken: "L'adresse e-mail ou le nom d'utilisateur est déjà utilisé",
+    filetype: "Le format de document n'est pas autorisé",
+    filesize : "Le fichier est trop volumineux, la limite est de 20 Mb",
+    nameimage: "Le nom de l'image est déjà pris, elle a peut être déjà été uploadée :)",
     default: "Une erreur est survenue",
 };
 

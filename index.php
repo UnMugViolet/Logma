@@ -38,7 +38,7 @@
     <main>
         <section>
             <div>
-                <video autoplay muted loop class="background-video-homepage">
+                <video autoplay muted loop class="background-video-homepage top-0 left-0 right-0">
                     <source src="./ressources/video/Bande demo logma.mp4">
                 </video>
             </div>
@@ -99,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="container ">
+            <div class="container">
                 <div class="triple-col spacing-last-projects ">
                     <span class="triple-col-1">
                         <a href="https://youtu.be/jGQK5btw2xc" class="relative video-hover">

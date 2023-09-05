@@ -6,13 +6,15 @@ class SignupContr extends Signup {
     private $pwd;
     private $pwdRepeat;
     private $email;
+    private $userRole;
 
-    public function __construct($uid, $pwd, $pwdRepeat, $email)
+    public function __construct($uid, $pwd, $pwdRepeat, $email, $userRole)
     {
         $this->uid = $uid;
         $this->pwd = $pwd;
         $this->pwdRepeat = $pwdRepeat;
         $this->email = $email;
+        $this->userRole = $userRole;
     }
 
     public function signupUser(){
@@ -28,10 +30,10 @@ class SignupContr extends Signup {
             header("location: ../access-admin-logma/signup?error=email");
             exit();
         }
-        if ($this->pwdRequirement() == false) {
-            header("location: ../access-admin-logma/signup?error=pwdrequirement");
-            exit();
-        }
+        // if ($this->pwdRequirement() == false) {
+        //     header("location: ../access-admin-logma/signup?error=pwdrequirement");
+        //     exit();
+        // }
         if ($this->pwdMatch() == false) {
             header("location: ../access-admin-logma/signup?error=passwordmatch");
             exit();
@@ -41,7 +43,7 @@ class SignupContr extends Signup {
             exit();
         }
 
-        $this->setUser($this->uid, $this->pwd, $this->email);
+        $this->setUser($this->uid, $this->pwd, $this->email, $this->userRole);
     }
 
     private function emptyInput(){
@@ -81,7 +83,7 @@ class SignupContr extends Signup {
     }
 
     private function pwdRequirement(){
-        $pwdMandatoryLength = 20;
+        $pwdMandatoryLength = 16;
         $specialCharCount = 0;
         $uppercaseCharCount = 0;
     
@@ -90,7 +92,7 @@ class SignupContr extends Signup {
             
             if (ctype_upper($char)) {
                 $uppercaseCharCount++;
-            } elseif (preg_match('/[!@#$%^&*()\-_=+{};:,<.>]/', $char)) {
+            } elseif (preg_match('/[!?@#$%^&*()\-_=+{};:,<.>]/', $char)) {
                 $specialCharCount++;
             }
         }

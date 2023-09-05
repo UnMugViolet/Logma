@@ -55,7 +55,7 @@
           <div class="w-full">
             <h1 class="color-white">On reste en contact ?</h1>
 
-            <form action="" method="POST">
+            <form action="" method="post">
                   <label for="name"></label><br>
                   <input class="w-full input input-small bg-color-black color-white" type="text" name="name" placeholder="Nom" >
                   <p class="color-white"><?php if(isset($name_error)) echo $name_error; ?></p>

@@ -23,38 +23,6 @@
 
 <body class="bg-color-black">
     <section class="h-full-screen">
-            <?php
-                if(isset($_SESSION["userid"]))
-                {
-            ?>
-            <div class="container">
-                <div>
-                    <h1 class="color-white">
-                        Bienvenue 
-                        <?php echo $_SESSION["useruid"]; ?>
-                        !   
-                    </h1>
-                </div>
-
-                <div class="flex mt-10">
-                    <a href="./access-admin-logma/signup" class="container-link-cta color-white">
-                    <p>Ajouter un compte admin </p>
-                    <p class="icon-link-cta"> →</p>
-                    </a>
-                </div>
-                <form action="./includes/logout.inc.php" method="post">
-                    <div class="object-center mt-50">
-                        <button type="submit" class="submit-cta" name="logout-submit">Déconnexion</button>
-                    </div>
-                </form>
-            </div>
-
-
-
-            <?php
-                }
-                else{
-            ?>
             <div class="container h-full vertical-align object-center">
                 <div>
                     <div>
@@ -71,12 +39,9 @@
                         </form>
                 </div>
             </div>
-            <?php
-                }
-            ?>
             
             <!-- Error Modal -->
-            <div id="errorModal" class="modal h-full w-full bg-faded-black">
+            <div id="errorModal" class="modal top-0 left-0 h-full w-full bg-faded-black">
                 <div class="modal-content bg-color-white w-full flex-container vertical-align ">
                     <p id="modalText">Text par défaut</p>
                     <span class="close color-main">&times;</span>

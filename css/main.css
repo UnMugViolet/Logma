@@ -1,4 +1,3 @@
-/* Silence is golden as they say :) */
 /* All variables are stocked right there */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 /* All variables are stocked right there */
@@ -16,11 +15,17 @@
 :root .color-main {
   color: #666970;
 }
+:root .color-red {
+  color: #D11A2A;
+}
 :root .bg-color-black {
   background-color: #010001;
 }
 :root .bg-color-white {
   background-color: #f6f8fa;
+}
+:root .bg-color-red {
+  background-color: #D11A2A;
 }
 :root .bg-color-main {
   background-color: #666970;
@@ -164,6 +169,11 @@ p {
   margin: 0 auto;
 }
 
+.text-left {
+  text-align: left;
+  margin: 0 auto;
+}
+
 .text-center-left {
   text-align: center;
   margin: 0 auto;
@@ -237,6 +247,18 @@ p {
   bottom: 0;
 }
 
+.top-0 {
+  top: 0;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
 .h-full-screen {
   height: 100vh;
 }
@@ -244,6 +266,14 @@ p {
 /* General Spacing */
 .mt-10 {
   margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 50px;
 }
 
 .mt-50 {
@@ -256,6 +286,18 @@ p {
 
 .mb-10 {
   margin-bottom: 10px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.pad-10 {
+  padding: 10px;
 }
 
 /* GRID LAYOUT */
@@ -348,7 +390,6 @@ p {
     margin: 0 auto;
   }
 }
-/* Silence is golden as they say :) */
 /* === HEADER ===*/
 nav {
   align-items: center;
@@ -401,9 +442,6 @@ nav div:nth-child(1) {
 
 .header-content {
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   z-index: 9;
   background: rgba(0, 0, 0, 0.15);
   box-shadow: 0px 7px 60px 47px rgba(0, 0, 0, 0.15);
@@ -546,7 +584,6 @@ footer h3 {
     height: auto;
   }
 }
-/* Silence is golden as they say :) */
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   margin-top: 10px;
@@ -564,7 +601,6 @@ footer h3 {
   border: solid 3px transparent;
 }
 
-/* Silence is golden as they say :) */
 /* Buttons */
 .first-cta {
   padding: 18px 40px;
@@ -641,6 +677,30 @@ footer h3 {
   transform: translateX(5px) translateZ(0);
 }
 
+.delete-cta {
+  background-color: #D11A2A;
+  color: #f6f8fa;
+  border: 1px solid #D11A2A;
+  border-radius: 8px;
+  transition: all 0.7s ease;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+.delete-cta:hover {
+  opacity: 0.7;
+}
+.delete-cta::before {
+  content: "";
+  background-image: url("../ressources/img/Trash.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 25px;
+  display: block;
+  margin: 0 auto;
+}
+
 /* === FORM ===*/
 .input {
   border-radius: 8px;
@@ -703,7 +763,6 @@ footer h3 {
   background-image: url(../ressources/img/car-iceland.jpg);
 }
 
-/* Silence is golden as they say :) */
 #hidden {
   display: none;
   opacity: 0;
@@ -711,14 +770,11 @@ footer h3 {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Silence is golden as they say :) */
 /* Styles for the modal */
 .modal {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 0;
-  top: 0;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -740,7 +796,6 @@ footer h3 {
   cursor: pointer;
 }
 
-/* Silence is golden as they say :) */
 /* === MAIN ===*/
 .background-video-homepage {
   position: relative;
@@ -750,9 +805,6 @@ footer h3 {
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
-  left: 0;
-  right: 0;
-  top: 0;
   bottom: 0;
   z-index: -1;
 }
@@ -810,8 +862,6 @@ footer h3 {
     height: 60vh;
   }
 }
-/* Silence is golden as they say :) */
-/* Silence is golden as they say :) */
 .margin-whatsapp {
   margin-top: 5px;
   margin-bottom: 15px;
