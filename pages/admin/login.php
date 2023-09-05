@@ -76,9 +76,9 @@
             </div>
             
             <!-- Error Modal -->
-            <div id="errorModal" class="modal top-0 left-0 h-full w-full bg-faded-black">
-                <div class="modal-content bg-color-white w-full flex-container vertical-align ">
-                    <p id="modalText">Text par défaut</p>
+            <div id="errorModal" class="error-modal top-0 left-0 h-full w-full bg-faded-black">
+                <div class="modal-content bg-color-white w-full flex-container vertical-align ">                    
+                    <p id="modalText" class="">Text par défaut</p>
                     <span class="close color-main">&times;</span>
                 </div>
             </div>
