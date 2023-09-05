@@ -6,7 +6,7 @@
     $user = false;
     $userRole = '';
 
-    $auto_logout_time = 1800; 
+    $auto_logout_time = 28800; 
     $time = $_SERVER['REQUEST_TIME'];
 
     // Autologout
@@ -15,7 +15,6 @@
         exit();
     }
 
-    // Role checker
     if (isset($_SESSION["userrole"])) {
         $userRole = $_SESSION["userrole"];
     } else {
@@ -43,7 +42,6 @@
             include("../errors/403.html");
             exit();
     }
-
 ?>
 
 <!DOCTYPE html>
