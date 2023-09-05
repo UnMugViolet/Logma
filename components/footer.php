@@ -74,7 +74,7 @@
     <p class="color-main text-center">© Logma production - 2023 Tous droits reservés<br></p>
     <div class="object-center vertical-align bottom-footer">
         <p class="color-main">Site Web éco conçue réalisé par </p>
-        <a href="https://github.com/UnMugViolet" class="color-main"> Paul. </a>
+        <a href="https://github.com/UnMugViolet" class="color-main"> Paul J. </a>
     </div>
 </div> 
 </footer>
