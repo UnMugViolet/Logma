@@ -19,31 +19,37 @@ class SignupContr extends Signup {
 
     public function signupUser(){
         if ($this->emptyInput() == false) {
-            header("location: ../access-admin-logma/signup?error=emptyinput");
+            $this->redirectToGallery("emptyinput");
             exit();
         }
         if ($this->invalidUid() == false) {
-            header("location: ../access-admin-logma/signup?error=username");
+            $this->redirectToGallery("username");
             exit();
         }
         if ($this->invalidEmail() == false) {
-            header("location: ../access-admin-logma/signup?error=email");
+            $this->redirectToGallery("email");
             exit();
         }
-        // if ($this->pwdRequirement() == false) {
-        //     header("location: ../access-admin-logma/signup?error=pwdrequirement");
-        //     exit();
-        // }
+        if ($this->pwdRequirement() == false) {
+            $this->redirectToGallery("pwdrequirement");
+            exit();
+        }
         if ($this->pwdMatch() == false) {
-            header("location: ../access-admin-logma/signup?error=passwordmatch");
+            $this->redirectToGallery("passwordmatch");
             exit();
         }
         if ($this->uidTakenCheck() == false) {
-            header("location: ../access-admin-logma/signup?error=useroremailtaken");
+            $this->redirectToGallery("useroremailtaken");
             exit();
         }
 
         $this->setUser($this->uid, $this->pwd, $this->email, $this->userRole);
+    }
+
+    private function redirectToGallery($errorType)
+    {
+        header("location: ../access-admin-logma/signup?error=$errorType");
+        exit();
     }
 
     private function emptyInput(){
