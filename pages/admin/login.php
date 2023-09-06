@@ -1,49 +1,22 @@
 <?php
     session_start();
-    
-    $userAdmin = false;
-    $userDev = false;
-    $user = false;
-    $userRole = '';
+    include_once('../../classes/session-manager.classes.php');
 
-    $auto_logout_time = 1800; 
-    $time = $_SERVER['REQUEST_TIME'];
+    $sessionManager = new SessionManager();
+    $sessionManager->checkAutoLogout();
 
-    // Autologout
-    if (isset($_SESSION['last_activity']) && ($time - $_SESSION['last_activity']) > $auto_logout_time) {
-        include("../../includes/logout.inc.php");
-        exit();
-    }
+    $sessionManager->checkUserRole();
+    $userAdmin = $sessionManager->getUserAdmin();
+    $userDev = $sessionManager->getUserDev();
+    $user = $sessionManager->getUser();
+    $notUser = $sessionManager->notUser();
 
-    // Role checker
-    if (isset($_SESSION["userrole"])) {
-        $userRole = $_SESSION["userrole"];
-    } else {
 
-    }
-
-    switch ($userRole) {
-        case "admin":
-            $userAdmin = true;
-            break;
-        
-        case "dev":
-            $userDev = true;
-            break;
-        
-        case "user":
-            $user = true;
-            break;
-
-        default:
-            break;
-    }
-
-    // Redirect user already logged in dashboard
-    if ($userAdmin || $userDev) {
-        header("Location: ./access-admin-logma/dashboard");
-        exit();
-    }
+    if ($userAdmin || $userDev || $user || $notUser) {
+        $userHasAccess = true;
+    } else{
+        $sessionManager->forbiddenAccess();
+    } 
 ?>
 
 
@@ -88,7 +61,7 @@
             <!-- Error Modal -->
             <div id="errorModal" class="error-modal top-0 left-0 h-full w-full bg-faded-black">
                 <div class="modal-content bg-color-white w-full flex-container vertical-align ">                    
-                    <p id="modalText" class="">Text par défaut</p>
+                    <p id="modalText" class="">Text par défaut</p>  
                     <span class="close color-main">&times;</span>
                 </div>
             </div>

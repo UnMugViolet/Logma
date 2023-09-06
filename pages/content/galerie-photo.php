@@ -1,33 +1,22 @@
 <?php
     session_start();
+    include_once('../../classes/session-manager.classes.php');
 
-    $userAdmin = false;
-    $userDev = false;
-    $user = false;
-    $userRole = '';
+    $sessionManager = new SessionManager();
+    $sessionManager->checkAutoLogout();
 
-    if (isset($_SESSION["userrole"])) {
-        $userRole = $_SESSION["userrole"];
-    } else {
-        
-    }
+    $sessionManager->checkUserRole();
+    $userAdmin = $sessionManager->getUserAdmin();
+    $userDev = $sessionManager->getUserDev();
+    $user = $sessionManager->getUser();
+    $notUser = $sessionManager->notUser();
 
-    switch ($userRole) {
-        case "admin":
-            $userAdmin = true;
-            break;
-        
-        case "dev":
-            $userDev = true;
-            break;
-        
-        case "user":
-            $user = true;
-            break;
 
-        default:
-            break;
-    }
+    if ($userAdmin || $userDev || $user || $notUser) {
+        $userHasAccess = true;
+    } else{
+        $sessionManager->forbiddenAccess();
+    } 
 ?>
 
 <!DOCTYPE html>

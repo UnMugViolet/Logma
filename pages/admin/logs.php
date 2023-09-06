@@ -1,52 +1,24 @@
 <?php
     session_start();
-    
-    $userAdmin = false;
-    $userDev = false;
-    $user = false;
-    $userRole = '';
+    include_once('../../classes/session-manager.classes.php');
 
-    $auto_logout_time = 1800; 
-    $time = $_SERVER['REQUEST_TIME'];
+    $sessionManager = new SessionManager();
+    $sessionManager->checkAutoLogout();
 
-    // Autologout
-    if (isset($_SESSION['last_activity']) && ($time - $_SESSION['last_activity']) > $auto_logout_time) {
-        include("../../includes/logout.inc.php");
-        exit();
+    $sessionManager->checkUserRole();
+    $userAdmin = $sessionManager->getUserAdmin();
+    $userDev = $sessionManager->getUserDev();
+    $user = $sessionManager->getUser();
+    $notUser = $sessionManager->notUser();
+
+
+    if ($userAdmin) {
+        $userHasAccess = true;
+    } elseif($userDev) {
+        $sessionManager->notAllowed();
+    } else{
+        $sessionManager->forbiddenAccess();
     }
-
-    // Role checker
-    if (isset($_SESSION["userrole"])) {
-        $userRole = $_SESSION["userrole"];
-    } else {
-        header("HTTP/1.1 403 Forbidden");
-        include("../errors/403.html");
-        exit();
-    }
-
-    switch ($userRole) {
-        case "admin":
-            $userAdmin = true;
-            break;
-        
-        case "dev":
-            header("HTTP/1.1 401 Unauthorized");
-            include("../errors/401.html");
-            exit();
-        
-        case "user":
-            header("HTTP/1.1 403 Forbidden");
-            include("../errors/403.html");
-            exit();
-
-        default:
-            header("HTTP/1.1 403 Forbidden");
-            include("../errors/403.html");
-            exit();
-    }
-
-
-
 
     $logFile = '../../log/login_log.txt';
 
@@ -86,14 +58,14 @@
                         <span class="wrap"></span>
                     </h1>
                     <div class="flex mt-10 object-center">
-                        <div class="absolute top-0 left-0 mb-10 pad-10">
-                            <a href="/Logma/" class="container-link-cta color-white">
+                        <div class="absolute top-0 right-0 mb-10 pad-20">
+                            <a href="./dashboard" class="container-link-cta color-white">
                                 <p>Retour au dashboard </p>
                                 <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
                     </div>
-                    <pre class="color-white"><?php echo htmlspecialchars($logContent); ?></pre>
+                    <pre class="color-white logs-typo"><?php echo htmlspecialchars($logContent); ?></pre>
                 </div>
             </div>
     </section>

@@ -1,49 +1,22 @@
 <?php
     session_start();
-    
-    $userAdmin = false;
-    $userDev = false;
-    $user = false;
-    $userRole = '';
-    
-    $auto_logout_time = 1800; 
-    $time = $_SERVER['REQUEST_TIME'];
+    include_once('../../classes/session-manager.classes.php');
 
-    // Autologout
-    if (isset($_SESSION['last_activity']) && ($time - $_SESSION['last_activity']) > $auto_logout_time) {
-        include("../../includes/logout.inc.php");
-        exit();
-    }
+    $sessionManager = new SessionManager();
+    $sessionManager->checkAutoLogout();
 
-    // Role checker
-    if (isset($_SESSION["userrole"])) {
-        $userRole = $_SESSION["userrole"];
-    } else {
-        header("HTTP/1.1 403 Forbidden");
-        include("../errors/403.html");
-        exit();
-    }
-    
-    switch ($userRole) {
-        case "admin":
-            $userAdmin = true;
-            break;
-        
-        case "dev":
-            $userDev = true;
-            $userAdmin = false;
-            break;
-        
-        case "user":
-            header("HTTP/1.1 403 Forbidden");
-            include("../errors/403.html");
-            exit();
-    
-        default:
-            header("HTTP/1.1 403 Forbidden");
-            include("../errors/403.html");
-            exit();
-    }
+    $sessionManager->checkUserRole();
+    $userAdmin = $sessionManager->getUserAdmin();
+    $userDev = $sessionManager->getUserDev();
+    $user = $sessionManager->getUser();
+    $notUser = $sessionManager->notUser();
+
+
+    if ($userAdmin || $userDev) {
+        $userHasAccess = true;
+    } else{
+        $sessionManager->forbiddenAccess();
+    } 
 ?>
 
 <!DOCTYPE html>

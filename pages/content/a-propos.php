@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    error_reporting(0);
+    include_once('../../classes/session-manager.classes.php');
+
+    $sessionManager = new SessionManager();
+    $sessionManager->checkAutoLogout();
+
+    $sessionManager->checkUserRole();
+    $userAdmin = $sessionManager->getUserAdmin();
+    $userDev = $sessionManager->getUserDev();
+    $user = $sessionManager->getUser();
+    $notUser = $sessionManager->notUser();
+
+
+    if ($userAdmin || $userDev || $user || $notUser) {
+        $userHasAccess = true;
+    } else{
+        $sessionManager->forbiddenAccess();
+    } 
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
