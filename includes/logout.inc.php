@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 // Log a successful logout
 logEvent("SUCCESS: User ".$_SESSION["useruid"] ." logged out successfully", "LOGOUTOK");
 
@@ -14,8 +12,11 @@ header("location: ../index.php?error=none");
 
 // Function to log events with severity indicators
 function logEvent($message, $severity = "LOGOUTOK") {
-    $logFile = "../log/login_log.txt";
-    $timestamp = date("Y-m-d H:i:s");
+    $logFile = __DIR__ . "/../log/login_log.txt";
+    
+    $parisTimezone = new DateTimeZone('Europe/Paris');
+    $dateTime = new DateTime('now', $parisTimezone);
+    $timestamp = $dateTime->format("Y-m-d H:i:s");  
 
     // Define ASCII characters for severity indicators
     $severityIcons = [

@@ -8,7 +8,7 @@ class Login extends Dbh {
 
         if (!$stmt->execute(array($uid, $uid))){
             $stmt = null;
-            $this->logEvent("SQL statement execution failed", "ERROR");
+            $this->logEvent("ERROR: statement execution failed", "ERROR");
             header("location: ../access-admin-logma?error=stmtfailed");
             exit();
         }
@@ -19,7 +19,7 @@ class Login extends Dbh {
         
         if (!$user){
             $stmt = null;
-            $this->logEvent("Connexion attempt with unknow user", "ERROR");
+            $this->logEvent("ERROR: Connexion attempt with unknow user", "ERROR");
             header("location: ../access-admin-logma?error=wronginformations");
             exit();
         }
@@ -27,12 +27,10 @@ class Login extends Dbh {
         $checkPwd = password_verify($pwd, $user["users_pwd"]);
 
         if (!$checkPwd){
-            $this->logEvent("Connexion attempt with known user", "WARNING");
+            $this->logEvent("FAIL: Connexion attempt with known user", "WARNING");
             header("location: ../access-admin-logma?error=wronginformations");
             exit();
         }
-
-
 
         else {
             session_start();
@@ -41,14 +39,17 @@ class Login extends Dbh {
             $_SESSION["userrole"] = $user["users_role"];
             $_SESSION['last_activity'] = $_SERVER['REQUEST_TIME'];
 
-            $this->logEvent("Successful login for user: " . $user["users_uid"]);
+            $this->logEvent("SUCCESS: Login for user: " . $user["users_uid"]);
             $stmt = null;
         }
     }
 
     private function logEvent($message, $severity = "LOGINOK") {
         $logFile = "../log/login_log.txt";
-        $timestamp = date("Y-m-d H:i:s");
+        
+        $parisTimezone = new DateTimeZone('Europe/Paris');
+        $dateTime = new DateTime('now', $parisTimezone);
+        $timestamp = $dateTime->format("Y-m-d H:i:s");  
 
         $severityIcons = [
             "LOGINOK" => "✅",
