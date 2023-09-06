@@ -103,6 +103,10 @@ p {
   font-size: 12px;
 }
 
+.logs-typo {
+  font-size: 17px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   h1 {
@@ -143,6 +147,9 @@ p {
     font-weight: 300;
     text-decoration: none;
     font-size: 14px;
+  }
+  .logs-typo {
+    font-size: 10px;
   }
 }
 /* === MISE EN PAGE GENERAL ===*/
@@ -314,6 +321,10 @@ p {
 
 .pad-10 {
   padding: 10px;
+}
+
+.pad-20 {
+  padding: 20px;
 }
 
 /* GRID LAYOUT */

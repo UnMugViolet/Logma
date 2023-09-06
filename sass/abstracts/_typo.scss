@@ -54,6 +54,10 @@ p{
   font-size: 12px;
 }
 
+.logs-typo{
+  font-size: 17px;
+}
+
   /* Responsive */
 
   @media (max-width:768px){
@@ -101,5 +105,9 @@ p{
       font-weight: 300;
       text-decoration: none;
       font-size: 14px;
+    }
+
+    .logs-typo{
+      font-size: 10px;
     }
   }
