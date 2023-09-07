@@ -13,7 +13,7 @@ class UploadHandler
         $fileExt = explode(".", $fileName);
         $fileActualExt = strtolower(end($fileExt));
 
-        $allowed = array("gif", "jpg", "jpeg", "png");
+        $allowed = array("gif", "jpg", "jpeg", "png", "webp");
 
         if(empty($newFileName) || empty($file) || empty($imageTitle) || empty($projectName)) {
             $this->redirectToGallery("emptyinput");

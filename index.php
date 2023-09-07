@@ -10,7 +10,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="fr_FR">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="canonical" href="./index.php" />
-    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale" content="fr" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Accueil - logma." />
     <meta property="og:description"
@@ -82,7 +82,7 @@
                             <div class="overlay w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
-                            <img src="./ressources/img/projet blacksheep.jpg">
+                            <img src="./ressources/img/projet-blacksheep.jpg" alt="projet blacksheep concepeteur de van de voyage">
                         </a>
                         <h4 class="color-white">BLACK SHEEP</h4>
                         <h5 class="color-white">PUBLICITÉ</h5>
@@ -92,7 +92,7 @@
                             <div class="overlay w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
-                            <img src="./ressources/img/sophie faguet.jpg">
+                            <img src="./ressources/img/sophie-faguet.jpg" alt="bateau de sophie faguet route du rhum">
                         </a>
                         <h4 class="color-white">SOPHIE FAGUET</h4>
                         <h5 class="color-white">PORTRAIT</h5>
@@ -102,7 +102,7 @@
                             <div class="overlay w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
-                            <img src="./ressources/img/colliaux opticien.jpg">
+                            <img src="./ressources/img/colliaux-opticien.jpg" alt="shooting de marque colliaux opticiens">
                         </a>
                         <h4 class="color-white">COLLIAUX OPTICIENS</h4>
                         <h5 class="color-white">CAMPAGNE</h5>
@@ -117,7 +117,7 @@
                             <div class="overlay w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
-                            <img src="./ressources/img/projet-photographe-noe.jpg">
+                            <img src="./ressources/img/projet-photographe-nohe.jpg" alt="shooting photo nohé créateur de vêtements">
                         </a>
                         <h4 class="color-white">NOHÉ</h4>
                         <h5 class="color-white">CAMPAGNE</h5>
@@ -127,7 +127,7 @@
                             <div class="overlay w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
-                            <img src="./ressources/img/projet-photographe-PLATYPUS-CRAFT.jpg">
+                            <img src="./ressources/img/projet-photographe-PLATYPUS-CRAFT.jpg" alt="platypus craft tournage en mer">
                         </a>
                         <h4 class="color-white">PLATYPUS CRAFT</h4>
                         <h5 class="color-white">DIGITAL</h5>
@@ -137,7 +137,7 @@
                             <div class="overlay w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
-                            <img src="./ressources/img/projet-photographe-transaharienne-maroc.jpg">
+                            <img src="./ressources/img/projet-photographe-transaharienne-maroc.jpg" alt="reportage pour la transaharienne">
                         </a>
                         <h4 class="color-white">TRANSAHARIENNE</h4>
                         <h5 class="color-white">REPORTAGE</h5>
@@ -157,21 +157,21 @@
                 <div class="triple-col spacing-last-projects">
                     <span class="triple-col-1">
                         <div>
-                            <img src="./ressources/img/shooting-de-marque.jpg">
+                            <img src="./ressources/img/shooting-de-marque.jpg" alt="packshot nohé créateur de vêtements">
                         </div>
                         <h4>Shooting de marque</h4>
                         <h5>MAROC</h5>
                     </span>
                     <span class="triple-col-2">
                         <div>
-                            <img src="./ressources/img/interview-mike-horn.jpg">
+                            <img src="./ressources/img/interview-mike-horn.jpg" alt="interview Mike Horn">
                         </div>
                         <h4>Interview Mike Horn</h4>
                         <h5>PARIS</h5>
                     </span>
                     <span class="triple-col-3">
                         <div>
-                            <img src="./ressources/img/shooting-route-du-rhum.jpg">
+                            <img src="./ressources/img/shooting-route-du-rhum.jpg" alt="reportage pour la route du rhum 2022">
                         </div>
                         <h4>Route du Rhum 2022</h4>
                         <h5>SAINT-MALO</h5>
@@ -183,7 +183,7 @@
                 <h4>Et nous aussi !</h4>
             </div>
             <div class="container">
-                <img src="./ressources/img/clients-logma-production.png">
+                <img src="./ressources/img/clients-logma-production.png" alt="Nos partenaires">
             </div>
             <div class="button-center-disposition spacing-section">
                 <a href="./contacts" class="second-cta ">
