@@ -1,11 +1,15 @@
 <?php
     include_once('../../includes/user-role-check.inc.php');
 
-    if ($userAdmin || $userDev || $user || $notUser) {
+    if ($user || $notUser) {
         $userHasAccess = true;
-    } else{
+    } elseif($userAdmin || $userDev){
+        header("Location: ./access-admin-logma/dashboard");
+        exit();
+    } else {
         $sessionManager->forbiddenAccess();
-    } 
+
+    }
 ?>
 
 

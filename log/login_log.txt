@@ -1,2 +1,19 @@
 [2023-09-06 16:13:15] 🌠 SUCCESS: User test logged out successfully
 [2023-09-06 16:13:26] ✅ SUCCESS: Login for user: test
+[2023-09-06 17:26:33] ✅ SUCCESS: Login for user: test
+[2023-09-06 17:33:01] 🌠 SUCCESS: User test logged out successfully
+[2023-09-06 17:33:29] ✅ SUCCESS: Login for user: test
+[2023-09-07 09:32:06] 🌠 SUCCESS: User  logged out successfully
+[2023-09-07 11:04:31] ✅ SUCCESS: Login for user: test
+[2023-09-07 11:23:14] 🌠 SUCCESS: User test logged out successfully
+[2023-09-07 12:09:36] ✅ SUCCESS: Login for user: test
+[2023-09-07 12:11:18] ✅ SUCCESS: Login for user: test
+[2023-09-07 12:14:28] ✅ SUCCESS: Login for user: test
+[2023-09-07 12:33:04] ✅ SUCCESS: Login for user: test
+[2023-09-07 12:36:03] 🌠 SUCCESS: User test logged out successfully
+[2023-09-07 13:00:07] ✅ SUCCESS: Login for user: test
+[2023-09-07 13:00:09] 🌠 SUCCESS: User test logged out successfully
+[2023-09-07 13:05:45] ✅ SUCCESS: Login for user: test
+[2023-09-07 13:09:55] 🌠 SUCCESS: User test logged out successfully
+[2023-09-07 13:19:58] ✅ SUCCESS: Login for user: test
+[2023-09-07 13:20:16] 🌠 SUCCESS: User test logged out successfully

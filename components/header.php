@@ -1,33 +1,13 @@
 <?php
-    session_start();
-
+if(isset($_SESSION['userAdmin']) && isset($_SESSION['userDev'])) {
+    $userAdmin = $_SESSION['userAdmin'];
+    $userDev = $_SESSION['userDev'];
+    $user= $_SESSION['user'];
+} else {
     $userAdmin = false;
     $userDev = false;
     $user = false;
-    $userRole = '';
-
-    if (isset($_SESSION["userrole"])) {
-        $userRole = $_SESSION["userrole"];
-    } else {
-        
-    }
-
-    switch ($userRole) {
-        case "admin":
-            $userAdmin = true;
-            break;
-        
-        case "dev":
-            $userDev = true;
-            break;
-        
-        case "user":
-            $user = true;
-            break;
-
-        default:
-            break;
-    }
+}
 ?>
 
 
