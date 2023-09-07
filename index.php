@@ -1,3 +1,14 @@
+<?php
+    include_once('./includes/user-role-check.inc.php');
+
+    if ($userAdmin || $userDev || $user || $notUser) {
+        $userHasAccess = true;
+    } else{
+        $sessionManager->forbiddenAccess();
+    } 
+    
+?>
+
 <!DOCTYPE html>
 <html lang="fr_FR">
 

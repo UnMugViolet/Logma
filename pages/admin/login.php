@@ -1,16 +1,5 @@
 <?php
-    session_start();
-    include_once('../../classes/session-manager.classes.php');
-
-    $sessionManager = new SessionManager();
-    $sessionManager->checkAutoLogout();
-
-    $sessionManager->checkUserRole();
-    $userAdmin = $sessionManager->getUserAdmin();
-    $userDev = $sessionManager->getUserDev();
-    $user = $sessionManager->getUser();
-    $notUser = $sessionManager->notUser();
-
+    include_once('../../includes/user-role-check.inc.php');
 
     if ($userAdmin || $userDev || $user || $notUser) {
         $userHasAccess = true;

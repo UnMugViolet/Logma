@@ -1,22 +1,12 @@
 <?php
-    session_start();
-    include_once('../../classes/session-manager.classes.php');
-
-    $sessionManager = new SessionManager();
-    $sessionManager->checkAutoLogout();
-
-    $sessionManager->checkUserRole();
-    $userAdmin = $sessionManager->getUserAdmin();
-    $userDev = $sessionManager->getUserDev();
-    $user = $sessionManager->getUser();
-    $notUser = $sessionManager->notUser();
-
+    include_once('../../includes/user-role-check.inc.php');
 
     if ($userAdmin || $userDev || $user || $notUser) {
         $userHasAccess = true;
     } else{
         $sessionManager->forbiddenAccess();
     } 
+    
 ?>
 
 <!DOCTYPE html>
@@ -95,7 +85,7 @@
 
                 // Output the HTML
                 echo <<<HTML
-                    <span class="$currentClass">
+                    <span class="$currentClass mb-50">
                         <div class="relative">
                             <img class="gallery-image-size w-full" src="$imageSrc" alt="$imageAlt">
                             $form
