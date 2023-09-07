@@ -3,7 +3,7 @@
         <div class="container vertical-align footer-size triple-col">
             <div class="triple-col-1">
                 <div class="logo-size margin-logo">
-                    <img src="./ressources/img/Logo-logma.png">
+                    <img src="./ressources/img/Logo-logma.png" alt="Société de production Logma Rennes ">
                 </div>
                 <div>
                     <h3 class="color-white ">Nous serions ravis de vous entendre.</h3>
@@ -11,7 +11,7 @@
                         simplement discuter.</p>
                 </div>
 
-                <a href="mailto:contact@logma-production" class="container-link-cta color-white">
+                <a href="mailto:contact@logma-production" class="container-link-cta color-white" aria-label="Nous envoyer un e-mail">
                     <h5>contact@logma-production </h5>
                     <h5 class="icon-link-cta"> →</h5>
                 </a>
@@ -21,7 +21,7 @@
                 <h5 class="color-white text-center-left">Suivez nous</h5>
                 <div class="center-responsive-left text-height">
                     <div class="flex-col h-full">
-                        <a href="https://www.linkedin.com/company/logma-agency/" target="_blank" class="icons-footer">
+                        <a href="https://www.linkedin.com/company/logma-agency/" target="_blank" class="icons-footer" aria-label="Lien Linkedin">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="vertical-align"
                                 viewBox="-2 -2 24 24">
                                 <g>
@@ -32,7 +32,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="https://www.youtube.com/@logma_production" target="_blank" class="icons-footer">
+                        <a href="https://www.youtube.com/@logma_production" target="_blank" class="icons-footer" aria-label="Voir notre chaine Youtube">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="vertical-align"
                                 viewBox="0 0 24 24">
                                 <g>
@@ -40,7 +40,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/logma_production/" target="_blank" class="icons-footer">
+                        <a href="https://www.instagram.com/logma_production/" target="_blank" class="icons-footer" aria-label="Voir notre compte Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="vertical-align"
                                 viewBox="0 0 24 24">
                                 <path
@@ -56,13 +56,13 @@
                 <div class=" center-responsive-left h-demi">
                     <div class="flex-col text-height">
                         <div>
-                            <a href="./contacts">Contact</a>
+                            <a href="./contacts" aria-label="Nous contacter">Contact</a>
                         </div>
                         <div>
-                            <a href="./cgu">CGU</a>
+                            <a href="./cgu" aria-label="Voir nos Conditions Générales d'Utilisation">CGU</a>
                         </div>
                         <div>
-                            <a href="./mentions-legales">Mentions légales</a>  
+                            <a href="./mentions-legales" aria-label="Nos Mentions Légales">Mentions légales</a>  
                         </div>
                         
                     </div>
@@ -74,7 +74,7 @@
     <p class="color-main text-center">© Logma production - 2023 Tous droits reservés<br></p>
     <div class="object-center vertical-align bottom-footer">
         <p class="color-main">Site Web éco conçue réalisé par </p>
-        <a href="https://github.com/UnMugViolet" class="color-main"> Paul J. </a>
+        <a href="https://github.com/UnMugViolet" class="color-main" aria-label="Concepteur du site lien github"> Paul J. </a>
     </div>
 </div> 
 </footer>
