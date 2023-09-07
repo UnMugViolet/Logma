@@ -6,7 +6,7 @@ const errorParam = urlParams.get('error');
 console.log(errorParam);
 
 // Check if the error parameter is not "none" or is not empty
-if (errorParam !== 'none' && urlParams.toString() !== "") {
+if (urlParams.toString() !== "") {
     // Retrieve the corresponding error message from the mapping
     const errorMessage = errorMessageMap[errorParam] || errorMessageMap.default;
 

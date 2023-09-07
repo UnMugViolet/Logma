@@ -1,7 +1,13 @@
 <?php
-    session_start();
-    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
-
+    include_once('../../includes/user-role-check.inc.php');
+    
+    if ($userAdmin) {
+        $userHasAccess = true;
+    } elseif($userDev) {
+        $sessionManager->notAllowed();
+    } else{
+        $sessionManager->forbiddenAccess();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -20,21 +26,19 @@
     <script src="../js/error/modal.error.js" type="module" defer></script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/logma/favicon.ico">
 
 </head>
 
 <body class="bg-color-black">
     <section class="h-full-screen">
         <div class="container h-full vertical-align object-center">
-            <!-- Logged -->
-            <?php
-                if($userAdmin)
-                {
-            ?>
             <div>
+                <div class="block container icon-error mb-50">
+                    <img src="/logma/ressources/img/AddAccountIcon.svg" alt="Erreur 404">
+                </div>
                 <div>
-                    <h1 class="color-white">Ajouter un compte</h1>
+                    <h1 class="color-white">Ajouter un compte.</h1>
                 </div>
                 <div class="input-size">
                     <form action="../includes/signup.inc.php" method="post">
@@ -63,35 +67,14 @@
                     </a>
                 </div>
             </div>
-            <!-- Not logged -->
-            <?php
-                }
-                else{
-            ?>
-            <div>
-                <div>
-                    <h1 class="color-white text-center">Accès refusé :)</h1>
-                </div>
-                <div>
-                    <div class="flex mt-10 object-center">
-                        <a href="../" class="container-link-cta color-white">
-                        <p>Retour à la page d'accueil </p>
-                        <p class="icon-link-cta"> →</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <?php
-                }
-            ?>
+            
             <!-- Error Modal -->
-            <div id="errorModal" class="modal top-0 left-0 h-full w-full bg-faded-black">
-                <div class="modal-content bg-color-white w-full flex-container vertical-align ">
+            <div id="errorModal" class="error-modal top-0 left-0 h-full w-full bg-faded-black">
+                <div class="modal-content bg-color-white w-full flex-container vertical-align ">                    
                     <p id="modalText" class="">Text par défaut</p>
                     <span class="close color-main">&times;</span>
                 </div>
             </div>
-
         </div>
     </section>
 

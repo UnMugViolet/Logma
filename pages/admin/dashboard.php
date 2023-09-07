@@ -1,7 +1,11 @@
 <?php
-    session_start();
-    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
-    $userDev = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "dev";
+    include_once('../../includes/user-role-check.inc.php');
+    
+    if ($userAdmin || $userDev) {
+        $userHasAccess = true;
+    } else{
+        $sessionManager->forbiddenAccess();
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -18,17 +22,12 @@
     <!-- JS -->
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/logma/favicon.ico">
 
 </head>
 
 <body class="bg-color-black">
-    <section class="h-full-screen">
-            <?php
-                if($userAdmin || $userDev)
-                {
-                
-            ?>
+    <section>
             <div class="container">
                 <div class="mt-50 mb-50">
                     <h1 class="color-white text-left mb-10">
@@ -37,61 +36,100 @@
                         !   
                     </h1>
                     <h5 class="color-white">
-                        Le plus valereux des 
-                        <?php echo $_SESSION["userrole"]; ?>
+                        Le plus valeureux des 
+                        <?php echo $_SESSION["userrole"] .'s';?>
                         !   
                     </h5>
-                </div>
-                <?php
-                    if($userAdmin){
-                ?>
-                <div class="flex mt-10">
-                    <a href="./signup" class="container-link-cta color-white">
-                    <p>Ajouter un compte admin </p>
-                    <p class="icon-link-cta"> →</p>
-                    </a>
-                </div>
-                <?php
-                    }
-                ?>
-                <div class="flex">
-                    <a href="./gallery" class="container-link-cta color-white">
-                    <p>Ajouter des images à la galerie </p>
-                    <p class="icon-link-cta"> →</p>
-                    </a>
-                </div>
-                <form action="../includes/logout.inc.php" method="post">
-                    <div class="object-center mt-50">
-                        <button type="submit" class="submit-cta" name="logout-submit">Déconnexion</button>
-                    </div>
-                </form>
-            </div>
 
+                </div>
 
+                <div class="triple-col spacing-last-projects ">
 
-            <?php
-                }
-                else{
-            ?>
-            <div class="container h-full vertical-align object-center">
-                <div>
-                    <div>
-                        <h1 class="color-white text-center">Accès refusé :)</h1>
-                    </div>
-                    <div>
-                        <div class="flex mt-10 object-center">
-                            <a href="../" class="container-link-cta color-white">
-                            <p>Retour à la page d'accueil </p>
+    <?php
+        if($userAdmin){
+    ?>
+
+                    <div class="triple-col-1">
+                        <div class="flex vertical-align">
+                            <img src="/logma/ressources/img/AdminIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <h2 class="color-white">Fonctions Admin :</h2>
+                        </div>
+
+                        <div class="flex">
+                            <a href="./signup" class="container-link-cta color-white">
+                            <p>Ajouter un compte</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                        <div class="flex">
+                            <a href="./logs" class="container-link-cta color-white">
+                            <p>Journal de logs</p>
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
                     </div>
-                </div>
+    <?php
+        }
+    ?>
+                    <div class="triple-col-2">
+                        <div class="flex vertical-align">
+                            <img src="/logma/ressources/img/AddIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <h2 class="color-white">Ajouter </h2>
+                        </div>
+
+                        <div class="flex">
+                            <a href="./gallery" class="container-link-cta color-white">
+                            <p>Ajouter des images à la galerie </p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="triple-col-3">
+                        <div class="flex vertical-align">
+                            <img src="/logma/ressources/img/WebIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <h2 class="color-white">Voir le site.</h2>
+                        </div>
+
+                        <div class="flex">
+                            <a href="/Logma/" class="container-link-cta color-white">
+                            <p>Homepage</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                        <div class="flex">
+                            <a href="/Logma/galerie-photo" class="container-link-cta color-white">
+                            <p>Galerie photo</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                        <div class="flex">
+                            <a href="/Logma/contacts" class="container-link-cta color-white">
+                            <p>Contacts</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                        <div class="flex">
+                            <a href="/Logma/cgu" class="container-link-cta color-white">
+                            <p>CGU</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                        <div class="flex">
+                            <a href="/Logma/mentions-legales" class="container-link-cta color-white">
+                            <p>Mentions Légales</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                    </div>
             </div>
-            <?php
-                }
-            ?>
-            
+
+
+                <form action="../includes/logout.inc.php" method="post" class="object-center mt-50 ">
+                    <div class="absolute-responsive bottom-0 mb-30 ">
+                        <button type="submit" class="submit-cta" name="logout-submit">Déconnexion</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 

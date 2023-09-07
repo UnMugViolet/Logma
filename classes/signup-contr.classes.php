@@ -46,15 +46,10 @@ class SignupContr extends Signup {
         $this->setUser($this->uid, $this->pwd, $this->email, $this->userRole);
     }
 
-    private function redirectToGallery($errorType)
-    {
-        header("location: ../access-admin-logma/signup?error=$errorType");
-        exit();
-    }
-
+    
     private function emptyInput(){
         $result="";
-
+        
         if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)){
             $result = false;
         }
@@ -63,7 +58,7 @@ class SignupContr extends Signup {
         }
         return $result;
     }
-
+    
     private function invalidUid(){
         $result="";
         
@@ -75,10 +70,10 @@ class SignupContr extends Signup {
         }
         return $result; 
     }
-
+    
     private function invalidEmail(){
         $result="";
-
+        
         if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             $result = false;
         }
@@ -87,12 +82,12 @@ class SignupContr extends Signup {
         }
         return $result; 
     }
-
+    
     private function pwdRequirement(){
         $pwdMandatoryLength = 16;
         $specialCharCount = 0;
         $uppercaseCharCount = 0;
-    
+        
         for ($i = 0; $i < strlen($this->pwd); $i++) {
             $char = $this->pwd[$i];
             
@@ -102,13 +97,13 @@ class SignupContr extends Signup {
                 $specialCharCount++;
             }
         }
-    
+        
         return strlen($this->pwd) >= $pwdMandatoryLength && $specialCharCount >= 2 && $uppercaseCharCount >= 2;
     }
-
+    
     private function pwdMatch(){
         $result="";
-
+        
         if ($this->pwd !== $this->pwdRepeat) {
             $result = false;
         }
@@ -117,10 +112,10 @@ class SignupContr extends Signup {
         }
         return $result; 
     }
-
+    
     private function uidTakenCheck(){
         $result="";
-
+        
         if (!$this->checkUser($this->uid, $this->email) ) {
             $result = false;
         }
@@ -128,5 +123,11 @@ class SignupContr extends Signup {
             $result = true;
         }
         return $result; 
+    }
+    
+    private function redirectToGallery($errorType)
+    {
+        header("location: ../access-admin-logma/signup?error=$errorType");
+        exit();
     }
 }

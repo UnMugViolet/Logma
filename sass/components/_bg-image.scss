@@ -5,11 +5,11 @@
     background-position: 50% 91.5%;
 }
 
-.bg-image-small{
-    height: 30vh;
+.bg-image-contact{
+    height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 48.5%;
+    background-position: 50% 28.5%;
 
 }
 
@@ -20,12 +20,20 @@
         background-repeat: no-repeat;
         background-position: 43% 50.65%;
     }
+
+    .bg-image-contact{
+        height: 50vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 18% 48.5%;
+
+    }
 }
 
 .bg-image-mountains{
     background-image: url(../ressources/img/men-in-moutains.jpg);
 }
     
-.bg-image-car{
-    background-image: url(../ressources/img/car-iceland.jpg);
+.bg-image-baptise{
+    background-image: url(../ressources/img/baptiste-fablet.jpg);
 }

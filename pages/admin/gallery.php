@@ -1,8 +1,11 @@
 <?php
-    session_start();
-    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin" ;
-    $userDev = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "dev";
+    include_once('../../includes/user-role-check.inc.php');
 
+    if ($userAdmin || $userDev) {
+        $userHasAccess = true;
+    } else{
+        $sessionManager->forbiddenAccess();
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -28,13 +31,10 @@
 <body class="bg-color-black">
     <section class="h-full-screen">
         <div class="container h-full vertical-align object-center">
-            <!-- Logged -->
-            <?php
-                if($userAdmin || $userDev)
-                {
-
-            ?>
             <div>
+                <div class="block container icon-error mb-50">
+                    <img src="/logma/ressources/img/DownloadImage.svg" alt="Télécharger une image">
+                </div>
                 <div>
                     <h1 class="color-white">Télécharger des images.</h1>
                 </div>
@@ -64,30 +64,9 @@
                 </div>
             </div>
 
-            <!-- Not logged -->
-            <?php
-                }
-                else{
-            ?>
-            <div>
-                <div>
-                    <h1 class="color-white text-center">Accès refusé :)</h1>
-                </div>
-                <div>
-                    <div class="flex mt-10 object-center">
-                        <a href="../" class="container-link-cta color-white">
-                        <p>Retour à la page d'accueil </p>
-                        <p class="icon-link-cta"> →</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <?php
-                }
-            ?>
             <!-- Error Modal -->
-            <div id="errorModal" class="modal top-0 left-0 h-full w-full bg-faded-black">
-                <div class="modal-content bg-color-white w-full flex-container vertical-align ">
+            <div id="errorModal" class="error-modal top-0 left-0 h-full w-full bg-faded-black">
+                <div class="modal-content bg-color-white w-full flex-container vertical-align ">                    
                     <p id="modalText" class="">Text par défaut</p>
                     <span class="close color-main">&times;</span>
                 </div>

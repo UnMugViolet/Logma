@@ -103,6 +103,10 @@ p {
   font-size: 12px;
 }
 
+.logs-typo {
+  font-size: 17px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   h1 {
@@ -144,9 +148,16 @@ p {
     text-decoration: none;
     font-size: 14px;
   }
+  .logs-typo {
+    font-size: 10px;
+  }
 }
 /* === MISE EN PAGE GENERAL ===*/
 .absolute {
+  position: absolute;
+}
+
+.absolute-responsive {
   position: absolute;
 }
 
@@ -179,6 +190,11 @@ p {
   margin: 0 auto;
 }
 
+.text-left-center {
+  text-align: left;
+  margin: 0 auto;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -186,6 +202,10 @@ p {
 
 .flex {
   display: flex;
+}
+
+.block {
+  display: block;
 }
 
 .object-center {
@@ -288,6 +308,14 @@ p {
   margin-bottom: 10px;
 }
 
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
 .mb-50 {
   margin-bottom: 50px;
 }
@@ -298,6 +326,10 @@ p {
 
 .pad-10 {
   padding: 10px;
+}
+
+.pad-20 {
+  padding: 20px;
 }
 
 /* GRID LAYOUT */
@@ -337,7 +369,6 @@ p {
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 0px;
-  align-items: center;
 }
 
 .triple-col-1 {
@@ -388,6 +419,13 @@ p {
   .text-center-left {
     text-align: left;
     margin: 0 auto;
+  }
+  .text-left-center {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .absolute-responsive {
+    position: relative;
   }
 }
 /* === HEADER ===*/
@@ -695,7 +733,7 @@ footer h3 {
   background-image: url("../ressources/img/Trash.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 40px;
+  width: 25px;
   height: 25px;
   display: block;
   margin: 0 auto;
@@ -740,11 +778,11 @@ footer h3 {
   background-position: 50% 91.5%;
 }
 
-.bg-image-small {
-  height: 30vh;
+.bg-image-contact {
+  height: 50vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 48.5%;
+  background-position: 50% 28.5%;
 }
 
 @media (max-width: 768px) {
@@ -754,13 +792,19 @@ footer h3 {
     background-repeat: no-repeat;
     background-position: 43% 50.65%;
   }
+  .bg-image-contact {
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 18% 48.5%;
+  }
 }
 .bg-image-mountains {
   background-image: url(../ressources/img/men-in-moutains.jpg);
 }
 
-.bg-image-car {
-  background-image: url(../ressources/img/car-iceland.jpg);
+.bg-image-baptise {
+  background-image: url(../ressources/img/baptiste-fablet.jpg);
 }
 
 #hidden {
@@ -770,11 +814,11 @@ footer h3 {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Styles for the modal */
-.modal {
+/* Error modal */
+.error-modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -862,24 +906,12 @@ footer h3 {
     height: 60vh;
   }
 }
-.margin-whatsapp {
-  margin-top: 5px;
-  margin-bottom: 15px;
+.title-margin {
+  margin-bottom: 0px;
 }
 
-.margin-number {
-  margin-bottom: 20px;
-}
-.margin-number a {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  text-decoration: none;
-  font-size: 14px;
-  color: #f6f8fa;
-  transition: all 0.8s ease;
-}
-.margin-number a:hover {
-  color: #666970;
+.icon-error {
+  width: 60px;
 }
 
 .spacing-button {
@@ -892,4 +924,10 @@ footer h3 {
 
 .input-spacing {
   margin-bottom: 11px;
+}
+
+.size-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
 }/*# sourceMappingURL=main.css.map */

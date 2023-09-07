@@ -1,12 +1,14 @@
 <?php
-    session_start();
-    $userAdmin = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "admin";
-    $userDev = isset($_SESSION["userrole"]) && $_SESSION["userrole"] === "dev";
+    include_once('../../includes/user-role-check.inc.php');
 
-    // Redirect user already logged in dashboard
-    if ($userAdmin || $userDev) {
+    if ($user || $notUser) {
+        $userHasAccess = true;
+    } elseif($userAdmin || $userDev){
         header("Location: ./access-admin-logma/dashboard");
         exit();
+    } else {
+        $sessionManager->forbiddenAccess();
+
     }
 ?>
 
@@ -50,9 +52,9 @@
             </div>
             
             <!-- Error Modal -->
-            <div id="errorModal" class="modal top-0 left-0 h-full w-full bg-faded-black">
-                <div class="modal-content bg-color-white w-full flex-container vertical-align ">
-                    <p id="modalText">Text par défaut</p>
+            <div id="errorModal" class="error-modal top-0 left-0 h-full w-full bg-faded-black">
+                <div class="modal-content bg-color-white w-full flex-container vertical-align ">                    
+                    <p id="modalText" class="">Text par défaut</p>  
                     <span class="close color-main">&times;</span>
                 </div>
             </div>
