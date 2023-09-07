@@ -12,6 +12,7 @@ const errorMessageMap = {
     filesize : "❌ Le fichier est trop volumineux, la limite est de 2 Mb",
     nameimage: "❌ Le nom de l'image est déjà pris, elle a peut être déjà été uploadée :)",
     invalidinput: "❌ Un ou plusieurs champs ne sont pas valide, ils comportent peut être des caractères spéciaux",
+    contactfailed: "❌ Une erreur s'est produite, vous pouvez nous contacter à contact@logma-production.com",
     default: "❌ Une erreur est survenue",
     none: "✅ Opération réalisée avec succès !",
 };

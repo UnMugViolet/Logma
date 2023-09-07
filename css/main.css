@@ -190,6 +190,11 @@ p {
   margin: 0 auto;
 }
 
+.text-left-center {
+  text-align: left;
+  margin: 0 auto;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -413,6 +418,10 @@ p {
   }
   .text-center-left {
     text-align: left;
+    margin: 0 auto;
+  }
+  .text-left-center {
+    text-align: center;
     margin: 0 auto;
   }
   .absolute-responsive {
@@ -769,11 +778,11 @@ footer h3 {
   background-position: 50% 91.5%;
 }
 
-.bg-image-small {
-  height: 30vh;
+.bg-image-contact {
+  height: 50vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 48.5%;
+  background-position: 50% 28.5%;
 }
 
 @media (max-width: 768px) {
@@ -783,13 +792,19 @@ footer h3 {
     background-repeat: no-repeat;
     background-position: 43% 50.65%;
   }
+  .bg-image-contact {
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 18% 48.5%;
+  }
 }
 .bg-image-mountains {
   background-image: url(../ressources/img/men-in-moutains.jpg);
 }
 
-.bg-image-car {
-  background-image: url(../ressources/img/car-iceland.jpg);
+.bg-image-baptise {
+  background-image: url(../ressources/img/baptiste-fablet.jpg);
 }
 
 #hidden {
@@ -891,24 +906,8 @@ footer h3 {
     height: 60vh;
   }
 }
-.margin-whatsapp {
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-.margin-number {
-  margin-bottom: 20px;
-}
-.margin-number a {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  text-decoration: none;
-  font-size: 14px;
-  color: #f6f8fa;
-  transition: all 0.8s ease;
-}
-.margin-number a:hover {
-  color: #666970;
+.title-margin {
+  margin-bottom: 0px;
 }
 
 .icon-error {
