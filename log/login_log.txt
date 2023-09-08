@@ -17,3 +17,9 @@
 [2023-09-07 13:09:55] 🌠 SUCCESS: User test logged out successfully
 [2023-09-07 13:19:58] ✅ SUCCESS: Login for user: test
 [2023-09-07 13:20:16] 🌠 SUCCESS: User test logged out successfully
+[2023-09-07 16:28:03] ✅ SUCCESS: Login for user: test
+[2023-09-07 16:28:03] ✅ SUCCESS: Login for user: test
+[2023-09-07 17:10:00] 🌠 SUCCESS: User test logged out successfully
+[2023-09-07 17:10:14] ✅ SUCCESS: Login for user: test
+[2023-09-08 08:28:30] ✅ SUCCESS: Login for user: test
+[2023-09-08 11:28:33] ✅ SUCCESS: Login for user: test
