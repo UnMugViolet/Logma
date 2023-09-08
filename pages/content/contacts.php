@@ -35,21 +35,21 @@
     ?>
   </section>
 
-  <section class="spacing-section container">
+  <section class="container mt-100">
     <div class="mb-50">
       <h1 class="color-white text-left-center title-margin">On reste en contact ?</h1>
     <div>
 
-    <div class="dual-col">
-      <div class="dual-col-1 mt-20 mb-20 vertical-align ">
+    <div class="dual-col mt-100">
+      <div class="dual-col-1 mb-20">
         <div>
-          <h2 class="color-white">Laissez nous un petit message</h2>
+          <h2 class="color-white styled-h2">Laissez nous un petit message</h2>
           <h5 class="color-white">Votre voix compte ! </h5>
           <p class="color-white">Nous sommes ravis de vous entendre ! N'hésitez pas à nous laisser un message pour toute question, suggestion ou demande d'information.</p>
         </div>
       </div>
 
-      <div class="dual-col-2 vertical-align spacing-section mt-50">
+      <div class="dual-col-2 vertical-align">
           <form action="./includes/contact.inc.php" method="post">
             <input name="name" class="w-full input input-small bg-color-black color-white mb-20" type="text" placeholder="Nom">
 
