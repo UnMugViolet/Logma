@@ -79,7 +79,7 @@
                 <div class="triple-col spacing-last-projects ">
                     <span class="triple-col-1">
                         <a href="https://youtu.be/L3AFBkg_BG8" class="relative video-hover">
-                            <div class="overlay w-full h-full absolute">
+                            <div class="overlay-project w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
                             <img src="./ressources/img/projet-blacksheep.jpg" alt="projet blacksheep concepeteur de van de voyage">
@@ -89,7 +89,7 @@
                     </span>
                     <span class="triple-col-2">
                         <a href="https://youtu.be/dqAV68Km7hs" class="relative video-hover">
-                            <div class="overlay w-full h-full absolute">
+                            <div class="overlay-project w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
                             <img src="./ressources/img/sophie-faguet.jpg" alt="bateau de sophie faguet route du rhum">
@@ -99,7 +99,7 @@
                     </span>
                     <span class="triple-col-3">
                         <a href="https://youtu.be/pLDtHUxPeH4" class="relative video-hover">
-                            <div class="overlay w-full h-full absolute">
+                            <div class="overlay-project w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
                             <img src="./ressources/img/colliaux-opticien.jpg" alt="shooting de marque colliaux opticiens">
@@ -114,7 +114,7 @@
                 <div class="triple-col spacing-last-projects ">
                     <span class="triple-col-1">
                         <a href="https://youtu.be/jGQK5btw2xc" class="relative video-hover">
-                            <div class="overlay w-full h-full absolute">
+                            <div class="overlay-project w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
                             <img src="./ressources/img/projet-photographe-nohe.jpg" alt="shooting photo nohé créateur de vêtements">
@@ -124,7 +124,7 @@
                     </span>
                     <span class="triple-col-2">
                         <a href="https://youtu.be/rNqv_Gi_kIg" class="relative video-hover">
-                            <div class="overlay w-full h-full absolute">
+                            <div class="overlay-project w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
                             <img src="./ressources/img/projet-photographe-PLATYPUS-CRAFT.jpg" alt="platypus craft tournage en mer">
@@ -134,7 +134,7 @@
                     </span>
                     <span class="triple-col-3">
                         <a href="https://youtu.be/1TNve6kRkKg" class="relative video-hover">
-                            <div class="overlay w-full h-full absolute">
+                            <div class="overlay-project w-full h-full absolute">
                                 <p class="text-center absolute">Voir la vidéo</p>
                             </div>
                             <img src="./ressources/img/projet-photographe-transaharienne-maroc.jpg" alt="reportage pour la transaharienne">
