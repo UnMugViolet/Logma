@@ -40,3 +40,11 @@
 [2023-09-08 15:23:55] ❌ ERROR: Connexion attempt with unknow user
 [2023-09-08 15:24:40] ⚠️ FAIL: Connexion attempt with known user
 [2023-09-08 15:24:52] ✅ SUCCESS: Login for user: test
+[2023-09-08 16:57:00] 🌠 SUCCESS: User test logged out successfully
+[2023-09-08 16:57:10] ✅ SUCCESS: Login for user: test
+[2023-09-08 17:39:24] 🌠 SUCCESS: User test logged out successfully
+[2023-09-08 17:39:37] ✅ SUCCESS: Login for user: test
+[2023-09-08 18:23:33] ✅ SUCCESS: Login for user: test
+[2023-09-08 18:26:04] 🌠 SUCCESS: User test logged out successfully
+[2023-09-08 18:38:11] ✅ SUCCESS: Login for user: test
+[2023-09-08 18:45:44] ✅ SUCCESS: Login for user: test

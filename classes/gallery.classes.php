@@ -1,4 +1,5 @@
 <?php 
+include_once 'dbh.classes.php';
 
 class ImageManagement extends Dbh {
 
@@ -61,6 +62,21 @@ class ImageManagement extends Dbh {
             $stmt->bindParam(1, $imageFileName);
             $stmt->execute();
         }
+    }
+
+    public function getImageGallery(){
+        $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC";
+        $stmt = $this->connect()->prepare($sql);
+
+        if (!$stmt) {
+            header("location: ./galerie-photo?error=stmtfailed");
+            exit();
+        } else {
+            $stmt->execute();
+            $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        return $images;
     }
 
 
