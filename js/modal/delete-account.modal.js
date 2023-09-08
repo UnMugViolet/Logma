@@ -20,10 +20,5 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Modal closed for user ID: " + userId); // Add this line for debugging
         });
 
-        overlay.addEventListener("click", function() {
-            overlay.style.display = "none"; // Hide the overlay
-            overlay.querySelector(".modal-delete-container").style.display = "none"; // Hide the modal container
-            console.log("Modal closed for user ID: " + userId); // Add this line for debugging
-        });
     });
 });
