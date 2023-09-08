@@ -27,3 +27,16 @@
 [2023-09-08 11:57:44] ✅ SUCCESS: Login for user: test
 [2023-09-08 12:53:35] 🌠 SUCCESS: User test logged out successfully
 [2023-09-08 12:53:45] ✅ SUCCESS: Login for user: test
+[2023-09-08 15:15:47] ✅ SUCCESS: Login for user: test
+[2023-09-08 15:15:53] 🌠 SUCCESS: User test logged out successfully
+[2023-09-08 15:16:02] ✅ SUCCESS: Login for user: test2
+[2023-09-08 15:16:09] 🌠 SUCCESS: User test2 logged out successfully
+[2023-09-08 15:16:18] ✅ SUCCESS: Login for user: test2
+[2023-09-08 15:16:33] 🌠 SUCCESS: User test2 logged out successfully
+[2023-09-08 15:17:45] ✅ SUCCESS: Login for user: test
+[2023-09-08 15:21:57] 🌠 SUCCESS: User test logged out successfully
+[2023-09-08 15:23:35] ✅ SUCCESS: Login for user: test
+[2023-09-08 15:23:37] 🌠 SUCCESS: User test logged out successfully
+[2023-09-08 15:23:55] ❌ ERROR: Connexion attempt with unknow user
+[2023-09-08 15:24:40] ⚠️ FAIL: Connexion attempt with known user
+[2023-09-08 15:24:52] ✅ SUCCESS: Login for user: test
