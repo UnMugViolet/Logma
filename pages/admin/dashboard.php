@@ -48,7 +48,7 @@
     <?php
         if($userAdmin){
     ?>
-                    <div class="triple-col-1">
+                    <div class="triple-col-1 mb-30">
                         <div class="flex vertical-align">
                             <img src="/logma/ressources/img/svg/AdminIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Fonctions Admin :</h2>
@@ -81,7 +81,7 @@
     <?php
         }
     ?>
-                    <div class="triple-col-2">
+                    <div class="triple-col-2 mb-30">
                         <div class="flex vertical-align">
                             <img src="/logma/ressources/img/svg/AddIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Ajouter </h2>
@@ -94,7 +94,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="triple-col-3">
+                    <div class="triple-col-3 mb-30">
                         <div class="flex vertical-align">
                             <img src="/logma/ressources/img/svg/WebIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Voir le site.</h2>
