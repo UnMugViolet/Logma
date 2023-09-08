@@ -746,6 +746,17 @@ footer h3 {
   margin: 0 auto;
 }
 
+.danger-button {
+  border: 1px solid #D11A2A;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 300;
+  text-transform: uppercase;
+}
+.danger-button:hover {
+  opacity: 0.9;
+}
+
 /* === FORM ===*/
 .input {
   border-radius: 8px;
