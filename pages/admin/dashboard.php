@@ -48,22 +48,32 @@
     <?php
         if($userAdmin){
     ?>
-
                     <div class="triple-col-1">
                         <div class="flex vertical-align">
-                            <img src="/logma/ressources/img/AdminIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <img src="/logma/ressources/img/svg/AdminIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Fonctions Admin :</h2>
                         </div>
-
-                        <div class="flex">
-                            <a href="./signup" class="container-link-cta color-white">
-                            <p>Ajouter un compte</p>
+                        
+                        <div class="vertical-align">
+                            <img src="../ressources/img/svg/LogsIcon.svg" alt="Poubelle" class="size-small-icon">
+                            <a href="./logs" class="container-link-cta color-white">
+                            <p>Journal de logs</p>
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
-                        <div class="flex">
-                            <a href="./logs" class="container-link-cta color-white">
-                            <p>Journal de logs</p>
+                        
+                        <div class="vertical-align">
+                            <img src="../ressources/img/svg/AddSimple.svg" alt="Poubelle" class="size-small-icon">   
+                            <a href="./signup" class="container-link-cta color-white">
+                                <p>Ajouter un compte</p>
+                                <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                        
+                        <div class="vertical-align">
+                            <img src="../ressources/img/svg/Trash.svg" alt="Poubelle" class="size-small-icon">
+                            <a href="./delete-account" class="container-link-cta color-white">
+                            <p>Supprimer un compte</p>
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
@@ -73,7 +83,7 @@
     ?>
                     <div class="triple-col-2">
                         <div class="flex vertical-align">
-                            <img src="/logma/ressources/img/AddIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <img src="/logma/ressources/img/svg/AddIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Ajouter </h2>
                         </div>
 
@@ -86,7 +96,7 @@
                     </div>
                     <div class="triple-col-3">
                         <div class="flex vertical-align">
-                            <img src="/logma/ressources/img/WebIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <img src="/logma/ressources/img/svg/WebIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Voir le site.</h2>
                         </div>
 

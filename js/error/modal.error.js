@@ -3,7 +3,6 @@ import errorMessageMap from './mapping.error.js';
 // Get the error parameter from the URL
 const urlParams = new URLSearchParams(window.location.search);
 const errorParam = urlParams.get('error');
-console.log(errorParam);
 
 // Check if the error parameter is not "none" or is not empty
 if (urlParams.toString() !== "") {
@@ -17,7 +16,7 @@ if (urlParams.toString() !== "") {
     modalText.textContent = errorMessage;
     modal.style.display = 'block';
 
-    const closeButton = modal.querySelector('.close');
+    const closeButton = modal.querySelector('.close-error');
     closeButton.onclick = function() {
         modal.style.display = 'none';
     };

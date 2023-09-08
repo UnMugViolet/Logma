@@ -33,7 +33,7 @@
         <div class="container h-full vertical-align object-center">
             <div>
                 <div class="block container icon-error mb-50">
-                    <img src="/logma/ressources/img/DownloadImage.svg" alt="Télécharger une image">
+                    <img src="/logma/ressources/img/svg/DownloadImage.svg" alt="Télécharger une image">
                 </div>
                 <div>
                     <h1 class="color-white">Télécharger des images.</h1>
@@ -66,9 +66,9 @@
 
             <!-- Error Modal -->
             <div id="errorModal" class="error-modal top-0 left-0 h-full w-full bg-faded-black">
-                <div class="modal-content bg-color-white w-full flex-container vertical-align ">                    
+                <div class="modal-error-content bg-color-white w-full flex-container vertical-align ">                    
                     <p id="modalText" class="">Text par défaut</p>
-                    <span class="close color-main">&times;</span>
+                    <span class="close-error color-main">&times;</span>
                 </div>
             </div>
 
