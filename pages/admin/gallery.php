@@ -32,7 +32,7 @@
     <section class="h-full-screen">
         <div class="container h-full vertical-align object-center">
             <div>
-                <div class="block container icon-error mb-50">
+                <div class="block container icon-error mt-50 mb-50">
                     <img src="/logma/ressources/img/svg/DownloadImage.svg" alt="Télécharger une image">
                 </div>
                 <div>

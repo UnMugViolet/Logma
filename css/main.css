@@ -246,6 +246,11 @@ p {
   padding-bottom: 5%;
 }
 
+.spacing-gallery {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -433,6 +438,9 @@ p {
   }
   .absolute-responsive {
     position: relative;
+  }
+  .h-full-screen {
+    height: auto;
   }
 }
 /* === HEADER ===*/
