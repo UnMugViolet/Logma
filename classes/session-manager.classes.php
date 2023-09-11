@@ -79,5 +79,11 @@ class SessionManager {
         include(__DIR__ . "/../pages/errors/401.html");
         exit();
     }
+
+    public function maintenanceMode() {
+        header("HTTP/1.1 503 Forbidden");
+        include(__DIR__ . "/../pages/errors/maintenance-logma.html");
+        exit();
+    }
     
 }

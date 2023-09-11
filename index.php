@@ -1,5 +1,6 @@
 <?php
     include_once('./includes/user-role-check.inc.php');
+    include_once('./includes/maintenance.inc.php');
 
     if ($userAdmin || $userDev || $user || $notUser) {
         $userHasAccess = true;
@@ -7,6 +8,10 @@
         $sessionManager->forbiddenAccess();
     } 
     
+    // Check Maintenance
+    if ($maintenanceMode && !isAuthorizedIP($clientIP, $authorizedIPs)) {
+        $sessionManager->maintenanceMode();
+      }
 ?>
 
 <!DOCTYPE html>
