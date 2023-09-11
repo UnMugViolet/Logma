@@ -13,6 +13,7 @@ const errorMessageMap = {
     nameimage: "❌ Le nom de l'image est déjà pris, elle a peut être déjà été uploadée :)",
     invalidinput: "❌ Un ou plusieurs champs ne sont pas valide, ils comportent peut être des caractères spéciaux",
     contactfailed: "❌ Une erreur s'est produite, vous pouvez nous contacter à contact@logma-production.com",
+    missinguserid: "❌ L'utilisateur ne peut pas être supprimé, merci de contacter le développeur en charge",
     default: "❌ Une erreur est survenue",
     none: "✅ Opération réalisée avec succès !",
 };

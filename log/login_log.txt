@@ -50,3 +50,8 @@
 [2023-09-08 18:45:44] ✅ SUCCESS: Login for user: test
 [2023-09-11 08:53:10] 🌠 SUCCESS: User test logged out successfully
 [2023-09-11 08:55:23] ✅ SUCCESS: Login for user: test
+[2023-09-11 09:48:33] 🌠 SUCCESS: User test logged out successfully
+[2023-09-11 10:04:04] IP: [::1] ⚠️ FAIL: Connexion attempt with known user
+[2023-09-11 10:04:17] IP: [::1] ⚠️ FAIL: Connexion attempt with known user
+[2023-09-11 10:04:28] IP: [::1] ❌ ERROR: Connexion attempt with unknow user
+[2023-09-11 10:04:41] IP: [::1] ✅ SUCCESS: Login for user: test

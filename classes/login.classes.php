@@ -45,12 +45,28 @@ class Login extends Dbh {
         }
     }
 
+    public function getIp(){
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])){
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        }else{
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        return $ip;
+    }
+
+
     private function logEvent($message, $severity = "LOGINOK") {
         $logFile = "../log/login_log.txt";
         
+        // Timezone 
         $parisTimezone = new DateTimeZone('Europe/Paris');
         $dateTime = new DateTime('now', $parisTimezone);
         $timestamp = $dateTime->format("Y-m-d H:i:s");  
+
+        //Ip address
+        $ip = $this->getIp();
 
         $severityIcons = [
             "LOGINOK" => "✅",
@@ -59,7 +75,7 @@ class Login extends Dbh {
         ];
 
         $severityIcon = isset($severityIcons[$severity]) ? $severityIcons[$severity] : $severityIcons["LOGINOK"];
-        $logMessage = "[$timestamp] $severityIcon $message" . PHP_EOL;
+        $logMessage = "[$timestamp] IP: [$ip] $severityIcon $message" . PHP_EOL;
 
         // Append the log message to the log file
         file_put_contents($logFile, $logMessage, FILE_APPEND);

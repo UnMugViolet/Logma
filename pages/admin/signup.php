@@ -38,7 +38,7 @@
                     <img src="/logma/ressources/img/svg/AddAccountIcon.svg" alt="Erreur 404">
                 </div>
                 <div>
-                    <h1 class="color-white">Ajouter un compte.</h1>
+                    <h1 class="color-white text-center mb-30 mt-30">Ajouter un compte.</h1>
                 </div>
                 <div class="input-size">
                     <form action="../includes/signup.inc.php" method="post">

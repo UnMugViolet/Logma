@@ -52,8 +52,6 @@ class GalleryDisplay extends DisplayTripleCol {
 
     protected function generateContentHTML($galleryItems) {
 
-        include_once('../../includes/user-role-check.inc.php');
-
         // Extract data from the gallery item
         $imageSrc = "./ressources/img/gallery/" . $galleryItems["imgFullNameGallery"];
         $imageAlt = $galleryItems["titleGallery"];
