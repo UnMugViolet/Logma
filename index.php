@@ -1,17 +1,24 @@
 <?php
     include_once('./includes/user-role-check.inc.php');
     include_once('./includes/maintenance.inc.php');
+    
 
     if ($userAdmin || $userDev || $user || $notUser) {
         $userHasAccess = true;
     } else{
         $sessionManager->forbiddenAccess();
     } 
-    
+
     // Check Maintenance
-    if ($maintenanceMode && !isAuthorizedIP($clientIP, $authorizedIPs)) {
-        $sessionManager->maintenanceMode();
-      }
+    $maintenanceManager = new MaintenanceModeManager('./config/config.php', $authorizedIPs);
+
+    if ($maintenanceManager->isMaintenanceModeActive()) {
+        if ($maintenanceManager->isAuthorizedIP($clientIP)) {
+            $maintenanceManager->displayMaintenanceOnBanner();
+        } else {
+            $sessionManager->maintenanceMode();
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +88,7 @@
         <section class="spacing-section">
             <div class="container">
                 <h2 class="text-center color-white">Nos derniers projets</h2>
-                <div class="triple-col spacing-last-projects ">
+                <div class="triple-col spacing-last-projects mb-50">
                     <span class="triple-col-1">
                         <a href="https://youtu.be/L3AFBkg_BG8" class="relative video-hover">
                             <div class="overlay-project w-full h-full absolute">
@@ -116,7 +123,7 @@
             </div>
 
             <div class="container">
-                <div class="triple-col spacing-last-projects ">
+                <div class="triple-col spacing-last-projects mb-50">
                     <span class="triple-col-1">
                         <a href="https://youtu.be/jGQK5btw2xc" class="relative video-hover">
                             <div class="overlay-project w-full h-full absolute">
@@ -159,7 +166,7 @@
         </section>
         <section class="spacing-section bg-color-white">
             <div class="container">
-                <div class="triple-col spacing-last-projects">
+                <div class="triple-col spacing-last-projects mb-50">
                     <span class="triple-col-1">
                         <div>
                             <img src="./ressources/img/shooting-de-marque.jpg" alt="packshot nohé créateur de vêtements">

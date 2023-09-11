@@ -119,7 +119,6 @@
   }
 }
 
-
 // Danger button 
 
 .danger-button{
@@ -127,7 +126,7 @@
   border: 1px solid $main-red;
   border-radius: 8px;
   font-family: $main-font;
-  font-size: 300;
+  font-size: 15px;
   text-transform: uppercase;
 
   &:hover {
@@ -135,3 +134,14 @@
   }
   
 }
+
+// Checkbox
+
+.checkbox{
+  width: 17px;
+  height: 17px;
+  border-radius: 3px; /* Rounded corners */
+  cursor: pointer;
+  
+}
+

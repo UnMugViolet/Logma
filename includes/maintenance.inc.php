@@ -1,38 +1,54 @@
 <?php
-include_once('../config/config.php');
-include_once('../config/authorized-ip.config.php');
 
-    // Check if authorized Ip 
-    function isAuthorizedIP($ip, $authorizedIPs) {
-        return in_array($ip, $authorizedIPs);
+$includePathsConfig = [
+    './config/',
+    '../config/',
+    '../../config/',
+];
+$includePathsClasses = [
+    './classes/',
+    '../classes/',
+    '../../classes/',
+];
+
+
+function include_once_multiple_paths($paths, $file) {
+    foreach ($paths as $path) {
+        $fullPath = $path . $file;
+        if (file_exists($fullPath)) {
+            include_once($fullPath);
+            return;
+        }
     }
-    
-    // Check if the request is coming from an authorized IP address
-    $clientIP = $_SERVER['REMOTE_ADDR'];
+}
 
-    
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+include_once_multiple_paths($includePathsConfig, 'config.php');
+include_once_multiple_paths($includePathsClasses, 'maintenance-mode-manager.classes.php');
+
+
+// Add the authorized IPS here : 
+$authorizedIPs = array(
+    '::1',
+);
+
+$clientIP = $_SERVER['REMOTE_ADDR'];
+
+
+// Create an instance of MaintenanceModeManager
+$maintenanceManager = new MaintenanceModeManager('../config/config.php', $authorizedIPs);
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['form_identifier']) && $_POST['form_identifier'] === 'maintenance_form') {
     // Check if the checkbox is checked
     $maintenanceMode = isset($_POST['maintenance']);
 
     // Check if the client IP is authorized
-    if (!$maintenanceMode && !isAuthorizedIP($clientIP, $authorizedIPs)) {
-        header("location: ../access-admin-logma/maintenance?error=stmt");
+    if (!$maintenanceManager->isAuthorizedIP($clientIP)) {
+        // Redirect unauthorized IP addresses
+        header("location: ../access-admin-logma/maintenance?error=ipnotauthorized");
         exit();
     }
 
-    // Update the maintenance mode status in config.php
-    $configContents = '<?php $maintenanceMode = ' . var_export($maintenanceMode, true) . ';';
-    file_put_contents('../config/config.php', $configContents, LOCK_EX);
-
-
-    if ($maintenanceMode) {
-        // Enable
-        header("location: ../access-admin-logma/maintenance?error=none");
-        exit();
-    } else {
-        // Disable
-        header("location: ../access-admin-logma/maintenance?error=none");
-        exit();
-    }
+    // Toggle maintenance mode based on the checkbox
+    $maintenanceManager->toggleMaintenanceMode($maintenanceMode);
 }
+

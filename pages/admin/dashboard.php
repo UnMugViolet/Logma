@@ -6,6 +6,7 @@
     } else{
         $sessionManager->forbiddenAccess();
     } 
+    
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +49,7 @@
     <?php
         if($userAdmin){
     ?>
-                    <div class="triple-col-1">
+                    <div class="triple-col-1 mb-50">
                         <div class="flex vertical-align">
                             <img src="/logma/ressources/img/svg/AdminIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Fonctions Admin :</h2>
@@ -77,13 +78,21 @@
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
+
+                        <div class="vertical-align">
+                            <img src="../ressources/img/svg/MaintenanceIcon.svg" alt="Site en Maintenance" class="size-small-icon">
+                            <a href="./maintenance" class="container-link-cta color-white">
+                            <p>Mode maintenance</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
                     </div>
     <?php
         }
     ?>
-                    <div class="triple-col-2">
+                    <div class="triple-col-2 mb-50">
                         <div class="flex vertical-align">
-                            <img src="/logma/ressources/img/svg/FeaturesIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <img src="/logma/ressources/img/svg/FeaturesIcon.svg" alt="Accès au fonctionnalités du site" class="size-icon">
                             <h2 class="color-white">Fonctionnalités </h2>
                         </div>
 
@@ -95,7 +104,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="triple-col-3">
+                    <div class="triple-col-3 mb-50">
                         <div class="vertical-align">
                             <img src="/logma/ressources/img/svg/WebIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Voir le site.</h2>

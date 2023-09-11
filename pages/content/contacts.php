@@ -1,11 +1,23 @@
 <?php
   include_once('../../includes/user-role-check.inc.php');
+  include_once('../../includes/maintenance.inc.php');
 
   if ($userAdmin || $userDev || $user || $notUser) {
     $userHasAccess = true;
   } else {
     $sessionManager->forbiddenAccess();
   }
+  
+    // Check Maintenance
+    $maintenanceManager = new MaintenanceModeManager('../../config/config.php', $authorizedIPs);
+
+    if ($maintenanceManager->isMaintenanceModeActive()) {
+        if ($maintenanceManager->isAuthorizedIP($clientIP)) {
+            $maintenanceManager->displayMaintenanceOnBanner();
+        } else {
+            $sessionManager->maintenanceMode();
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +53,7 @@
     <div>
 
     <div class="dual-col mt-100">
-      <div class="dual-col-1 mb-20">
+      <div class="dual-col-1 spacing-contact">
         <div>
           <h2 class="color-white styled-h2">Laissez nous un petit message</h2>
           <h5 class="color-white">Votre voix compte ! </h5>

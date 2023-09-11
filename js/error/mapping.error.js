@@ -14,6 +14,7 @@ const errorMessageMap = {
     invalidinput: "❌ Un ou plusieurs champs ne sont pas valide, ils comportent peut être des caractères spéciaux",
     contactfailed: "❌ Une erreur s'est produite, vous pouvez nous contacter à contact@logma-production.com",
     missinguserid: "❌ L'utilisateur ne peut pas être supprimé, merci de contacter le développeur en charge",
+    ipnotauthorized: "❌ Merci de rentrer votre IP avant de mettre en mode maintenance",
     default: "❌ Une erreur est survenue",
     none: "✅ Opération réalisée avec succès !",
 };

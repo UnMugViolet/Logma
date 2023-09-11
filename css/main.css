@@ -137,14 +137,6 @@ p {
     font-size: 16px;
     margin: 0;
   }
-  h5 {
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-size: 14px;
-    text-align: left;
-    margin: 0;
-  }
   p {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -253,8 +245,8 @@ p {
 }
 
 .spacing-gallery {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 7%;
+  padding-bottom: 0%;
 }
 
 .w-full {
@@ -303,6 +295,10 @@ p {
 
 .h-full-screen-responsive {
   height: 100vh;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 /* General Spacing */
@@ -381,8 +377,6 @@ p {
   }
   .dual-col-2 {
     grid-area: 2/1/3/2;
-    margin-top: 50px;
-    margin-bottom: 50px;
   }
 }
 .triple-col {
@@ -408,9 +402,6 @@ p {
 @media (max-width: 940px) {
   .triple-col {
     grid-column-gap: 0px;
-    grid-row-gap: 61px;
-    margin-top: 50px;
-    margin-bottom: 50px;
   }
   .triple-col-1 {
     grid-area: 1/1/2/2;
@@ -766,11 +757,18 @@ footer h3 {
   border: 1px solid #D11A2A;
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
-  font-size: 300;
+  font-size: 15px;
   text-transform: uppercase;
 }
 .danger-button:hover {
   opacity: 0.9;
+}
+
+.checkbox {
+  width: 17px;
+  height: 17px;
+  border-radius: 3px; /* Rounded corners */
+  cursor: pointer;
 }
 
 /* === FORM ===*/
@@ -964,6 +962,11 @@ footer h3 {
 
 .styled-h2 {
   margin-top: 0px;
+}
+
+.spacing-contact {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .icon-error {
