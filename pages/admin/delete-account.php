@@ -43,11 +43,11 @@
     <section class="h-full-screen">
         <div class="container h-full vertical-align object-center">
             <div>
-                <div class="block container icon-error mb-50 mt-50">
+                <div class="block container icon-error mt-50 mb-50">
                     <img src="/logma/ressources/img/svg/DeleteAccountIcon.svg" alt="Erreur 404">
                 </div>
                 <div>
-                    <h1 class="color-white text-center mb-30">Supprimer un compte.</h1>
+                    <h1 class="color-white text-center mb-20">Supprimer un compte.</h1>
                 </div>
                     <div>
                     <?php
