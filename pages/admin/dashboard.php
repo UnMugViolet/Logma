@@ -48,14 +48,14 @@
     <?php
         if($userAdmin){
     ?>
-                    <div class="triple-col-1 mb-30">
+                    <div class="triple-col-1 mb-50">
                         <div class="flex vertical-align">
                             <img src="/logma/ressources/img/svg/AdminIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Fonctions Admin :</h2>
                         </div>
                         
                         <div class="vertical-align">
-                            <img src="../ressources/img/svg/LogsIcon.svg" alt="Poubelle" class="size-small-icon">
+                            <img src="../ressources/img/svg/LogsIcon.svg" alt="Voir les logs" class="size-small-icon">
                             <a href="./logs" class="container-link-cta color-white">
                             <p>Journal de logs</p>
                             <p class="icon-link-cta"> →</p>
@@ -63,7 +63,7 @@
                         </div>
                         
                         <div class="vertical-align">
-                            <img src="../ressources/img/svg/AddSimple.svg" alt="Poubelle" class="size-small-icon">   
+                            <img src="../ressources/img/svg/AddSimple.svg" alt="Ajouter un compte" class="size-small-icon">   
                             <a href="./signup" class="container-link-cta color-white">
                                 <p>Ajouter un compte</p>
                                 <p class="icon-link-cta"> →</p>
@@ -71,7 +71,7 @@
                         </div>
                         
                         <div class="vertical-align">
-                            <img src="../ressources/img/svg/Trash.svg" alt="Poubelle" class="size-small-icon">
+                            <img src="../ressources/img/svg/Trash.svg" alt="Supprimer un compte" class="size-small-icon">
                             <a href="./delete-account" class="container-link-cta color-white">
                             <p>Supprimer un compte</p>
                             <p class="icon-link-cta"> →</p>
@@ -81,21 +81,22 @@
     <?php
         }
     ?>
-                    <div class="triple-col-2 mb-30">
+                    <div class="triple-col-2 mb-50">
                         <div class="flex vertical-align">
-                            <img src="/logma/ressources/img/svg/AddIcon.svg" alt="Accès au site Internet" class="size-icon">
-                            <h2 class="color-white">Ajouter </h2>
+                            <img src="/logma/ressources/img/svg/FeaturesIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <h2 class="color-white">Fonctionnalités </h2>
                         </div>
 
-                        <div class="flex">
+                        <div class="vertical-align">
+                            <img src="../ressources/img/svg/AddPhotoGalleryIcon.svg" alt="Ajouter des images" class="size-small-icon">
                             <a href="./gallery" class="container-link-cta color-white">
                             <p>Ajouter des images à la galerie </p>
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
                     </div>
-                    <div class="triple-col-3 mb-30">
-                        <div class="flex vertical-align">
+                    <div class="triple-col-3 mb-50">
+                        <div class="vertical-align">
                             <img src="/logma/ressources/img/svg/WebIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Voir le site.</h2>
                         </div>
