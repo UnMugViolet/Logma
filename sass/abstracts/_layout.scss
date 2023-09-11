@@ -145,6 +145,11 @@
   height: 100vh;
 }
 
+.h-full-screen-responsive{
+  height: 100vh;
+}
+
+
 /* General Spacing */
   // Top 
 
@@ -291,7 +296,12 @@
     position: relative;
   }
 
-  .h-full-screen{
+  .h-full-screen-responsive{
     height: auto;
+  }
+
+  .spacing-gallery {
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 }

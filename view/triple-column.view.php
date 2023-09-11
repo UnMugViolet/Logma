@@ -18,7 +18,7 @@ abstract class DisplayTripleCol {
     
             // Output the content HTML
             echo <<<HTML
-                <span class="$currentClass mb-50">
+                <span class="$currentClass spacing-gallery">
                     <div class="relative">
                         $contentHTML
                     </div>

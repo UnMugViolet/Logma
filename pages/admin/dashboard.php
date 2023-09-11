@@ -43,12 +43,12 @@
 
                 </div>
 
-                <div class="triple-col spacing-last-projects ">
+                <div class="triple-col">
 
     <?php
         if($userAdmin){
     ?>
-                    <div class="triple-col-1 mb-30">
+                    <div class="triple-col-1">
                         <div class="flex vertical-align">
                             <img src="/logma/ressources/img/svg/AdminIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Fonctions Admin :</h2>
@@ -81,7 +81,7 @@
     <?php
         }
     ?>
-                    <div class="triple-col-2 mb-30">
+                    <div class="triple-col-2">
                         <div class="flex vertical-align">
                             <img src="/logma/ressources/img/svg/FeaturesIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Fonctionnalités </h2>
@@ -95,8 +95,8 @@
                             </a>
                         </div>
                     </div>
-                    <div class="triple-col-3 mb-30">
-                        <div class="flex vertical-align">
+                    <div class="triple-col-3">
+                        <div class="vertical-align">
                             <img src="/logma/ressources/img/svg/WebIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Voir le site.</h2>
                         </div>

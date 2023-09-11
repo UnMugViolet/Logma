@@ -301,6 +301,10 @@ p {
   height: 100vh;
 }
 
+.h-full-screen-responsive {
+  height: 100vh;
+}
+
 /* General Spacing */
 .mt-10 {
   margin-top: 10px;
@@ -439,8 +443,12 @@ p {
   .absolute-responsive {
     position: relative;
   }
-  .h-full-screen {
+  .h-full-screen-responsive {
     height: auto;
+  }
+  .spacing-gallery {
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 }
 /* === HEADER ===*/
