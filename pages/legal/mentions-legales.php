@@ -9,9 +9,15 @@
     } 
     
     // Check Maintenance
-    if ($maintenanceMode && !isAuthorizedIP($clientIP, $authorizedIPs)) {
-        $sessionManager->maintenanceMode();
-      }
+    $maintenanceManager = new MaintenanceModeManager('../../config/config.php', $authorizedIPs);
+
+    if ($maintenanceManager->isMaintenanceModeActive()) {
+        if ($maintenanceManager->isAuthorizedIP($clientIP)) {
+            $maintenanceManager->displayMaintenanceOnBanner();
+        } else {
+            $sessionManager->maintenanceMode();
+        }
+    }
 ?>
 
 <!DOCTYPE html>
