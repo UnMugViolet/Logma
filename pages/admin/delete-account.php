@@ -40,9 +40,9 @@
 </head>
 
 <body class="bg-color-black">
-    <section class="h-full-screen">
+    <section class="h-full-screen-responsive">
         <div class="container h-full vertical-align object-center">
-            <div>
+            <div class="card-min-size">
                 <div class="block container icon-error mt-50 mb-50">
                     <img src="/logma/ressources/img/svg/DeleteAccountIcon.svg" alt="Erreur 404">
                 </div>
