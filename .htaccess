@@ -28,8 +28,3 @@ ErrorDocument 403 /logma/pages/errors/403.html
 ErrorDocument 404 /logma/pages/errors/404.html
 ErrorDocument 500 /logma/pages/errors/500.html
 ErrorDocument 503 /logma/pages/errors/maintenance-logma.html
-
-
-# # Uncomment bellow for maintenance mode
-# RewriteCond %{REMOTE_ADDR} !^192\.168\.1\.1$
-# RewriteRule .* pages/errors/maintenance-logma.html [L]
