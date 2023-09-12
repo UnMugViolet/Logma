@@ -99,6 +99,13 @@ p {
   font-size: 14px;
 }
 
+li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 .small-p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -144,12 +151,6 @@ p {
     font-size: 14px;
     text-align: left;
     margin: 0;
-  }
-  p {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    text-decoration: none;
-    font-size: 14px;
   }
   .logs-typo {
     font-size: 10px;
