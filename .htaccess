@@ -19,6 +19,7 @@ RewriteRule ^access-admin-logma/gallery$ /logma/pages/admin/gallery.php [L]
 RewriteRule ^access-admin-logma/dashboard$ /logma/pages/admin/dashboard.php [L]
 RewriteRule ^access-admin-logma/logs$ /logma/pages/admin/logs.php [L]
 RewriteRule ^access-admin-logma/delete-account$ /logma/pages/admin/delete-account.php [L]
+RewriteRule ^access-admin-logma/maintenance$ /logma/pages/admin/maintenance.php [L]
 
 
 # Management of errors on website 

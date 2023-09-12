@@ -3,7 +3,7 @@ require "../classes/dbh.classes.php";
 require "../classes/gallery.classes.php";
 require "../classes/gallery-handler-contr.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["deleteImage"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["filename"])) {
     // Get the image file name to delete from the form input
     $imageFileNameToDelete = $_POST['filename'];
 

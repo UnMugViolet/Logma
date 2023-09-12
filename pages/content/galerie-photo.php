@@ -2,6 +2,8 @@
     include_once('../../includes/user-role-check.inc.php');
     include_once('../../classes/gallery.classes.php');
     include_once ('../../view/triple-column.view.php');
+    include_once('../../includes/maintenance.inc.php');
+
 
     if ($userAdmin || $userDev || $user || $notUser) {
         $userHasAccess = true;
@@ -13,6 +15,18 @@
     $images = $galleryItems->getImageGallery();
 
     $galleryDisplay = new GalleryDisplay($galleryItems);
+
+    // Check Maintenance
+    $maintenanceManager = new MaintenanceModeManager('../../config/config.php', $authorizedIPs);
+
+    if ($maintenanceManager->isMaintenanceModeActive()) {
+        if ($maintenanceManager->isAuthorizedIP($clientIP)) {
+            $maintenanceManager->displayMaintenanceOnBanner();
+        } else {
+            $sessionManager->maintenanceMode();
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -29,21 +43,20 @@
     <!-- JS -->
     <script src="./js/script.js" type="text/javascript" defer></script>
     <script src="./js/error/modal.error.js" type="module" defer></script>
-    <script src="./js/modal/delete-account.modal.js" type="text/javascript" defer></script>
-
+    <script src="./js/modal/delete-image.modal.js" type="text/javascript" defer></script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
 </head>
 
 <body class="bg-color-black">
-    <section class="spacing-section">
+    <section>
         <?php
         include_once "../../components/header.php";
         ?>
     </section>
-    <section class="w-full pad-10">
+    <section class="w-full pad-10 mt-100 mb-100">
         <?php
             $galleryDisplay->displayContent($images);
         ?>

@@ -1,9 +1,11 @@
 <footer class="bg-color-black w-full">
     <div>
-        <div class="container vertical-align footer-size triple-col">
-            <div class="triple-col-1">
+        <div class="container vertical-align footer-size triple-col mt-50 mb-50">
+            <div class="triple-col-1 mb-50">
                 <div class="logo-size margin-logo">
+                  
                     <img src="./ressources/img/Logo-logma.webp" alt="Société de production Logma Rennes ">
+                  
                 </div>
                 <div>
                     <h3 class="color-white ">Nous serions ravis de vous entendre.</h3>
@@ -17,7 +19,7 @@
                 </a>
             </div>
 
-            <div class="triple-col-2 col-center ">
+            <div class="triple-col-2 col-center mb-50">
                 <h5 class="color-white text-center-left">Suivez nous</h5>
                 <div class="center-responsive-left text-height">
                     <div class="flex-col h-full">
@@ -51,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="triple-col-3">
+            <div class="triple-col-3 mb-50">
                 <h5 class="color-white text-center-left">Notre contenu</h5>
                 <div class=" center-responsive-left h-demi">
                     <div class="flex-col text-height">

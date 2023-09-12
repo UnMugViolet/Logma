@@ -47,7 +47,7 @@
                         <span class="wrap"></span>
                     </h1>
                     <div class="flex mt-10 object-center">
-                        <div class="absolute top-0 right-0 mb-10 pad-20">
+                        <div class="fixed top-0 right-0 mb-10 pad-20">
                             <a href="./dashboard" class="container-link-cta color-white">
                                 <p>Retour au dashboard </p>
                                 <p class="icon-link-cta"> →</p>

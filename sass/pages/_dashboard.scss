@@ -16,3 +16,12 @@
     border: solid 1px #fff;
     border-radius: 15px;
 }
+
+.card-min-size{
+    min-width: 1000px;
+}
+
+@media (max-width: 940px) {
+    .card-min-size{
+        min-width: auto;
+    }

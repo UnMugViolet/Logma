@@ -1,22 +1,22 @@
 <?php
-    session_start();
-    error_reporting(0);
-    include_once('../../classes/session-manager.classes.php');
-
-    $sessionManager = new SessionManager();
-    $sessionManager->checkAutoLogout();
-
-    $sessionManager->checkUserRole();
-    $userAdmin = $sessionManager->getUserAdmin();
-    $userDev = $sessionManager->getUserDev();
-    $user = $sessionManager->getUser();
-    $notUser = $sessionManager->notUser();
-
+    include_once('../../includes/user-role-check.inc.php');
+    include_once('../../includes/maintenance.inc.php');
 
     if ($userAdmin || $userDev || $user || $notUser) {
         $userHasAccess = true;
     } else{
         $sessionManager->forbiddenAccess();
+    } 
+    
+    // Check Maintenance
+    $maintenanceManager = new MaintenanceModeManager('../../config/config.php', $authorizedIPs);
+
+    if ($maintenanceManager->isMaintenanceModeActive()) {
+        if ($maintenanceManager->isAuthorizedIP($clientIP)) {
+            $maintenanceManager->displayMaintenanceOnBanner();
+        } else {
+            $sessionManager->maintenanceMode();
+        }
     }
 
     $websiteName= "Logma Production";
@@ -27,6 +27,7 @@
     $siren = "322868415";
     $phoneNumber = "06 79 79 69 70";
     $email= "contact@logma-production.com";
+
 ?>
 
 <!DOCTYPE html>

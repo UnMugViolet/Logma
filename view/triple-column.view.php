@@ -51,7 +51,7 @@ abstract class DisplayTripleCol {
 class GalleryDisplay extends DisplayTripleCol {
 
     protected function generateContentHTML($galleryItems) {
-
+      
         include_once('../../includes/user-role-check.inc.php');
 
         // Extract data from the gallery item
@@ -71,10 +71,10 @@ class GalleryDisplay extends DisplayTripleCol {
                     <div>
                         <h2>Confirmation</h2>
                         <p class="mb-10">Êtes-vous sûr de vouloir supprimer cette photo ?</p>
-                        <h4 class="text-center">' . $title . '-'. $imageName .'</h4>
-                        <form class="delete-form object-center" action="./includes/gallery-delete.inc.php" method="post">
+                        <h4 class="text-center">' . $title . ' - '. $project .'</h4>
+                        <form class="delete-form object-center" action="./includes/gallery-delete.inc.php" method="post" name="deleteImage"> 
                             <input type="hidden" name="filename" value="' . $galleryItems["imgFullNameGallery"] . '">
-                            <button class="hidden-click danger-button mt-30 bg-color-red color-white pad-10" type="submit">Supprimer le compte</button>
+                            <button class="hidden-click danger-button mt-30 bg-color-red color-white pad-10" type="submit">Supprimer l\'image</button>
                         </form>
                         <span class="close-delete-account absolute pad-20 top-0 right-0" id="close-delete' . $galleryItems["imgFullNameGallery"] . '">&times;</span>
                     </div>
@@ -83,7 +83,7 @@ class GalleryDisplay extends DisplayTripleCol {
 
             <form class="absolute right-0 top-0 pad-10" method="post">
                 <input type="hidden" name="filename" value="' . $galleryItems["imgFullNameGallery"] . '">
-                <button class ="delete-cta" data-userid="'.$galleryItems["imgFullNameGallery"].'"></button>
+                <button class ="delete-cta" data-image="'. $galleryItems["imgFullNameGallery"].'"></button>
             </form>
             ';
         } else {
