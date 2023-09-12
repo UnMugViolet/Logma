@@ -3,7 +3,7 @@
         <div class="container vertical-align footer-size triple-col">
             <div class="triple-col-1">
                 <div class="logo-size margin-logo">
-                    <img src="./ressources/img/Logo-logma.png" alt="Société de production Logma Rennes ">
+                    <img src="./ressources/img/Logo-logma.webp" alt="Société de production Logma Rennes ">
                 </div>
                 <div>
                     <h3 class="color-white ">Nous serions ravis de vous entendre.</h3>

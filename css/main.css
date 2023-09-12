@@ -290,6 +290,10 @@ li {
   top: 0;
 }
 
+.top-30 {
+  top: 30%;
+}
+
 .left-0 {
   left: 0;
 }
@@ -820,6 +824,13 @@ footer h3 {
   background-position: 50% 28.5%;
 }
 
+.bg-image-info {
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 76.5%;
+}
+
 @media (max-width: 768px) {
   .bg-image-layout {
     height: 60vh;
@@ -835,11 +846,11 @@ footer h3 {
   }
 }
 .bg-image-mountains {
-  background-image: url(../ressources/img/men-in-moutains.jpg);
+  background-image: url(../ressources/img/men-in-moutains.webp);
 }
 
 .bg-image-baptise {
-  background-image: url(../ressources/img/baptiste-fablet.jpg);
+  background-image: url(../ressources/img/logma-production.webp);
 }
 
 #hidden {

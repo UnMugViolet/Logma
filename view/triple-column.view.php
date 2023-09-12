@@ -93,7 +93,7 @@ class GalleryDisplay extends DisplayTripleCol {
         // Generate and return the HTML for the gallery item
         return <<<HTML
             <div class="relative mt-20">
-                <img class="gallery-image-size w-full" src="$imageSrc" alt="$imageAlt">
+                <img class="gallery-image-size w-full" src="$imageSrc" alt="$imageAlt" loading="lazy">
                 $form
             </div>
             <h4 class="color-white mt-10">$title</h4>
