@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- JS -->
-    <script src="./js/script.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript" defer></script>
     <script src="./js/components/typewirter.js" type="text/javascript" defer></script>
 
     <!-- Favicon -->
@@ -60,7 +60,7 @@
 
         </section>
 
-        <section class="spacing-section" >
+        <section class="spacing-section">
             <div class="container">
                 <div class="text-center spacing-section ">
                     <div>
