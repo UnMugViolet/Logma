@@ -14,6 +14,14 @@ CREATE TABLE users(
     users_role TINYTEXT not null
 )
 
+
+CREATE TABLE authorized_ips (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ip_address VARCHAR(45) NOT NULL,
+    description VARCHAR(255),
+    added_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Create database with terminal :
 -- mysql -u database_username -p database_name < create_database.sql
 

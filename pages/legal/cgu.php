@@ -12,7 +12,7 @@
     $maintenanceManager = new MaintenanceModeManager('../../config/config.php', $authorizedIPs);
 
     if ($maintenanceManager->isMaintenanceModeActive()) {
-        if ($maintenanceManager->isAuthorizedIP($clientIP)) {
+        if ($maintenanceManager->isAuthorizedIP()) {
             $maintenanceManager->displayMaintenanceOnBanner();
         } else {
             $sessionManager->maintenanceMode();

@@ -76,3 +76,6 @@
 [2023-09-12 16:10:51] 🌠 SUCCESS: User test logged out successfully
 [2023-09-12 16:44:39] IP: [::1] ✅ SUCCESS: Login for user: test
 [2023-09-12 16:45:55] 🌠 SUCCESS: User test logged out successfully
+[2023-09-12 17:33:01] 🌠 SUCCESS: User test logged out successfully
+[2023-09-12 17:41:21] IP: [::1] ✅ SUCCESS: Login for user: test
+[2023-09-12 17:41:37] 🌠 SUCCESS: User  logged out successfully

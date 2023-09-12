@@ -1,7 +1,6 @@
 <?php
     include_once('./includes/user-role-check.inc.php');
     include_once('./includes/maintenance.inc.php');
-    
 
     if ($userAdmin || $userDev || $user || $notUser) {
         $userHasAccess = true;
@@ -10,10 +9,10 @@
     } 
 
     // Check Maintenance
-    $maintenanceManager = new MaintenanceModeManager('./config/config.php', $authorizedIPs);
+    $maintenanceManager = new MaintenanceModeManager('./config/config.php');
 
     if ($maintenanceManager->isMaintenanceModeActive()) {
-        if ($maintenanceManager->isAuthorizedIP($clientIP)) {
+        if ($maintenanceManager->isAuthorizedIP()) {
             $maintenanceManager->displayMaintenanceOnBanner();
         } else {
             $sessionManager->maintenanceMode();
@@ -60,7 +59,7 @@
 
         </section>
 
-        <section class="spacing-section">
+        <section class="spacing-section" >
             <div class="container">
                 <div class="text-center spacing-section ">
                     <div>

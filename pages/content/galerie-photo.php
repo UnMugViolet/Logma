@@ -17,10 +17,10 @@
     $galleryDisplay = new GalleryDisplay($galleryItems);
 
     // Check Maintenance
-    $maintenanceManager = new MaintenanceModeManager('../../config/config.php', $authorizedIPs);
+    $maintenanceManager = new MaintenanceModeManager('../../config/config.php');
 
     if ($maintenanceManager->isMaintenanceModeActive()) {
-        if ($maintenanceManager->isAuthorizedIP($clientIP)) {
+        if ($maintenanceManager->isAuthorizedIP()) {
             $maintenanceManager->displayMaintenanceOnBanner();
         } else {
             $sessionManager->maintenanceMode();

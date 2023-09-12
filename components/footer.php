@@ -13,7 +13,7 @@
                         simplement discuter.</p>
                 </div>
 
-                <a href="mailto:contact@logma-production" class="container-link-cta color-white" aria-label="Nous envoyer un e-mail">
+                <a href="mailto:contact@logma-production.com" class="container-link-cta color-white" aria-label="Nous envoyer un e-mail">
                     <h5>contact@logma-production </h5>
                     <h5 class="icon-link-cta"> →</h5>
                 </a>
