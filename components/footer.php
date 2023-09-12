@@ -22,7 +22,7 @@
             <div class="triple-col-2 col-center mb-50">
                 <h5 class="color-white text-center-left">Suivez nous</h5>
                 <div class="center-responsive-left text-height">
-                    <div class="flex-col h-full">
+                    <div class="flex-col h-full vertical-align">
                         <a href="https://www.linkedin.com/company/logma-agency/" target="_blank" class="icons-footer" aria-label="Lien Linkedin">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="vertical-align"
                                 viewBox="-2 -2 24 24">
@@ -55,7 +55,7 @@
 
             <div class="triple-col-3 mb-50">
                 <h5 class="color-white text-center-left">Notre contenu</h5>
-                <div class=" center-responsive-left h-demi">
+                <div class=" center-responsive-left">
                     <div class="flex-col text-height">
                         <div>
                             <a href="./contacts" aria-label="Nous contacter">Contact</a>
