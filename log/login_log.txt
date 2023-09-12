@@ -64,3 +64,4 @@
 [2023-09-11 19:09:01] 🌠 SUCCESS: User  logged out successfully
 [2023-09-11 19:18:41] IP: [192.168.1.11] ⚠️ FAIL: Connexion attempt with known user
 [2023-09-11 19:18:50] IP: [192.168.1.11] ✅ SUCCESS: Login for user: test
+

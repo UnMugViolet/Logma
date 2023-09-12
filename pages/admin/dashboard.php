@@ -104,6 +104,7 @@
                             </a>
                         </div>
                     </div>
+                  
                     <div class="triple-col-3 mb-50">
                         <div class="vertical-align">
                             <img src="/logma/ressources/img/svg/WebIcon.svg" alt="Accès au site Internet" class="size-icon">

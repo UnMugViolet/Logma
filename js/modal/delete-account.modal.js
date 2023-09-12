@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const overlay = document.querySelector("#overlay-" + userId);
         const closeButton = overlay.querySelector(".close-delete-account");
 
+
         deleteButton.addEventListener("click", function(event) {
             event.preventDefault(); 
             overlay.style.display = "block"; // Show the overlay

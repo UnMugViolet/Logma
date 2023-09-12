@@ -47,6 +47,13 @@ p{
   font-size: 14px;
 }
 
+li{
+  font-family: $main-font;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 .small-p{
   font-family: $main-font;
   font-weight: 300;
@@ -89,13 +96,6 @@ p{
       font-size: 16px;
     
       margin: 0;
-    }
-    
-    p{
-      font-family: $main-font;
-      font-weight: 300;
-      text-decoration: none;
-      font-size: 14px;
     }
 
     .logs-typo{

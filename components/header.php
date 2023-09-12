@@ -14,7 +14,7 @@ if(isset($_SESSION['userAdmin']) && isset($_SESSION['userDev'])) {
 <header class="header-content top-0 w-full">
     <nav class="container flex-container spacing-nav">
         <div class="logo-size">
-            <a href="./index.php"><img src="./ressources/img/Logo-logma.png" alt="Logo société Logma" aria-label="Retour à la page d'accueil"></a>
+            <a href="./index.php"><img src="./ressources/img/Logo-logma.webp" alt="Logo société Logma" aria-label="Retour à la page d'accueil"></a>
         </div>
         <div class="vertical-align w-trois-quart nav-menu w-full h-full">
             <ul class="flex-end w-full spacing-components-header">

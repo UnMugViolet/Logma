@@ -99,6 +99,13 @@ p {
   font-size: 14px;
 }
 
+li {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 .small-p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -136,12 +143,6 @@ p {
     font-weight: 400;
     font-size: 16px;
     margin: 0;
-  }
-  p {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    text-decoration: none;
-    font-size: 14px;
   }
   .logs-typo {
     font-size: 9px;
@@ -281,6 +282,10 @@ p {
   top: 0;
 }
 
+.top-30 {
+  top: 30%;
+}
+
 .left-0 {
   left: 0;
 }
@@ -296,7 +301,7 @@ p {
 .h-full-screen-responsive {
   height: 100vh;
 }
-
+  
 .z-10 {
   z-index: 10;
 }
@@ -817,6 +822,13 @@ footer h3 {
   background-position: 50% 28.5%;
 }
 
+.bg-image-info {
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 76.5%;
+}
+
 @media (max-width: 768px) {
   .bg-image-layout {
     height: 60vh;
@@ -832,11 +844,11 @@ footer h3 {
   }
 }
 .bg-image-mountains {
-  background-image: url(../ressources/img/men-in-moutains.jpg);
+  background-image: url(../ressources/img/men-in-moutains.webp);
 }
 
 .bg-image-baptise {
-  background-image: url(../ressources/img/baptiste-fablet.jpg);
+  background-image: url(../ressources/img/logma-production.webp);
 }
 
 #hidden {
@@ -1010,4 +1022,5 @@ footer h3 {
   .card-min-size {
     min-width: auto;
   }
+
 }/*# sourceMappingURL=main.css.map */

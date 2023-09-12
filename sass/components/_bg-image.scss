@@ -13,6 +13,14 @@
 
 }
 
+.bg-image-info{
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 76.5%;
+
+}
+
 @media (max-width:768px){
     .bg-image-layout{
         height: 60vh;
@@ -31,9 +39,9 @@
 }
 
 .bg-image-mountains{
-    background-image: url(../ressources/img/men-in-moutains.jpg);
+    background-image: url(../ressources/img/men-in-moutains.webp);
 }
     
 .bg-image-baptise{
-    background-image: url(../ressources/img/baptiste-fablet.jpg);
+    background-image: url(../ressources/img/logma-production.webp);
 }
