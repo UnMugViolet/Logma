@@ -15,7 +15,7 @@ if($userAdmin || $userDev){
         $db = $dbhInstance->connect();
 
         // Create a DataHandler instance to manage database operations
-        $dbHandler = new ImageManagement($db);
+        $dbHandler = new ImageManagement();
 
         if ($dbHandler->imageExists($imageFileNameToDelete)) {
             // Call the deleteImage method to delete the image

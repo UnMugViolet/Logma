@@ -2,6 +2,7 @@
     require "../classes/dbh.classes.php";
     require "../classes/gallery.classes.php";
     require "../classes/gallery-handler-contr.php";
+    include_once ('./user-role-check.inc.php');
 
 
 if($userAdmin || $userDev){
@@ -19,7 +20,7 @@ if($userAdmin || $userDev){
         $dbhInstance = new Dbh();
         $db = $dbhInstance->connect();
 
-        $dbHandler = new ImageManagement($db);
+        $dbHandler = new ImageManagement();
 
         //Running error handlers 
         $uploadHandler = new UploadHandler();
