@@ -1,9 +1,12 @@
 <?php
 include_once('./user-role-check.inc.php');
+include_once('../classes/users-manager.classes.php');
 
 if($userAdmin){
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {    
+        $userManager = new UserManager();
+        
         sleep(2);
     
         if (isset($_POST['user_id'])) {
