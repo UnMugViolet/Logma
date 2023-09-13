@@ -2,6 +2,13 @@
 include_once 'dbh.classes.php';
 
 class ImageManagement extends Dbh {
+    
+    private $db;
+
+    public function __construct($db) {
+        $this->db = $db;
+    }
+
 
     public function insertGalleryRecord($imageTitle, $projectName, $imageFullName, $setImageOrder) {
         // Insert data into the database

@@ -73,7 +73,7 @@
 
 
         </div>
-        <div class="button-center-disposition mb-50">
+        <div class="object-center mt-100 mb-50">
             <a href="./contacts" class="second-cta ">
                 UN PROJET ? LET’S GO.
             </a>

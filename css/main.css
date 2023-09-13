@@ -301,7 +301,7 @@ li {
 .h-full-screen-responsive {
   height: 100vh;
 }
-  
+
 .z-10 {
   z-index: 10;
 }
@@ -923,12 +923,6 @@ footer h3 {
   margin-top: 10px;
 }
 
-.button-center-disposition {
-  display: flex;
-  justify-content: center;
-  margin-top: 3%;
-}
-
 .overlay-project {
   top: 0;
   bottom: 0;
@@ -1022,5 +1016,4 @@ footer h3 {
   .card-min-size {
     min-width: auto;
   }
-
 }/*# sourceMappingURL=main.css.map */

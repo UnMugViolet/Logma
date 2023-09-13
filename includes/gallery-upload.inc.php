@@ -3,24 +3,29 @@
     require "../classes/gallery.classes.php";
     require "../classes/gallery-handler-contr.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Grabbing data from form
-    $newFileName = $_POST['filename'];
-    $imageTitle = $_POST["filetitle"];
-    $projectName = $_POST["projectName"];
+if($userAdmin || $userDev){
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Format the image name
-    $newFileName = strtolower(str_replace(" ", "-", $newFileName));
+        // Grabbing data from form
+        $newFileName = $_POST['filename'];
+        $imageTitle = $_POST["filetitle"];
+        $projectName = $_POST["projectName"];
 
-    // Create a Dbh instance and get the database connection
-    $dbhInstance = new Dbh();
-    $db = $dbhInstance->connect();
+        // Format the image name
+        $newFileName = strtolower(str_replace(" ", "-", $newFileName));
 
-    $dbHandler = new ImageManagement();
+        // Create a Dbh instance and get the database connection
+        $dbhInstance = new Dbh();
+        $db = $dbhInstance->connect();
 
-    //Running error handlers 
-    $uploadHandler = new UploadHandler();
+        $dbHandler = new ImageManagement($db);
 
-    $uploadHandler->handleFileUpload($dbHandler, $imageTitle, $projectName, $newFileName);
-}
+        //Running error handlers 
+        $uploadHandler = new UploadHandler();
+
+        $uploadHandler->handleFileUpload($dbHandler, $imageTitle, $projectName, $newFileName);
+    }
+} else{
+    $sessionManager->forbiddenAccess();
+} 
