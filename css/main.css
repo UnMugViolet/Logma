@@ -923,6 +923,13 @@ footer h3 {
   margin-top: 10px;
 }
 
+.image-project-container {
+  display: inline-block;
+}
+.image-project-container:hover .overlay-project {
+  opacity: 0.6;
+}
+
 .overlay-project {
   top: 0;
   bottom: 0;
@@ -940,10 +947,6 @@ footer h3 {
   left: 50%;
   text-decoration: underline;
   transform: translate(-50%, -50%);
-}
-
-.video-hover:hover .overlay-project {
-  opacity: 0.6;
 }
 
 .wrap {

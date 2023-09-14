@@ -77,32 +77,38 @@
                 <h2 class="text-center color-white">Nos derniers projets</h2>
                 <div class="triple-col spacing-last-projects mb-50">
                     <span class="triple-col-1">
-                        <a href="https://youtu.be/L3AFBkg_BG8" class="relative video-hover">
-                            <div class="overlay-project w-full h-full absolute">
-                                <p class="text-center absolute">Voir la vidéo</p>
-                            </div>
-                            <img src="./ressources/img/projet-blacksheep.webp" alt="projet blacksheep concepeteur de van de voyage" loading="lazy">
-                        </a>
+                        <div class="image-project-container relative">
+                            <a href="https://youtu.be/L3AFBkg_BG8?si=zXZx1U6REGbZMG29">
+                                <img src="./ressources/img/projet-blacksheep.webp" alt="projet blacksheep concepeteur de van de voyage" loading="lazy">
+                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
+                                    <p class="text-center absolute">Voir la vidéo</p>
+                                </div>
+                            </a>
+                        </div>
                         <h4 class="color-white">BLACK SHEEP</h4>
                         <h5 class="color-white">PUBLICITÉ</h5>
                     </span>
                     <span class="triple-col-2">
-                        <a href="https://youtu.be/dqAV68Km7hs" class="relative video-hover">
-                            <div class="overlay-project w-full h-full absolute">
-                                <p class="text-center absolute">Voir la vidéo</p>
-                            </div>
-                            <img src="./ressources/img/sophie-faguet.webp" alt="bateau de sophie faguet route du rhum" loading="lazy">
-                        </a>
+                        <div class="image-project-container relative">
+                            <a href="https://youtu.be/dqAV68Km7hs">
+                                <img src="./ressources/img/sophie-faguet.webp" alt="bateau de sophie faguet route du rhum" loading="lazy">
+                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
+                                    <p class="text-center absolute">Voir la vidéo</p>
+                                </div>
+                            </a>
+                        </div>
                         <h4 class="color-white">SOPHIE FAGUET</h4>
                         <h5 class="color-white">PORTRAIT</h5>
                     </span>
                     <span class="triple-col-3">
-                        <a href="https://youtu.be/pLDtHUxPeH4" class="relative video-hover">
-                            <div class="overlay-project w-full h-full absolute">
-                                <p class="text-center absolute">Voir la vidéo</p>
-                            </div>
-                            <img src="./ressources/img/colliaux-opticien.webp" alt="shooting de marque colliaux opticiens" loading="lazy">
-                        </a>
+                        <div class="image-project-container relative">
+                            <a href="https://youtu.be/pLDtHUxPeH4">
+                                <img src="./ressources/img/colliaux-opticien.webp" alt="shooting de marque colliaux opticiens" loading="lazy">
+                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
+                                    <p class="text-center absolute">Voir la vidéo</p>
+                                </div>
+                            </a>
+                        </div>
                         <h4 class="color-white">COLLIAUX OPTICIENS</h4>
                         <h5 class="color-white">CAMPAGNE</h5>
                     </span>
@@ -112,39 +118,45 @@
             <div class="container">
                 <div class="triple-col spacing-last-projects mb-50">
                     <span class="triple-col-1">
-                        <a href="https://youtu.be/jGQK5btw2xc" class="relative video-hover">
-                            <div class="overlay-project w-full h-full absolute">
-                                <p class="text-center absolute">Voir la vidéo</p>
-                            </div>
-                            <img src="./ressources/img/projet-photographe-nohe.webp" alt="shooting photo nohé créateur de vêtements" loading="lazy">
-                        </a>
+                        <div class="image-project-container relative">
+                            <a href="https://youtu.be/jGQK5btw2xc">
+                                <img src="./ressources/img/projet-photographe-nohe.webp" alt="shooting photo nohé créateur de vêtements" loading="lazy">
+                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
+                                    <p class="text-center absolute">Voir la vidéo</p>
+                                </div>
+                            </a>
+                        </div>
                         <h4 class="color-white">NOHÉ</h4>
                         <h5 class="color-white">CAMPAGNE</h5>
                     </span>
                     <span class="triple-col-2">
-                        <a href="https://youtu.be/rNqv_Gi_kIg" class="relative video-hover">
-                            <div class="overlay-project w-full h-full absolute">
-                                <p class="text-center absolute">Voir la vidéo</p>
-                            </div>
-                            <img src="./ressources/img/projet-photographe-PLATYPUS-CRAFT.webp" alt="platypus craft tournage en mer" loading="lazy">
-                        </a>
+                        <div class="image-project-container relative">
+                            <a href="https://youtu.be/rNqv_Gi_kIg">
+                                <img src="./ressources/img/projet-photographe-PLATYPUS-CRAFT.webp" alt="platypus craft tournage en mer" loading="lazy">
+                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
+                                    <p class="text-center absolute">Voir la vidéo</p>
+                                </div>
+                            </a>
+                        </div>
                         <h4 class="color-white">PLATYPUS CRAFT</h4>
                         <h5 class="color-white">DIGITAL</h5>
                     </span>
                     <span class="triple-col-3">
-                        <a href="https://youtu.be/1TNve6kRkKg" class="relative video-hover">
-                            <div class="overlay-project w-full h-full absolute">
-                                <p class="text-center absolute">Voir la vidéo</p>
-                            </div>
-                            <img src="./ressources/img/projet-photographe-transaharienne-maroc.webp" alt="reportage pour la transaharienne" loading="lazy">
-                        </a>
+                        <div class="image-project-container relative">
+                            <a href="https://youtu.be/1TNve6kRkKg">
+                                <img src="./ressources/img/projet-photographe-transaharienne-maroc.webp" alt="reportage pour la transaharienne" loading="lazy">
+                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
+                                    <p class="text-center absolute">Voir la vidéo</p>
+                                </div>
+                            </a>
+                        </div>
                         <h4 class="color-white">TRANSAHARIENNE</h4>
                         <h5 class="color-white">REPORTAGE</h5>
                     </span>
                 </div>
             </div>
             <div class="container ">
-                <div class="button-center-disposition spacing-section">
+                <div class="object-center spacing-section">
                     <a href="https://www.youtube.com/@logma_production" class="first-cta ">
                         VOIR LE CONTENU
                     </a>
@@ -184,7 +196,7 @@
             <div class="container">
                 <img src="./ressources/img/clients-logma-production.png" alt="Nos partenaires" loading="lazy">
             </div>
-            <div class="button-center-disposition spacing-section">
+            <div class="object-center spacing-section">
                 <a href="./contacts" class="second-cta ">
                     UN PROJET ? LET’S GO.
                 </a>
