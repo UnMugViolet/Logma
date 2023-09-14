@@ -302,6 +302,10 @@ li {
   height: 100vh;
 }
 
+.typewrite-require-space {
+  height: 130px;
+}
+
 .z-10 {
   z-index: 10;
 }

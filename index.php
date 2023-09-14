@@ -64,7 +64,7 @@
                 <div class="text-center spacing-section ">
                     <div>
                         <h1 class="color-white" aria-label="Logma c'est des reportages, des campagnes de marque et du motion design" >Logma c'est </h1>
-                        <h2 class="typewrite color-white" data-period="1500" data-type='[ "Des reportages.", "Des campagnes de marque.", "Du motion design."]'>
+                        <h2 class="typewrite color-white typewrite-require-space" data-period="1500" data-type='[ "Des reportages.", "Des campagnes de marque.", "Du motion design."]'>
                             <span class="wrap"></span>
                         </h2>
                     </div>
