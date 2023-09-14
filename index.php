@@ -36,7 +36,7 @@
     <script src="./js/components/typewirter.js" type="text/javascript" defer></script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="canonical" href="https://www.logma-production.com/" />
     <meta property="og:description"
         content="Derniers projets NOHÉ CAMPAGNE PLATYPUS CRAFT DIGITAL TRANSAHARIENNE REPORTAGE VOIR LES VIDÉOS Reportage, campagne de marque, contenu digitaux, motion design, nous vous accompagnons de A à Z afin de vous livrer des images prêtes à être diffusées. Shooting de marque MAROC Interview Mike Horn PARIS Route du Rhum 2022 SAINT-MALO Des clients heureux. Et nous aussi [&hellip;]" />
@@ -79,7 +79,7 @@
                     <span class="triple-col-1">
                         <div class="image-project-container relative">
                             <a href="https://youtu.be/L3AFBkg_BG8?si=zXZx1U6REGbZMG29">
-                                <img src="./ressources/img/projet-blacksheep.webp" alt="projet blacksheep concepeteur de van de voyage" loading="lazy">
+                                <img src="./ressources/img/projet-blacksheep.webp" alt="projet blacksheep concepeteur de van de voyage" loading="lazy" oncontextmenu="return false;">
                                 <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
                                     <p class="text-center absolute">Voir la vidéo</p>
                                 </div>
@@ -91,7 +91,7 @@
                     <span class="triple-col-2">
                         <div class="image-project-container relative">
                             <a href="https://youtu.be/dqAV68Km7hs">
-                                <img src="./ressources/img/sophie-faguet.webp" alt="bateau de sophie faguet route du rhum" loading="lazy">
+                                <img src="./ressources/img/sophie-faguet.webp" alt="bateau de sophie faguet route du rhum" loading="lazy" oncontextmenu="return false;">
                                 <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
                                     <p class="text-center absolute">Voir la vidéo</p>
                                 </div>
@@ -103,7 +103,7 @@
                     <span class="triple-col-3">
                         <div class="image-project-container relative">
                             <a href="https://youtu.be/pLDtHUxPeH4">
-                                <img src="./ressources/img/colliaux-opticien.webp" alt="shooting de marque colliaux opticiens" loading="lazy">
+                                <img src="./ressources/img/colliaux-opticien.webp" alt="shooting de marque colliaux opticiens" loading="lazy" oncontextmenu="return false;">
                                 <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
                                     <p class="text-center absolute">Voir la vidéo</p>
                                 </div>
@@ -120,7 +120,7 @@
                     <span class="triple-col-1">
                         <div class="image-project-container relative">
                             <a href="https://youtu.be/jGQK5btw2xc">
-                                <img src="./ressources/img/projet-photographe-nohe.webp" alt="shooting photo nohé créateur de vêtements" loading="lazy">
+                                <img src="./ressources/img/projet-photographe-nohe.webp" alt="shooting photo nohé créateur de vêtements" loading="lazy" oncontextmenu="return false;">
                                 <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
                                     <p class="text-center absolute">Voir la vidéo</p>
                                 </div>
@@ -132,7 +132,7 @@
                     <span class="triple-col-2">
                         <div class="image-project-container relative">
                             <a href="https://youtu.be/rNqv_Gi_kIg">
-                                <img src="./ressources/img/projet-photographe-PLATYPUS-CRAFT.webp" alt="platypus craft tournage en mer" loading="lazy">
+                                <img src="./ressources/img/projet-photographe-PLATYPUS-CRAFT.webp" alt="platypus craft tournage en mer" loading="lazy" oncontextmenu="return false;">
                                 <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
                                     <p class="text-center absolute">Voir la vidéo</p>
                                 </div>
@@ -144,7 +144,7 @@
                     <span class="triple-col-3">
                         <div class="image-project-container relative">
                             <a href="https://youtu.be/1TNve6kRkKg">
-                                <img src="./ressources/img/projet-photographe-transaharienne-maroc.webp" alt="reportage pour la transaharienne" loading="lazy">
+                                <img src="./ressources/img/projet-photographe-transaharienne-maroc.webp" alt="reportage pour la transaharienne" loading="lazy" oncontextmenu="return false;">
                                 <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
                                     <p class="text-center absolute">Voir la vidéo</p>
                                 </div>
@@ -168,21 +168,21 @@
                 <div class="triple-col spacing-last-projects mb-50">
                     <span class="triple-col-1">
                         <div>
-                            <img src="./ressources/img/shooting-de-marque.webp" alt="packshot nohé créateur de vêtements" loading="lazy">
+                            <img src="./ressources/img/shooting-de-marque.webp" alt="packshot nohé créateur de vêtements" loading="lazy" oncontextmenu="return false;">
                         </div>
                         <h4>Shooting de marque</h4>
                         <h5>MAROC</h5>
                     </span>
                     <span class="triple-col-2">
                         <div>
-                            <img src="./ressources/img/interview-mike-horn.webp" alt="interview Mike Horn" loading="lazy">
+                            <img src="./ressources/img/interview-mike-horn.webp" alt="interview Mike Horn" loading="lazy" oncontextmenu="return false;">
                         </div>
                         <h4>Interview Mike Horn</h4>
                         <h5>PARIS</h5>
                     </span>
                     <span class="triple-col-3">
                         <div>
-                            <img src="./ressources/img/shooting-route-du-rhum.webp" alt="reportage pour la route du rhum 2022" loading="lazy">
+                            <img src="./ressources/img/shooting-route-du-rhum.webp" alt="reportage pour la route du rhum 2022" loading="lazy" oncontextmenu="return false;">
                         </div>
                         <h4>Route du Rhum 2022</h4>
                         <h5>SAINT-MALO</h5>
@@ -194,7 +194,7 @@
                 <h4>Et nous aussi !</h4>
             </div>
             <div class="container">
-                <img src="./ressources/img/clients-logma-production.png" alt="Nos partenaires" loading="lazy">
+                <img src="./ressources/img/clients-logma-production.png" alt="Nos partenaires" loading="lazy" oncontextmenu="return false;">
             </div>
             <div class="object-center spacing-section">
                 <a href="./contacts" class="second-cta ">

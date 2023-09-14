@@ -306,6 +306,10 @@ li {
   z-index: 10;
 }
 
+.z-5 {
+  z-index: 5;
+}
+
 /* General Spacing */
 .mt-10 {
   margin-top: 10px;

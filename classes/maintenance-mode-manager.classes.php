@@ -50,7 +50,7 @@ class MaintenanceModeManager extends Dbh{
 
     public function displayMaintenanceOnBanner() {
         echo '
-        <div class="fixed top-0 right-0 bg-color-white pad-10 z-10">
+        <div class="fixed top-0 right-0 bg-color-white pad-10 z-5">
             <p>Mode maintenance actif ✅</p>
         </div>';
     }
