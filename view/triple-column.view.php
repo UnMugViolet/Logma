@@ -71,8 +71,8 @@ class GalleryDisplay extends DisplayTripleCol {
         if ($_SESSION['userAdmin'] || $_SESSION['userDev']) {
             $form = '
 
-            <div class="overlay-delete fixed top-0 left-0 w-full h-full bg-cloudy-black" id="overlay-' . $galleryItems["imgFullNameGallery"] . '">
-                <div class="modal-delete-container fixed bg-color-white pad-20">
+            <div class="overlay-delete fixed top-0 left-0 w-full h-full bg-cloudy-black z-5" id="overlay-' . $galleryItems["imgFullNameGallery"] . '">
+                <div class="modal-delete-container fixed bg-color-white pad-20 z-10">
                     <div>
                         <h2>Confirmation</h2>
                         <p class="mb-10">Êtes-vous sûr de vouloir supprimer cette photo ?</p>
@@ -86,7 +86,7 @@ class GalleryDisplay extends DisplayTripleCol {
                 </div>
             </div>
 
-            <form class="absolute right-0 top-0 pad-10" method="post">
+            <form class="absolute right-0 top-0 pad-10 z-2" method="post">
                 <input type="hidden" name="filename" value="' . $galleryItems["imgFullNameGallery"] . '">
                 <button class ="delete-cta" data-image="'. $galleryItems["imgFullNameGallery"].'"></button>
             </form>
@@ -127,24 +127,24 @@ class ProjectDisplay extends DisplayTripleCol {
         if ($_SESSION['userAdmin'] || $_SESSION['userDev']) {
             $form = '
 
-            <div class="overlay-delete fixed top-0 left-0 w-full h-full bg-cloudy-black" id="overlay-' . $thumbnailName . '">
-                <div class="modal-delete-container fixed bg-color-white pad-20">
+            <div class="overlay-delete fixed top-0 left-0 w-full h-full bg-cloudy-black z-5" id="overlay-' . $thumbnailName . '">
+                <div class="modal-delete-container fixed bg-color-white pad-20 z-10">
                     <div>
                         <h2>Confirmation</h2>
                         <p class="mb-10">Êtes-vous sûr de vouloir supprimer cette photo ?</p>
                         <h4 class="text-center">' . $projectTitle . ' - '. $thumbnailName .'</h4>
-                        <form class="delete-form object-center" action="./includes/gallery-delete.inc.php" method="post" name="deleteImage"> 
-                            <input type="hidden" name="filename" value="' . $thumbnailName . '">
-                            <button class="hidden-click danger-button mt-30 bg-color-red color-white pad-10" type="submit">Supprimer l\'image</button>
+                        <form class="delete-form object-center" action="./includes/delete-project.inc.php" method="post" name="deleteImage"> 
+                            <input type="hidden" name="thumbnailName" value="' . $thumbnailName . '">
+                            <button class="hidden-click danger-button mt-30 bg-color-red color-white pad-10" type="submit">Supprimer le projet</button>
                         </form>
                         <span class="close-delete-account absolute pad-20 top-0 right-0" id="close-delete' . $thumbnailName . '">&times;</span>
                     </div>
                 </div>
             </div>
 
-            <form class="absolute right-0 top-0 pad-10" method="post">
+            <form class="absolute right-0 top-0 pad-10 z-2" method="post">
                 <input type="hidden" name="filename" value="' . $thumbnailName . '">
-                <button class ="delete-cta" data-image="'. $thumbnailName .'"></button>
+                <button type="button" class="delete-cta" data-image="'. $thumbnailName .'"></button>
             </form>
             ';
         } else {
@@ -155,12 +155,13 @@ class ProjectDisplay extends DisplayTripleCol {
         return <<<HTML
 
             <div class="image-project-container relative">
-                <a href="$projectUrl">
+                <a href="$projectUrl" target="_blank" rel="noopener" aria-label="Liens vers la vidéo $projectTitle">
                     <img src="$projectSrc" alt="$projectAlt" loading="lazy" oncontextmenu="return false;">
                     <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
                         <p class="text-center absolute">Voir la vidéo</p>
                     </div>
                 </a>
+                $form
             </div>
             <h4 class="color-white">$projectTitle</h4>
             <h5 class="color-white">$projectSubtitle</h5>
@@ -176,7 +177,7 @@ class UserDisplay extends DisplayTripleCol {
 
         $form = '
             <div class="overlay-delete fixed top-0 left-0 w-full h-full bg-cloudy-black" id="overlay-' . $userItem->getId() . '">
-                <div class="modal-delete-container fixed bg-color-white pad-20">
+                <div class="modal-delete-container fixed bg-color-white pad-20 z-10">
                     <div>
                         <h2>Confirmation</h2>
                         <p class="mb-10">Êtes-vous sûr de vouloir supprimer ce compte utilisateur ?</p>

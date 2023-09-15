@@ -56,7 +56,7 @@ class ProjectManagement extends Dbh {
         }
 
         // Delete the image record from the database
-        $sql = "DELETE FROM projects WHERE thumbnailFullName = ?";
+        $sql = "DELETE FROM projects WHERE project_thumbnail_name = ?";
         $stmt = $this->connect()->prepare($sql);
 
         if ($stmt) {

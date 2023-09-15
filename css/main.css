@@ -306,12 +306,28 @@ li {
   height: 130px;
 }
 
-.z-10 {
-  z-index: 10;
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.z-4 {
+  z-index: 4;
 }
 
 .z-5 {
   z-index: 5;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 /* General Spacing */
@@ -894,7 +910,6 @@ footer h3 {
 /* Delete modal */
 .overlay-delete {
   display: none;
-  z-index: 2;
 }
 
 .modal-delete-container {
@@ -902,7 +917,6 @@ footer h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
   min-width: 300px;
 }
 

@@ -30,7 +30,6 @@
 
 .overlay-delete {
     display: none;
-    z-index: 2;
 }
 
 // Styles for the modal container
@@ -39,7 +38,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3; 
     min-width: 300px;
 }
 

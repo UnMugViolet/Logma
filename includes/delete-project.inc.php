@@ -1,32 +1,33 @@
 <?php
 include_once ('../classes/dbh.classes.php');
-include_once ('../classes/gallery.classes.php');
-include_once ('../classes/gallery-handler-contr.php');
+include_once ('../classes/project.classes.php');
+include_once ('../classes/project-handler.classes.php');
 include_once('./user-role-check.inc.php');
+
 
 if($userAdmin || $userDev){
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["filename"])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["thumbnailName"])) {
         // Get the image file name to delete from the form input
-        $imageFileNameToDelete = $_POST['filename'];
+        $thumbnailFullName = $_POST['thumbnailName'];
 
         // Create a Dbh instance and get the database connection
         $dbhInstance = new Dbh();
         $db = $dbhInstance->connect();
 
         // Create a DataHandler instance to manage database operations
-        $dbHandler = new ImageManagement();
+        $dbHandler = new ProjectManagement();
 
-        if ($dbHandler->imageExists($imageFileNameToDelete)) {
+        if ($dbHandler->projectExist($thumbnailFullName)) {
             // Call the deleteImage method to delete the image
-            $dbHandler->deleteImage($imageFileNameToDelete);
+            $dbHandler->deleteProject($thumbnailFullName);
 
             // Redirect to a success page or display a success message
-            header("location: ../galerie-photo?error=none");
+            header("location: /?error=none");
             exit();
         } else {
             // Handle the case where the image doesn't exist
-            header("location: ../galerie-photo?error=imagenotfound");
+            header("location: /?error=imagenotfound");
             exit();
         }
     }

@@ -41,6 +41,8 @@
     <!-- JS -->
     <script src="./js/script.js" type="text/javascript" defer></script>
     <script src="./js/components/typewirter.js" type="text/javascript" defer></script>
+    <script src="./js/error/modal.error.js" type="module" defer></script>
+    <script src="./js/modal/delete-image.modal.js" type="text/javascript" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -133,6 +135,14 @@
                 <a href="./contacts" class="second-cta ">
                     UN PROJET ? LET’S GO.
                 </a>
+            </div>
+
+            <!-- Error Modal -->
+            <div id="errorModal" class="error-modal top-0 left-0 h-full w-full bg-faded-black">
+                <div class="modal-error-content bg-color-white w-full flex-container vertical-align ">                    
+                    <p id="modalText" class="">Text par défaut</p>
+                    <span class="close-error color-main">&times;</span>
+                </div>
             </div>
         </section>
     </main>

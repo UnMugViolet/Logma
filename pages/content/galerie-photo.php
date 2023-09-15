@@ -60,6 +60,14 @@
         <?php
             $galleryDisplay->displayContent($images);
         ?>
+
+        <!-- Error Modal -->
+        <div id="errorModal" class="error-modal top-0 left-0 h-full w-full bg-faded-black">
+                <div class="modal-error-content bg-color-white w-full flex-container vertical-align ">                    
+                    <p id="modalText" class="">Text par défaut</p>
+                    <span class="close-error color-main">&times;</span>
+                </div>
+            </div>
     </section>
     <?php
     include_once "../../components/footer.php";

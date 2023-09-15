@@ -56,7 +56,7 @@
                     $userDisplay->displayContent($users);
                     ?>
                 </div>
-                <div class="flex mt-10">
+                <div class="object-center mt-10">
                     <a href="./dashboard" class="container-link-cta color-white">
                     <p>Retour au Dashboard </p>
                     <p class="icon-link-cta"> →</p>
