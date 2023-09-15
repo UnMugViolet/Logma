@@ -35,7 +35,7 @@
     <script src="../js/error/modal.error.js" type="module" defer></script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 </head>
 
