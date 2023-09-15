@@ -1,17 +1,17 @@
 <?php
-    require "../classes/dbh.classes.php";
-    require "../classes/gallery.classes.php";
-    require "../classes/gallery-handler-contr.php";
-    include_once ('./user-role-check.inc.php');
+    include_once ("../classes/dbh.classes.php");
+    include_once ("../classes/gallery.classes.php");
+    include_once ("../classes/gallery-handler-contr.php");
+    include_once ("./user-role-check.inc.php");
 
 
 if($userAdmin || $userDev){
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Grabbing data from form
-        $newFileName = $_POST['filename'];
         $imageTitle = $_POST["filetitle"];
-        $projectName = $_POST["projectName"];
+        $fileSubtitle = $_POST["fileSubtitle"];
+        $newFileName = $_POST['filename'];
 
         // Format the image name
         $newFileName = strtolower(str_replace(" ", "-", $newFileName));
@@ -25,7 +25,7 @@ if($userAdmin || $userDev){
         //Running error handlers 
         $uploadHandler = new UploadHandler();
 
-        $uploadHandler->handleFileUpload($dbHandler, $imageTitle, $projectName, $newFileName);
+        $uploadHandler->handleFileUpload($dbHandler, $imageTitle, $fileSubtitle, $newFileName);
     }
 } else{
     $sessionManager->forbiddenAccess();

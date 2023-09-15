@@ -1,13 +1,11 @@
 <?php
     include_once('../../includes/user-role-check.inc.php');
-    
-    if ($userAdmin) {
+
+    if ($userAdmin || $userDev) {
         $userHasAccess = true;
-    } elseif($userDev) {
-        $sessionManager->notAllowed();
     } else{
         $sessionManager->forbiddenAccess();
-    }
+    } 
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion | Logma </title>
+    <title>Ajouter un projet | Logma </title>
 
     <!--Feuille de CSS-->
     <link rel="stylesheet" href="../css/main.css">
@@ -26,7 +24,7 @@
     <script src="../js/error/modal.error.js" type="module" defer></script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 
 </head>
 
@@ -35,28 +33,25 @@
         <div class="container h-full vertical-align object-center">
             <div>
                 <div class="block container icon-error mt-50 mb-50">
-                    <img src="/ressources/img/svg/AddAccountIcon.svg" alt="Erreur 404">
+                    <img src="/ressources/img/svg/ProjectIcon.svg" alt="Télécharger une image">
                 </div>
                 <div>
-                    <h1 class="color-white text-center mb-30 mt-30">Ajouter un compte.</h1>
+                    <h1 class="color-white">Ajouter un projet.</h1>
                 </div>
                 <div class="input-size">
-                    <form action="../includes/signup.inc.php" method="post">
-                        <input type="text" name="uid" placeholder="Nom d'utilisateur" class="flex w-full input input-small bg-color-black color-white mb-10">
-                        <input id="trigger" type="password" name="pwd" placeholder="Mot de passe" class="w-full input input-small bg-color-black color-white mb-10">
-                       
-                        <p id="hidden" class="color-white text-center-left small-p mb-10">Le mot de passe doit contenir au minimum 16 caractères, majuscule et minuscule ainsi que 2 caractères spéciaux</p>                      
-                       
-                        <input type="password" name="pwdrepeat" placeholder="Confirmation du mot de passe" class="w-full input input-small bg-color-black color-white mb-10">
-                        <input type="text" name="email" placeholder="E-mail" class="w-full input input-small bg-color-black color-white mb-10">
+                    <form action="../includes/project-upload.inc.php" method="post" enctype="multipart/form-data">
+                        <input type="text" name="projectTitle" placeholder="Titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
+                        <input type="text" name="projectSubtitle" placeholder="Sous-titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
+                        <input type="text" name="projectUrl" placeholder="Lien du projet..." class="flex w-full input input-small bg-color-black color-white mb-10">
+                        <input type="file" name="file" class="flex color-white mt-30 vertical-align mb-10">
+                        <input id="trigger" type="text" name="thumbnailFullName" placeholder="Nom de la miniature... " class="flex w-full input input-small bg-color-black color-white mb-10">
+                                                
+                        <p id="hidden" class="color-white text-center-left small-p mb-10">
+                            Rappel : Pour garder l'esthétique du site il est préférable d'uploader les projets par 3 ! 
+                        </p>   
 
-                        <select name="userrole" class="w-full input input-small bg-color-black color-white mb-10">
-                            <option value="admin">Admin</option>
-                            <option value="dev">Dev</option>
-                            <option value="user">User</option>
-                        </select>
                         <div class="object-center mt-50">
-                            <button type="submit" class="submit-cta" name="signup-submit">Créer un compte</button>
+                            <button type="submit" class="submit-cta" name="image-submit">Ajouter le projet</button>
                         </div>
                     </form>
                 </div>
@@ -67,7 +62,7 @@
                     </a>
                 </div>
             </div>
-            
+
             <!-- Error Modal -->
             <div id="errorModal" class="error-modal top-0 left-0 h-full w-full bg-faded-black">
                 <div class="modal-error-content bg-color-white w-full flex-container vertical-align ">                    
@@ -75,6 +70,7 @@
                     <span class="close-error color-main">&times;</span>
                 </div>
             </div>
+
         </div>
     </section>
 

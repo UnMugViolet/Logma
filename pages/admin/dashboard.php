@@ -23,7 +23,7 @@
     <!-- JS -->
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/logma/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 </head>
 
@@ -51,7 +51,7 @@
     ?>
                     <div class="triple-col-1 mb-50">
                         <div class="flex vertical-align">
-                            <img src="/logma/ressources/img/svg/AdminIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <img src="/ressources/img/svg/AdminIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Fonctions Admin :</h2>
                         </div>
                         
@@ -92,7 +92,7 @@
     ?>
                     <div class="triple-col-2 mb-50">
                         <div class="flex vertical-align">
-                            <img src="/logma/ressources/img/svg/FeaturesIcon.svg" alt="Accès au fonctionnalités du site" class="size-icon">
+                            <img src="/ressources/img/svg/FeaturesIcon.svg" alt="Accès au fonctionnalités du site" class="size-icon">
                             <h2 class="color-white">Fonctionnalités </h2>
                         </div>
 
@@ -103,40 +103,47 @@
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
+                        <div class="vertical-align">
+                            <img src="../ressources/img/svg/AddProject.svg" alt="Ajouter des images" class="size-small-icon">
+                            <a href="./project" class="container-link-cta color-white">
+                            <p>Ajouter un projet à l'accueil</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
                     </div>
                   
                     <div class="triple-col-3 mb-50">
                         <div class="vertical-align">
-                            <img src="/logma/ressources/img/svg/WebIcon.svg" alt="Accès au site Internet" class="size-icon">
+                            <img src="/ressources/img/svg/WebIcon.svg" alt="Accès au site Internet" class="size-icon">
                             <h2 class="color-white">Voir le site.</h2>
                         </div>
 
                         <div class="flex">
-                            <a href="/Logma/" class="container-link-cta color-white">
+                            <a href="/" class="container-link-cta color-white">
                             <p>Homepage</p>
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
                         <div class="flex">
-                            <a href="/Logma/galerie-photo" class="container-link-cta color-white">
+                            <a href="/galerie-photo" class="container-link-cta color-white">
                             <p>Galerie photo</p>
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
                         <div class="flex">
-                            <a href="/Logma/contacts" class="container-link-cta color-white">
+                            <a href="/contacts" class="container-link-cta color-white">
                             <p>Contacts</p>
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
                         <div class="flex">
-                            <a href="/Logma/cgu" class="container-link-cta color-white">
+                            <a href="/cgu" class="container-link-cta color-white">
                             <p>CGU</p>
                             <p class="icon-link-cta"> →</p>
                             </a>
                         </div>
                         <div class="flex">
-                            <a href="/Logma/mentions-legales" class="container-link-cta color-white">
+                            <a href="/mentions-legales" class="container-link-cta color-white">
                             <p>Mentions Légales</p>
                             <p class="icon-link-cta"> →</p>
                             </a>

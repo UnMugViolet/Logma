@@ -1,9 +1,9 @@
 <?php 
-include_once 'dbh.classes.php';
+include_once ('dbh.classes.php');
 
 class ImageManagement extends Dbh {
 
-    public function insertGalleryRecord($imageTitle, $projectName, $imageFullName, $setImageOrder) {
+    public function insertGalleryRecord($imageTitle, $fileSubtitle, $imageFullName, $setImageOrder) {
         // Insert data into the database
         $sql = "INSERT INTO gallery (titleGallery, projectGallery, imgFullNameGallery, orderGallery) VALUES (?, ?, ?, ?);";
         $stmt = $this->connect()->prepare($sql);
@@ -13,7 +13,7 @@ class ImageManagement extends Dbh {
             exit();
         } else {
             $stmt->bindParam(1, $imageTitle);
-            $stmt->bindParam(2, $projectName);
+            $stmt->bindParam(2, $fileSubtitle);
             $stmt->bindParam(3, $imageFullName);
             $stmt->bindParam(4, $setImageOrder);
 
