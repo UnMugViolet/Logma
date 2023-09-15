@@ -36,6 +36,12 @@ abstract class DisplayTripleCol {
                 }
             }
         }
+
+        if ($this->itemCounter === 1) {
+            echo '<span class="triple-col-2"></span><span class="triple-col-3"></span>';
+        } elseif ($this->itemCounter === 2) {
+            echo '<span class="triple-col-3"></span>';
+        }
     
         // Close any open div tags
         if ($this->itemCounter > 0) {
@@ -59,7 +65,6 @@ class GalleryDisplay extends DisplayTripleCol {
         $imageAlt = $galleryItems["titleGallery"];
         $title = $galleryItems["titleGallery"];
         $project = $galleryItems["projectGallery"];
-        $imageName = $galleryItems["imgFullNameGallery"];
 
         // Check if the user is an admin
         $form = '';
@@ -98,6 +103,67 @@ class GalleryDisplay extends DisplayTripleCol {
             </div>
             <h4 class="color-white mt-10">$title</h4>
             <h5 class="color-white">$project</h5>
+        HTML;
+    }
+}
+
+class ProjectDisplay extends DisplayTripleCol {
+
+    protected function generateContentHTML($projectItems) {
+      
+        include_once('./includes/user-role-check.inc.php');
+
+        // Extract data from the gallery item
+        $thumbnailName = $projectItems["project_thumbnail_name"];
+        $projectSrc = "./ressources/img/projects/" . $thumbnailName;
+        $projectAlt = $projectItems["project_title"];
+        $projectTitle = $projectItems["project_title"];
+        $projectSubtitle = $projectItems["project_subtitle"];
+        $projectUrl = $projectItems["project_url"];
+
+
+        // Check if the user is an admin
+        $form = '';
+        if ($_SESSION['userAdmin'] || $_SESSION['userDev']) {
+            $form = '
+
+            <div class="overlay-delete fixed top-0 left-0 w-full h-full bg-cloudy-black" id="overlay-' . $thumbnailName . '">
+                <div class="modal-delete-container fixed bg-color-white pad-20">
+                    <div>
+                        <h2>Confirmation</h2>
+                        <p class="mb-10">Êtes-vous sûr de vouloir supprimer cette photo ?</p>
+                        <h4 class="text-center">' . $projectTitle . ' - '. $thumbnailName .'</h4>
+                        <form class="delete-form object-center" action="./includes/gallery-delete.inc.php" method="post" name="deleteImage"> 
+                            <input type="hidden" name="filename" value="' . $thumbnailName . '">
+                            <button class="hidden-click danger-button mt-30 bg-color-red color-white pad-10" type="submit">Supprimer l\'image</button>
+                        </form>
+                        <span class="close-delete-account absolute pad-20 top-0 right-0" id="close-delete' . $thumbnailName . '">&times;</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="absolute right-0 top-0 pad-10" method="post">
+                <input type="hidden" name="filename" value="' . $thumbnailName . '">
+                <button class ="delete-cta" data-image="'. $thumbnailName .'"></button>
+            </form>
+            ';
+        } else {
+            $form = '';
+        }
+
+        // Generate and return the HTML for the gallery item
+        return <<<HTML
+
+            <div class="image-project-container relative">
+                <a href="$projectUrl">
+                    <img src="$projectSrc" alt="$projectAlt" loading="lazy" oncontextmenu="return false;">
+                    <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
+                        <p class="text-center absolute">Voir la vidéo</p>
+                    </div>
+                </a>
+            </div>
+            <h4 class="color-white">$projectTitle</h4>
+            <h5 class="color-white">$projectSubtitle</h5>
         HTML;
     }
 }

@@ -35,7 +35,7 @@
     <script src="../js/error/modal.error.js" type="module" defer></script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/logma/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 
 </head>
 
@@ -45,7 +45,7 @@
             <div class="card-min-size">
 
                 <div class="block container icon-error mt-50 mb-50">
-                    <img src="/logma/ressources/img/svg/DeleteAccountIcon.svg" alt="Erreur 404">
+                    <img src="/ressources/img/svg/DeleteAccountIcon.svg" alt="Erreur 404">
                 </div>
                 <div>
                     <h1 class="color-white text-center mb-20">Supprimer un compte.</h1>

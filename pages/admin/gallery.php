@@ -24,7 +24,7 @@
     <script src="../js/error/modal.error.js" type="module" defer></script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 
 </head>
 
@@ -33,7 +33,7 @@
         <div class="container h-full vertical-align object-center">
             <div>
                 <div class="block container icon-error mt-50 mb-50">
-                    <img src="/logma/ressources/img/svg/DownloadImage.svg" alt="Télécharger une image">
+                    <img src="/ressources/img/svg/DownloadImage.svg" alt="Télécharger une image">
                 </div>
                 <div>
                     <h1 class="color-white">Télécharger des images.</h1>
@@ -41,7 +41,7 @@
                 <div class="input-size">
                     <form action="../includes/gallery-upload.inc.php" method="post" enctype="multipart/form-data">
                         <input type="text" name="filetitle" placeholder="Titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
-                        <input id="trigger" type="text" name="projectName" placeholder="Sous-titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
+                        <input id="trigger" type="text" name="fileSubtitle" placeholder="Sous-titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
                         
                         <p id="hidden" class="color-white text-center-left small-p mb-10">
                             Rappel : Pour garder l'esthétique du site il est préférable d'uploader les images par 3 ! 

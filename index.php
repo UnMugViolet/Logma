@@ -1,5 +1,7 @@
 <?php
     include_once('./includes/user-role-check.inc.php');
+    include_once('./classes/project.classes.php');
+    include_once ('./view/triple-column.view.php');
     include_once('./includes/maintenance.inc.php');
 
     if ($userAdmin || $userDev || $user || $notUser) {
@@ -7,6 +9,11 @@
     } else{
         $sessionManager->forbiddenAccess();
     } 
+
+    $projectItems = new ProjectManagement();
+    $projects = $projectItems->getProjectGallery();
+
+    $projectDisplay = new ProjectDisplay($projectItems);
 
     // Check Maintenance
     $maintenanceManager = new MaintenanceModeManager('./config/config.php');
@@ -75,86 +82,11 @@
         <section class="spacing-section">
             <div class="container">
                 <h2 class="text-center color-white">Nos derniers projets</h2>
-                <div class="triple-col spacing-last-projects mb-50">
-                    <span class="triple-col-1">
-                        <div class="image-project-container relative">
-                            <a href="https://youtu.be/L3AFBkg_BG8?si=zXZx1U6REGbZMG29">
-                                <img src="./ressources/img/projet-blacksheep.webp" alt="projet blacksheep concepeteur de van de voyage" loading="lazy" oncontextmenu="return false;">
-                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
-                                    <p class="text-center absolute">Voir la vidéo</p>
-                                </div>
-                            </a>
-                        </div>
-                        <h4 class="color-white">BLACK SHEEP</h4>
-                        <h5 class="color-white">PUBLICITÉ</h5>
-                    </span>
-                    <span class="triple-col-2">
-                        <div class="image-project-container relative">
-                            <a href="https://youtu.be/dqAV68Km7hs">
-                                <img src="./ressources/img/sophie-faguet.webp" alt="bateau de sophie faguet route du rhum" loading="lazy" oncontextmenu="return false;">
-                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
-                                    <p class="text-center absolute">Voir la vidéo</p>
-                                </div>
-                            </a>
-                        </div>
-                        <h4 class="color-white">SOPHIE FAGUET</h4>
-                        <h5 class="color-white">PORTRAIT</h5>
-                    </span>
-                    <span class="triple-col-3">
-                        <div class="image-project-container relative">
-                            <a href="https://youtu.be/pLDtHUxPeH4">
-                                <img src="./ressources/img/colliaux-opticien.webp" alt="shooting de marque colliaux opticiens" loading="lazy" oncontextmenu="return false;">
-                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
-                                    <p class="text-center absolute">Voir la vidéo</p>
-                                </div>
-                            </a>
-                        </div>
-                        <h4 class="color-white">COLLIAUX OPTICIENS</h4>
-                        <h5 class="color-white">CAMPAGNE</h5>
-                    </span>
+                <div class="spacing-last-projects mb-50">
+                    <?php 
+                        $projectDisplay->displayContent($projects)
+                    ?>
                 </div>
-            </div>
-
-            <div class="container">
-                <div class="triple-col spacing-last-projects mb-50">
-                    <span class="triple-col-1">
-                        <div class="image-project-container relative">
-                            <a href="https://youtu.be/jGQK5btw2xc">
-                                <img src="./ressources/img/projet-photographe-nohe.webp" alt="shooting photo nohé créateur de vêtements" loading="lazy" oncontextmenu="return false;">
-                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
-                                    <p class="text-center absolute">Voir la vidéo</p>
-                                </div>
-                            </a>
-                        </div>
-                        <h4 class="color-white">NOHÉ</h4>
-                        <h5 class="color-white">CAMPAGNE</h5>
-                    </span>
-                    <span class="triple-col-2">
-                        <div class="image-project-container relative">
-                            <a href="https://youtu.be/rNqv_Gi_kIg">
-                                <img src="./ressources/img/projet-photographe-PLATYPUS-CRAFT.webp" alt="platypus craft tournage en mer" loading="lazy" oncontextmenu="return false;">
-                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
-                                    <p class="text-center absolute">Voir la vidéo</p>
-                                </div>
-                            </a>
-                        </div>
-                        <h4 class="color-white">PLATYPUS CRAFT</h4>
-                        <h5 class="color-white">DIGITAL</h5>
-                    </span>
-                    <span class="triple-col-3">
-                        <div class="image-project-container relative">
-                            <a href="https://youtu.be/1TNve6kRkKg">
-                                <img src="./ressources/img/projet-photographe-transaharienne-maroc.webp" alt="reportage pour la transaharienne" loading="lazy" oncontextmenu="return false;">
-                                <div class="overlay-project absolute top-0 left-0 w-full h-full vertical-align object-center">
-                                    <p class="text-center absolute">Voir la vidéo</p>
-                                </div>
-                            </a>
-                        </div>
-                        <h4 class="color-white">TRANSAHARIENNE</h4>
-                        <h5 class="color-white">REPORTAGE</h5>
-                    </span>
-                </div>
-            </div>
             <div class="container ">
                 <div class="object-center spacing-section">
                     <a href="https://www.youtube.com/@logma_production" class="first-cta ">
@@ -163,6 +95,7 @@
                 </div>
             </div>
         </section>
+
         <section class="spacing-section bg-color-white">
             <div class="container">
                 <div class="triple-col spacing-last-projects mb-50">
