@@ -1,10 +1,10 @@
 <footer class="bg-color-black w-full">
     <div>
-        <div class="container vertical-align footer-size triple-col mt-50 mb-50">
+        <div class="container vertical-align footer-size triple-col mt-50">
             <div class="triple-col-1 mb-50">
                 <div class="logo-size margin-logo">
                   
-                    <img src="./ressources/img/Logo-logma.webp" alt="Société de production Logma Rennes ">
+                    <img src="./ressources/img/logo-logma.webp" alt="Société de production Logma Rennes ">
                   
                 </div>
                 <div>
@@ -23,7 +23,7 @@
                 <h5 class="color-white text-center-left">Suivez nous</h5>
                 <div class="center-responsive-left text-height">
                     <div class="flex-col h-full vertical-align">
-                        <a href="https://www.linkedin.com/company/logma-agency/" target="_blank" class="icons-footer" aria-label="Lien Linkedin">
+                        <a href="https://www.linkedin.com/company/logma-agency/" target="_blank" class="icons-footer" aria-label="Lien Linkedin" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="vertical-align"
                                 viewBox="-2 -2 24 24">
                                 <g>
@@ -34,7 +34,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="https://www.youtube.com/@logma_production" target="_blank" class="icons-footer" aria-label="Voir notre chaine Youtube">
+                        <a href="https://www.youtube.com/@logma_production" target="_blank" class="icons-footer" aria-label="Voir notre chaine Youtube" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="vertical-align"
                                 viewBox="0 0 24 24">
                                 <g>
@@ -42,7 +42,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/logma_production/" target="_blank" class="icons-footer" aria-label="Voir notre compte Instagram">
+                        <a href="https://www.instagram.com/logma_production/" target="_blank" class="icons-footer" aria-label="Voir notre compte Instagram" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="vertical-align"
                                 viewBox="0 0 24 24">
                                 <path
@@ -76,7 +76,7 @@
     <p class="color-main text-center">© Logma production - 2023 Tous droits reservés<br></p>
     <div class="object-center vertical-align bottom-footer">
         <p class="color-main">Site Web éco conçue réalisé par </p>
-        <a href="https://github.com/UnMugViolet" class="color-main" aria-label="Concepteur du site lien github"> Paul J. </a>
+        <a href="https://github.com/UnMugViolet" class="color-main" aria-label="Concepteur du site lien github" target="_blank" rel="noopener"> Paul J. </a>
     </div>
 </div> 
 </footer>

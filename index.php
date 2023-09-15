@@ -51,6 +51,44 @@
         content="Derniers projets NOHÉ CAMPAGNE PLATYPUS CRAFT DIGITAL TRANSAHARIENNE REPORTAGE VOIR LES VIDÉOS Reportage, campagne de marque, contenu digitaux, motion design, nous vous accompagnons de A à Z afin de vous livrer des images prêtes à être diffusées. Shooting de marque MAROC Interview Mike Horn PARIS Route du Rhum 2022 SAINT-MALO Des clients heureux. Et nous aussi [&hellip;]" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Accueil | Logma Production">
+    <meta property="og:description" content="Société de production audiovisuelle. Réalisation de contenus digitaux, reportages, campagne de marque, motion design et plus encore !">
+    <meta property="og:country-name" content="France">
+    <meta property="og:image" content="./ressources/img/logo-logma.webp"> 
+    <meta property="og:url" content="https://www.logma-production.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://www.logma-production.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Accueil | Logma Production">
+    <meta property="og:description" content="Société de production audiovisuelle. Réalisation de contenus digitaux, reportages, campagne de marque, motion design et plus encore !">
+    <meta property="og:image" content="https://logma-production.com/ressources/img/logo-logma-black.webp">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="logma-production.com">
+    <meta property="twitter:url" content="https://www.logma-production.com/">
+    <meta name="twitter:title" content="Accueil | Logma Production">
+    <meta name="twitter:description" content="Société de production audiovisuelle. Réalisation de contenus digitaux, reportages, campagne de marque, motion design et plus encore !">
+    <meta name="twitter:image" content="https://logma-production.com/ressources/img/logo-logma-black.webp">
+
+
+    <!-- Tags -->
+    <link rel="canonical" href="https://www.logma-production.com/" />
+    <meta name="description" content="Nous sommes une société de production basée à Rennes, réalisation de contenus digitaux, reportages, campagne de marque, motion design. Nous vous accompagnons dans tous vos projets de A à Z pour vous livrer des images prêtes à être diffusées !" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow"/>
+
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="somedir/apple-touch-icon-iphone-60x60.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://logma-production.com/ressources/img/touch-icons/apple-touch-icon-ipad-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://logma-production.com/ressources/img/touch-icons/apple-touch-icon-iphone-retina-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://logma-production.com/ressources/img/touch-icons/apple-touch-icon-ipad-retina-152x152.png">
+
+
 </head>
 
 <body class="bg-color-black">

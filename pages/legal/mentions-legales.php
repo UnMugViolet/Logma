@@ -24,7 +24,7 @@
     $ownerName = "Baptiste Fablet";
     $devName = "Paul Jaguin";
     $address = "1 rue du General Maurice Guillaudot, 35000 Rennes";
-    $siren = "322868415";
+    $siren = "894 994 383 00012";
     $phoneNumber = "06 79 79 69 70";
     $email= "contact@logma-production.com";
 
@@ -46,6 +46,9 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Robot -->
+    <meta name="robots" content="noindex, nofollow"/>
 
 </head>
 

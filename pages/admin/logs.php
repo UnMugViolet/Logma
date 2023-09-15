@@ -35,6 +35,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+    <!-- Robot -->
+    <meta name=" robots" content=" noindex, nofollow"/>
+
 </head>
 
 <body class="bg-color-black">
