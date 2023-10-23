@@ -11,7 +11,7 @@ Il est actuellement sur Wordpress et pour un site statique single page il y a po
 
 Le but ici est de faire une refonte du site en essayant de le rendre le moins lourds possible du côté du code. 
 
-Site actuel : https://www.logma-production.com/
+Site terminé : https://www.logma-production.com/
 
 # Ce que ça veut dire 
 
