@@ -134,6 +134,12 @@
                             </a>
                         </div>
                         <div class="flex">
+                            <a href="/a-propos" class="container-link-cta color-white">
+                            <p>A propos</p>
+                            <p class="icon-link-cta"> →</p>
+                            </a>
+                        </div>
+                        <div class="flex">
                             <a href="/contacts" class="container-link-cta color-white">
                             <p>Contacts</p>
                             <p class="icon-link-cta"> →</p>

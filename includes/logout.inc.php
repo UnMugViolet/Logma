@@ -8,7 +8,7 @@ session_unset();
 session_destroy();
 
 // Going back to root
-header("location: ../index.php?error=none");
+header("location: /?error=none");
 
 // Function to log events with severity indicators
 function logEvent($message, $severity = "LOGOUTOK") {

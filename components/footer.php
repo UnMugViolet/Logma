@@ -42,7 +42,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/logma_production/" target="_blank" class="icons-footer" aria-label="Voir notre compte Instagram" rel="noopener">
+                        <a href="https://www.instagram.com/logma.production/" target="_blank" class="icons-footer" aria-label="Voir notre compte Instagram" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="vertical-align"
                                 viewBox="0 0 24 24">
                                 <path

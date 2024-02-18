@@ -48,20 +48,13 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Nous connaitre | Logma Production">
-    <meta property="og:description" content="Découvrez notre galerie photo, la vitrine de nos réalisations. Autant dans le désert que sous la mer. Découvrez tous nos projets et leur ambiance unique.">
-    <meta property="og:country-name" content="France">
-    <meta property="og:image" content="./ressources/img/logo-logma.webp"> 
-    <meta property="og:url" content="https://www.logma-production.com/galerie-photo">
-    <meta property="og:type" content="website">
-
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://www.logma-production.com/galerie-photo">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Nous connaitre  | Logma Production">
     <meta property="og:description" content="Découvrez notre galerie photo, la vitrine de nos réalisations. Autant dans le désert que sous la mer. Découvrez tous nos projets et leur ambiance unique.">
     <meta property="og:image" content="https://logma-production.com/ressources/img/logo-logma-black.webp">
+    <meta property="og:country-name" content="France">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
@@ -86,6 +79,8 @@
         ?>
     </section>
     <section class="w-full pad-10 mt-100 mb-100">
+        <h1 class="color-white text-center">Galerie photo</h1>
+        <h2 class="color-white text-center">Voir toutes nos réalisations</h2>
         <?php
             $galleryDisplay->displayContent($images);
         ?>

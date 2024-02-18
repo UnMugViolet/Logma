@@ -45,7 +45,7 @@
                     <form action="../includes/project-upload.inc.php" method="post" enctype="multipart/form-data">
                         <input type="text" name="projectTitle" placeholder="Titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
                         <input type="text" name="projectSubtitle" placeholder="Sous-titre..." class="flex w-full input input-small bg-color-black color-white mb-10">
-                        <input type="text" name="projectUrl" placeholder="Lien du projet..." class="flex w-full input input-small bg-color-black color-white mb-10">
+                        <input type="text" name="projectUrl" placeholder="Lien de la vidéo Youtube..." class="flex w-full input input-small bg-color-black color-white mb-10">
                         <input type="file" name="file" class="flex color-white mt-30 vertical-align mb-10">
                         <input id="trigger" type="text" name="thumbnailFullName" placeholder="Nom de la miniature... " class="flex w-full input input-small bg-color-black color-white mb-10">
                                                 

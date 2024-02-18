@@ -60,8 +60,8 @@ class UploadHandler
 
     private function calculateImageOrder($dbHandler)
     {
-        // Prepare SQL statement to count rows in the 'gallery' table
-        $sql = 'SELECT * FROM gallery;';
+        // Prepare SQL statement to get the last inserted ID
+        $sql = 'SELECT MAX(orderGallery) FROM gallery;';
         $stmt = $dbHandler->connect()->prepare($sql);
 
         if (!$stmt) {
@@ -72,11 +72,10 @@ class UploadHandler
         // Execute the SQL query
         $stmt->execute();
 
-        // Get the result set and count rows
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $rowCount = count($result);
+        // Get the maximum ID (last inserted ID)
+        $maxOrder = $stmt->fetchColumn();
 
         // Calculate the new $setImageOrder
-        return $rowCount + 1;
+        return $maxOrder + 1;
     }
 }

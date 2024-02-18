@@ -1,0 +1,6 @@
+# Remove tracking from 
+.env
+.vscode
+.DS_Store
+.htaccess
+log

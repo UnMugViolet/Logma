@@ -38,20 +38,13 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Contact | Logma Production">
-  <meta property="og:description" content="Contactez-nous ! Discutons de votre projet, de vos idées et de votre passion. Experts en reportages, campagnes de marque et motion design. Construisons un projet ensemble">
-  <meta property="og:country-name" content="France">
-  <meta property="og:image" content="./ressources/img/logo-logma.webp"> 
-  <meta property="og:url" content="https://www.logma-production.com/contacts">
-  <meta property="og:type" content="website">
-
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="https://www.logma-production.com/contacts">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact | Logma Production">
   <meta property="og:description" content="Contactez-nous ! Discutons de votre projet, de vos idées et de votre passion. Experts en reportages, campagnes de marque et motion design. Construisons un projet ensemble">
   <meta property="og:image" content="https://logma-production.com/ressources/img/logo-logma-black.webp">
+  <meta property="og:country-name" content="France">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -85,7 +78,7 @@
     <div class="dual-col mt-100">
       <div class="dual-col-1 spacing-contact">
         <div>
-          <h2 class="color-white styled-h2">Laissez nous un petit message</h2>
+          <h2 class="color-white styled-h2">Laissez nous un petit message.</h2>
           <h5 class="color-white">Votre voix compte ! </h5>
           <p class="color-white">Nous sommes ravis de vous entendre ! N'hésitez pas à nous laisser un message pour toute question, suggestion ou demande d'information.</p>
         </div>

@@ -35,9 +35,16 @@ class Contact {
 
 
         $to = 'contact@logma-production.com';
-        $body = " Name: $this->name\n E-mail: $this->email\n Message:\n $this->message";
         
-        if (mail($to, $this->subject, $body)) {
+        // Decode the entities in the message
+        $this->message = html_entity_decode($this->message, ENT_QUOTES, 'UTF-8');
+
+        // Prepare the email body
+        $body = " Name: $this->name\n E-mail: $this->email\n Message:\n $this->message";
+
+        $headers = 'Content-type: text/plain; charset=utf-8' . "\r\n";
+
+        if (mail($to, $this->subject, $body, $headers)) {
             $this->redirectContactForm("none");
             exit();
         } 

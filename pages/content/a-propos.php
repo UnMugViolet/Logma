@@ -37,27 +37,19 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Nous connaitre | Logma Production">
-    <meta property="og:description" content="Plus qu'un travail, une vocation. Notre passion guide chaque image que nous créons. Nous transformons l'inspiration en vidéos captivantes.">
-    <meta property="og:country-name" content="France">
-    <meta property="og:image" content="./ressources/img/logo-logma.webp"> 
-    <meta property="og:url" content="https://www.logma-production.com/a-propos">
-    <meta property="og:type" content="website">
-
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://www.logma-production.com/a-propos">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Nous connaitre  | Logma Production">
+    <meta property="og:title" content="Nous connaitre | Logma Production">
     <meta property="og:description" content="Plus qu'un travail, une vocation. Notre passion guide chaque image que nous créons. Nous transformons l'inspiration en vidéos captivantes.">
     <meta property="og:image" content="https://logma-production.com/ressources/img/logo-logma-black.webp">
+    <meta property="og:country-name" content="France">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="logma-production.com">
     <meta property="twitter:url" content="https://www.logma-production.com/a-propos">
-    <meta name="twitter:title" content="Nous connaitre  | Logma Production">
+    <meta name="twitter:title" content="Nous connaitre | Logma Production">
     <meta name="twitter:description" content="Plus qu'un travail, une vocation. Notre passion guide chaque image que nous créons. Nous transformons l'inspiration en vidéos captivantes.">
     <meta name="twitter:image" content="https://logma-production.com/ressources/img/logo-logma-black.webp">
 
@@ -81,7 +73,7 @@
 
         <div class="container">
             <div>
-                <h1 >A propos.</h1>
+                <h1 >À propos.</h1>
             </div>
             <div class="dual-col vertical-align">
                 <div class="dual-col-1 ">

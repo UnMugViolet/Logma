@@ -31,8 +31,8 @@
     <link rel="stylesheet" href="../css/main.css">
 
     <!-- JS -->
-    <script src="../js/modal/delete-account.modal.js" type="text/javascript" defer></script>
-    <script src="../js/error/modal.error.js" type="module" defer></script>
+    <script src="/js/modal/delete-account.modal.js" type="text/javascript" defer></script>
+    <script src="/js/error/modal.error.js" type="module" defer></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
