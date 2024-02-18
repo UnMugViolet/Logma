@@ -5,7 +5,7 @@ class Dbh
     public function connect()
     {
         // Load environment variables from .env file
-        $envFile = '/home/ujvcjnrm/public_html/.env';
+        $envFile = '.env';
         $envVar = $this->parseEnv($envFile);
 
         // Check if .env file exists and contains necessary variables
