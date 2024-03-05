@@ -19,3 +19,4 @@ Que du Vanilla, pas de framework pour faciliter la tâche, il est peut être art
 Pourquoi faire compliqué quand on peut faire simple ? 
 
 
+test
