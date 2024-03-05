@@ -16,6 +16,4 @@ Site terminé : https://www.logma-production.com/
 # Ce que ça veut dire 
 
 Que du Vanilla, pas de framework pour faciliter la tâche, il est peut être artisanale et peu attrayant d'un point de vue technique. Mais justement c'est tout le but ! 
-Pourquoi faire compliqué quand on peut faire simple ? 
-
-test
+Pourquoi faire compliqué quand on peut faire simple ?
