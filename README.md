@@ -1,6 +1,9 @@
 # Logma 
+<div align="center">
 
+[![Quality Gate Status](https://sonarqube.rocketegg.systems/api/project_badges/measure?project=Logma-Prod&metric=alert_status&token=sqb_d9dbd79e0ba2a8a10b3d0cdc9387006f1e9bd06b)](https://sonarqube.rocketegg.systems/dashboard?id=Logma-Prod)
 
+</div>
 
 Société de production basée à Rennes. 
 
